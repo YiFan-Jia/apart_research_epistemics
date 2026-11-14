@@ -12,3 +12,13 @@ venv/
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Pipeline outputs: run databases and exports reach hundreds of MB; keep a second copy elsewhere, not in git
+results/*
+!results/.gitkeep
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.lock
+scenarios/scripts.jsonl
+.pytest_cache/

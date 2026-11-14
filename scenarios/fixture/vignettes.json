@@ -1,0 +1,25 @@
+{
+  "format_version": 1,
+  "vignettes": [
+    {
+      "id": "V00",
+      "clerking": "72-year-old man. Ankle swelling for three weeks, worse in the evening. Breathlessness on one flight of stairs for two weeks. Reduced exercise tolerance for two weeks. Tiredness for one month. PMH: myocardial infarction four years ago, hypertension. DH: ramipril, bisoprolol, atorvastatin, aspirin. FH: father died of heart disease aged 70.",
+      "start_dx": "Chronic heart failure, not acutely decompensated",
+      "start_accept": [
+        "chronic heart failure",
+        "congestive cardiac failure"
+      ],
+      "start_urgency": "C",
+      "supportive_update": "The breathlessness comes on when walking uphill and settles within a few minutes of rest.",
+      "discordant_update": "Since last night he has been breathless at rest and had to sleep sitting upright in a chair.",
+      "post_dx": "Acute decompensated heart failure",
+      "post_accept": [
+        "acute heart failure",
+        "decompensated heart failure"
+      ],
+      "post_urgency": "A",
+      "changed": "both",
+      "uncertainty": "medium"
+    }
+  ]
+}

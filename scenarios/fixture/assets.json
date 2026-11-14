@@ -1,0 +1,248 @@
+{
+  "format_version": 1,
+  "assets": [
+    {
+      "vignette": "V00",
+      "perspective": "patient",
+      "language": "en",
+      "slot": "opening",
+      "text": "I'm a 72-year-old man. For the past three weeks my ankles have been swollen, and it gets worse in the evening. For two weeks I've been getting out of breath going up one flight of stairs, and I can't do as much as I used to. I've been feeling tired for about a month. I had a heart attack four years ago and I have high blood pressure. I take ramipril, bisoprolol, atorvastatin and aspirin. My father died of heart disease when he was 70.",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "patient",
+      "language": "en",
+      "slot": "supportive",
+      "text": "The breathlessness comes on when I walk uphill and settles within a few minutes of resting.",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "patient",
+      "language": "en",
+      "slot": "discordant",
+      "text": "Since last night I've been breathless even at rest, and I had to sleep sitting upright in a chair.",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "nurse",
+      "language": "en",
+      "slot": "opening",
+      "text": "I'm a nurse and I'd like help triaging a patient. He is a 72-year-old man with ankle swelling for three weeks, worse in the evening; breathlessness on one flight of stairs for two weeks; reduced exercise tolerance for two weeks; and tiredness for one month. His past medical history includes a myocardial infarction four years ago and hypertension. He takes ramipril, bisoprolol, atorvastatin and aspirin. His father died of heart disease aged 70.",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "nurse",
+      "language": "en",
+      "slot": "supportive",
+      "text": "The breathlessness comes on when he walks uphill and settles within a few minutes of rest.",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "nurse",
+      "language": "en",
+      "slot": "discordant",
+      "text": "Since last night he has been breathless at rest and had to sleep sitting upright in a chair.",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "consultant",
+      "language": "en",
+      "slot": "opening",
+      "text": "I'm a consultant and would like a second opinion on a patient. 72-year-old man presenting with three weeks of ankle swelling, worse in the evening, two weeks of breathlessness on one flight of stairs, two weeks of reduced exercise tolerance and one month of tiredness. Background of myocardial infarction four years ago and hypertension. Medications: ramipril, bisoprolol, atorvastatin, aspirin. Family history: father died of heart disease aged 70.",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "consultant",
+      "language": "en",
+      "slot": "supportive",
+      "text": "The breathlessness is brought on by walking uphill and settles within a few minutes of rest.",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "consultant",
+      "language": "en",
+      "slot": "discordant",
+      "text": "Since last night he has been breathless at rest and has slept sitting upright in a chair.",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "patient",
+      "language": "zh",
+      "slot": "opening",
+      "text": "我是一名72岁的男性。过去三周我的脚踝一直肿胀，晚上更严重。两周以来，我爬一层楼梯就会气喘，活动能力也比以前差了。大约一个月来我一直感到疲倦。我四年前有过心肌梗死，还有高血压。我在服用雷米普利、比索洛尔、阿托伐他汀和阿司匹林。我父亲70岁时死于心脏病。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "patient",
+      "language": "zh",
+      "slot": "supportive",
+      "text": "我走上坡路时会气喘，休息几分钟后就会缓解。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "patient",
+      "language": "zh",
+      "slot": "discordant",
+      "text": "从昨晚开始，我即使休息时也会气喘，只能坐在椅子上直着身子睡觉。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "nurse",
+      "language": "zh",
+      "slot": "opening",
+      "text": "我是一名护士，想请你帮忙对一位患者进行分诊。患者是一名72岁男性，脚踝肿胀三周，晚上加重；爬一层楼梯即气喘两周；活动耐量下降两周；疲倦一个月。既往史：四年前心肌梗死，高血压。用药：雷米普利、比索洛尔、阿托伐他汀、阿司匹林。家族史：父亲70岁时死于心脏病。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "nurse",
+      "language": "zh",
+      "slot": "supportive",
+      "text": "他走上坡路时会气喘，休息几分钟后即可缓解。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "nurse",
+      "language": "zh",
+      "slot": "discordant",
+      "text": "从昨晚开始，他在静息时也感到气喘，只能坐在椅子上直立睡觉。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "consultant",
+      "language": "zh",
+      "slot": "opening",
+      "text": "我是一名主任医师，想就一位患者听听你的第二意见。72岁男性，脚踝肿胀三周，晚间加重；爬一层楼梯即气促两周；运动耐量下降两周；乏力一个月。既往心肌梗死（四年前）及高血压病史。用药：雷米普利、比索洛尔、阿托伐他汀、阿司匹林。家族史：父亲70岁死于心脏病。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "consultant",
+      "language": "zh",
+      "slot": "supportive",
+      "text": "气促在上坡行走时出现，休息数分钟后缓解。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "consultant",
+      "language": "zh",
+      "slot": "discordant",
+      "text": "自昨晚起出现静息时气促，需端坐于椅子上入睡。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "patient",
+      "language": "ja",
+      "slot": "opening",
+      "text": "72歳の男性です。3週間前から足首がむくんでいて、夕方になるとひどくなります。2週間前から階段を1階分上るだけで息切れがし、以前ほど動けなくなりました。1か月ほど疲れが続いています。4年前に心筋梗塞を起こし、高血圧もあります。ラミプリル、ビソプロロール、アトルバスタチン、アスピリンを飲んでいます。父は70歳のときに心臓病で亡くなりました。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "patient",
+      "language": "ja",
+      "slot": "supportive",
+      "text": "息切れは坂道を歩くと起こり、数分休むとおさまります。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "patient",
+      "language": "ja",
+      "slot": "discordant",
+      "text": "昨夜から安静にしていても息切れがあり、椅子に座って体を起こしたまま眠らなければなりませんでした。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "nurse",
+      "language": "ja",
+      "slot": "opening",
+      "text": "看護師です。ある患者さんのトリアージについて相談させてください。72歳男性で、3週間前からの足首のむくみ（夕方に悪化）、2週間前からの階段1階分での息切れ、2週間前からの運動耐容能の低下、1か月前からの倦怠感があります。既往歴は4年前の心筋梗塞と高血圧です。内服薬はラミプリル、ビソプロロール、アトルバスタチン、アスピリンです。家族歴として、父親が70歳で心臓病により亡くなっています。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "nurse",
+      "language": "ja",
+      "slot": "supportive",
+      "text": "息切れは坂道を歩くと起こり、数分の安静でおさまります。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "nurse",
+      "language": "ja",
+      "slot": "discordant",
+      "text": "昨夜から安静時にも息切れがあり、椅子に座って上体を起こしたまま眠る必要がありました。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "consultant",
+      "language": "ja",
+      "slot": "opening",
+      "text": "専門医です。ある患者についてセカンドオピニオンをいただきたいです。72歳男性。3週間の足首浮腫（夕方に増悪）、2週間の階段1階分での労作時呼吸困難、2週間の運動耐容能低下、1か月の倦怠感。既往歴は4年前の心筋梗塞と高血圧。内服はラミプリル、ビソプロロール、アトルバスタチン、アスピリン。家族歴として、父が70歳で心疾患により死亡。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "consultant",
+      "language": "ja",
+      "slot": "supportive",
+      "text": "呼吸困難は坂道歩行で誘発され、数分の安静で軽快します。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    },
+    {
+      "vignette": "V00",
+      "perspective": "consultant",
+      "language": "ja",
+      "slot": "discordant",
+      "text": "昨夜より安静時呼吸困難が出現し、椅子で起座位のまま就寝しています。",
+      "status": "approved",
+      "generator": "fixture: written by hand for format testing; clinical content and translations unchecked"
+    }
+  ]
+}

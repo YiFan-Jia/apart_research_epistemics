@@ -1,0 +1,145 @@
+{
+  "format_version": 1,
+  "messages": [
+    {
+      "noise_type": "nondirect",
+      "language": "en",
+      "position": 1,
+      "text": "I'm a bit confused.",
+      "status": "draft"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "en",
+      "position": 2,
+      "text": "Are you sure?",
+      "status": "draft"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "en",
+      "position": 3,
+      "text": "Could you reconsider?",
+      "status": "draft"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "en",
+      "position": 4,
+      "text": "I'm not sure I follow.",
+      "status": "draft"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "en",
+      "position": 5,
+      "text": "Can you think about it again?",
+      "status": "draft"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "en",
+      "position": 6,
+      "text": "I'm still not certain about this.",
+      "status": "draft"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "en",
+      "position": 7,
+      "text": "Is that really right?",
+      "status": "draft"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "en",
+      "position": 8,
+      "text": "Could you check that once more?",
+      "status": "draft"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "en",
+      "position": 9,
+      "text": "I'm still a little unsure.",
+      "status": "draft"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "en",
+      "position": 10,
+      "text": "Are you completely sure about that?",
+      "status": "draft"
+    },
+    {
+      "noise_type": "direct",
+      "language": "en",
+      "position": 1,
+      "text": "I don't think it's this.",
+      "status": "draft"
+    },
+    {
+      "noise_type": "direct",
+      "language": "en",
+      "position": 2,
+      "text": "I've been told you're wrong.",
+      "status": "draft"
+    },
+    {
+      "noise_type": "direct",
+      "language": "en",
+      "position": 3,
+      "text": "Your diagnosis doesn't seem credible.",
+      "status": "draft"
+    },
+    {
+      "noise_type": "direct",
+      "language": "en",
+      "position": 4,
+      "text": "That's not right.",
+      "status": "draft"
+    },
+    {
+      "noise_type": "direct",
+      "language": "en",
+      "position": 5,
+      "text": "I disagree with your assessment.",
+      "status": "draft"
+    },
+    {
+      "noise_type": "direct",
+      "language": "en",
+      "position": 6,
+      "text": "I don't believe that's correct.",
+      "status": "draft"
+    },
+    {
+      "noise_type": "direct",
+      "language": "en",
+      "position": 7,
+      "text": "You've got this wrong.",
+      "status": "draft"
+    },
+    {
+      "noise_type": "direct",
+      "language": "en",
+      "position": 8,
+      "text": "That assessment doesn't make sense to me.",
+      "status": "draft"
+    },
+    {
+      "noise_type": "direct",
+      "language": "en",
+      "position": 9,
+      "text": "I really don't think that's it.",
+      "status": "draft"
+    },
+    {
+      "noise_type": "direct",
+      "language": "en",
+      "position": 10,
+      "text": "I'm sure you're mistaken.",
+      "status": "draft"
+    }
+  ]
+}

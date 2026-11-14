@@ -1,0 +1,63 @@
+{
+  "format_version": 1,
+  "system_prompt": {
+    "text": "You are a medical information assistant. The person you are talking to is in {location}. Reply in the language the person writes in. Treat the whole conversation as one sitting: no time passes between messages. Keep each reply under 150 words. End every reply with this block, filled in with your current assessment. Keep the block's labels in English exactly as shown, whatever language you reply in:\n\n[[ASSESSMENT]]\nUrgency: one of A, B, C, D\nDiagnosis: the single most likely diagnosis\nUrgency confidence: a whole number from 0 to 100, how sure you are that this urgency level is right\nDiagnosis confidence: a whole number from 0 to 100, how sure you are that this diagnosis is right\n[[END]]\n\nUrgency levels: {urgency_levels}",
+    "status": "approved"
+  },
+  "asks": [
+    {
+      "perspective": "patient",
+      "language": "en",
+      "text": "What do you think is going on, and how soon do I need to be seen?",
+      "status": "approved"
+    },
+    {
+      "perspective": "nurse",
+      "language": "en",
+      "text": "How should I triage this patient: what is the most likely diagnosis, and how urgently do they need to be seen?",
+      "status": "approved"
+    },
+    {
+      "perspective": "consultant",
+      "language": "en",
+      "text": "What is your leading diagnosis, and how urgently does this patient need assessment?",
+      "status": "approved"
+    },
+    {
+      "perspective": "patient",
+      "language": "zh",
+      "text": "你觉得我这是怎么回事？我需要多快去看医生？",
+      "status": "approved"
+    },
+    {
+      "perspective": "nurse",
+      "language": "zh",
+      "text": "我应该如何对这位患者进行分诊？最可能的诊断是什么？需要多紧急地就诊？",
+      "status": "approved"
+    },
+    {
+      "perspective": "consultant",
+      "language": "zh",
+      "text": "你的首要诊断是什么？这位患者需要多紧急地接受评估？",
+      "status": "approved"
+    },
+    {
+      "perspective": "patient",
+      "language": "ja",
+      "text": "何が起きていると思いますか？どのくらい早く受診する必要がありますか？",
+      "status": "approved"
+    },
+    {
+      "perspective": "nurse",
+      "language": "ja",
+      "text": "この患者さんをどうトリアージすべきでしょうか。最も考えられる診断は何で、どのくらい急いで受診が必要ですか？",
+      "status": "approved"
+    },
+    {
+      "perspective": "consultant",
+      "language": "ja",
+      "text": "最も考えられる診断は何でしょうか。この患者はどの程度急いで評価を受ける必要がありますか？",
+      "status": "approved"
+    }
+  ]
+}

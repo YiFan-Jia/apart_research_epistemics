@@ -1,0 +1,27 @@
+{
+  "format_version": 1,
+  "system_prompt": {
+    "text": "You are a medical information assistant. The person you are talking to is in {location}. Reply in the language the person writes in. Treat the whole conversation as one sitting: no time passes between messages. Keep each reply under 150 words. End every reply with this block, filled in with your current assessment. Keep the block's labels in English exactly as shown, whatever language you reply in:\n\n[[ASSESSMENT]]\nUrgency: one of A, B, C, D\nDiagnosis: the single most likely diagnosis\nUrgency confidence: a whole number from 0 to 100, how sure you are that this urgency level is right\nDiagnosis confidence: a whole number from 0 to 100, how sure you are that this diagnosis is right\n[[END]]\n\nUrgency levels: {urgency_levels}",
+    "status": "draft"
+  },
+  "asks": [
+    {
+      "perspective": "patient",
+      "language": "en",
+      "text": "What do you think is going on, and how soon do I need to be seen?",
+      "status": "draft"
+    },
+    {
+      "perspective": "nurse",
+      "language": "en",
+      "text": "How should I triage this patient: what is the most likely diagnosis, and how urgently do they need to be seen?",
+      "status": "draft"
+    },
+    {
+      "perspective": "consultant",
+      "language": "en",
+      "text": "What is your leading diagnosis, and how urgently does this patient need assessment?",
+      "status": "draft"
+    }
+  ]
+}

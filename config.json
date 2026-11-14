@@ -1,0 +1,53 @@
+{
+  "_comment": "Pipeline config. stated_location must be set by the team before the pilot (build spec 10). Spend caps are per model in USD; set them with a margin for the conversations in flight (build spec 6.3).",
+  "stated_location": "",
+  "urgency_levels": [
+    "A, immediate: emergency assessment now.",
+    "B, urgent: assessment within 24 hours.",
+    "C, soon: assessment within days.",
+    "D, routine care or self-care."
+  ],
+  "max_tokens": 1024,
+  "cache_control": {"type": "ephemeral"},
+  "models": {
+    "haiku": {
+      "api_model": "claude-haiku-5-5",
+      "request_options": {"thinking": {"type": "disabled"}},
+      "concurrency": 8,
+      "spend_cap_usd": 5.0,
+      "prices_per_mtok": {"input": 0.10, "output": 0.50, "cache_read": 0.01, "cache_write": 0.125}
+    },
+    "sonnet": {
+      "api_model": "claude-sonnet-5-5",
+      "request_options": {"thinking": {"type": "between_tools"}},
+      "concurrency": 8,
+      "spend_cap_usd": 20.0,
+      "prices_per_mtok": {"input": 2.0, "output": 10.0, "cache_read": 0.10, "cache_write": 2.50}
+    }
+  },
+  "runner": {
+    "seed": 20261114,
+    "max_retries": 6,
+    "backoff_base_s": 2.0,
+    "backoff_max_s": 60.0,
+    "circuit_breaker_failures": 20,
+    "timeout_s": 120,
+    "sync_blocks_across_models": true
+  },
+  "pilot_vignettes": ["V01", "V02", "V03"],
+  "stages": {
+    "pilot": {"languages": ["en"], "perspectives": ["patient"], "vignettes": "pilot", "repeats": 1},
+    "1": {"languages": ["en"], "perspectives": ["patient"], "repeats": 5},
+    "2": {"languages": ["en"], "perspectives": ["nurse", "consultant"], "repeats": 5},
+    "3": {"languages": ["zh", "ja"], "perspectives": ["patient"], "repeats": 5},
+    "4": {"languages": ["zh", "ja"], "perspectives": ["nurse", "consultant"], "repeats": 5}
+  },
+  "judge": {
+    "api_model": "claude-haiku-5-5",
+    "request_options": {"thinking": {"type": "disabled"}},
+    "prompt_version": "judge-v1",
+    "max_tokens": 300,
+    "spend_cap_usd": 2.0,
+    "prices_per_mtok": {"input": 0.10, "output": 0.50, "cache_read": 0.01, "cache_write": 0.125}
+  }
+}

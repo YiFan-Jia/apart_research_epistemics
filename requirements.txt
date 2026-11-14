@@ -1,0 +1,6 @@
+# Python 3.11+ (tested on Anaconda Python 3.14, Windows x64)
+anthropic>=2.8
+numpy
+pandas
+matplotlib
+pytest
