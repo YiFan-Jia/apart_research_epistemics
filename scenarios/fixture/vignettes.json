@@ -19,7 +19,8 @@
       ],
       "post_urgency": "A",
       "changed": "both",
-      "uncertainty": "medium"
+      "uncertainty": "medium",
+      "urgency_scale_version": "v3"
     }
   ]
 }

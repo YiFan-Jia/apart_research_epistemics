@@ -124,12 +124,28 @@ def test_stage_builds_with_only_its_assets_approved(tmp_path, cfg):
     assert len(s3) == 36
 
 
-def test_stated_location_required(scen):
+def test_stated_location_only_needed_if_prompt_has_it(scen):
     cfg = make_cfg(stated_location="")
+    scripts, _ = build_all(scen, cfg)                       # current prompt has no {location}
+    assert scripts and "{location}" not in scripts[0]["system_prompt"]
+    p = read_json(scen / "prompts.json")
+    p["system_prompt"]["text"] = "You are in {location}. " + p["system_prompt"]["text"]
+    write_json(scen / "prompts.json", p)
     with pytest.raises(BuildError):
         build_all(scen, cfg)
     scripts, _ = build_all(scen, cfg, None, allow_unapproved=True)
     assert "[stated location]" in scripts[0]["system_prompt"]
+    scripts, _ = build_all(scen, make_cfg(stated_location="Japan"))
+    assert scripts[0]["system_prompt"].startswith("You are in Japan. ")
+
+
+def test_rendered_system_prompt_matches_agreed_text(scen, cfg):
+    scripts, _ = build_all(scen, cfg)
+    sp = scripts[0]["system_prompt"]
+    assert sp.startswith("You are an AI assistant. Reply in the language the person writes in.")
+    assert sp.endswith("Urgency levels: " + " ".join(cfg["urgency_levels"]))
+    assert cfg["urgency_most_urgent_first"] == ["A", "B", "C", "D"] and cfg["urgency_levels"][0].startswith("A, emergency")
+    assert "{" not in sp and "}" not in sp
 
 
 def test_gold_is_kept_apart_and_hash_changes_with_assets(scen, cfg):
@@ -147,3 +163,24 @@ def test_gold_is_kept_apart_and_hash_changes_with_assets(scen, cfg):
     h2 = {x["script_id"]: x["assets_hash"] for x in scripts2}
     changed = {k for k in h1 if h1[k] != h2[k]}
     assert changed == {k for k in h1 if "_en_patient_" in k}
+
+
+def test_vignette_on_another_urgency_scale_is_refused(scen, cfg):
+    """A vignette keyed on a different scale version must not build: it would be scored backwards."""
+    v = read_json(scen / "vignettes.json")
+    v["vignettes"][0]["urgency_scale_version"] = "v2"
+    write_json(scen / "vignettes.json", v)
+    scripts, rep = build_all(scen, cfg)
+    assert scripts == []
+    assert any("urgency_scale_version" in e for e in rep.errors)
+    del v["vignettes"][0]["urgency_scale_version"]
+    write_json(scen / "vignettes.json", v)
+    assert build_all(scen, cfg)[0] == []
+    # A config with no scale version (runs made before versioning) does not check.
+    old_cfg = {k: val for k, val in cfg.items() if k != "urgency_scale_version"}
+    assert len(build_all(scen, old_cfg)[0]) > 0
+
+
+def test_gold_carries_key_and_scale_versions(scen, cfg):
+    s = build_all(scen, cfg)[0][0]
+    assert s["gold"]["urgency_scale_version"] == cfg["urgency_scale_version"] and len(s["gold"]["key_version"]) == 12

@@ -1,0 +1,115 @@
+{
+  "_comment": "The three updates of each vignette reworded as the patient would say them, in each language. Drafted by Claude on 15 Nov 2026 from the note-style update in the same language's spreadsheet; same facts, first person, nothing added. Order in each list: supportive (CC_both), urgency update (DC_Urgency), diagnosis update (DC_Dx). null = the vignette has no such update. These texts are written into the *_patient columns of the spreadsheets in this folder; the spreadsheets are what the importer reads.",
+  "notes": {
+    "V009": "Diagnosis update: 'stridor' is a clinician's word, so it is described as the noise the patient hears. The Japanese note says inspiratory stridor, so only the Japanese version says 'when I breathe in'.",
+    "V010": "Supportive update: 'no neurological deficit' is put as 'no lasting weakness or numbness'. 'Lasting' is there because the patient's opening says the feet go numb during walks.",
+    "V015": "Diagnosis update: 'epididymis' is put as 'at the back of one testicle'.",
+    "V018": "Supportive update: 'no immunosuppression' is put as 'my immune system isn't weakened'.",
+    "V020": "Supportive update: 'no neurological changes' is put as 'no changes in feeling or strength'.",
+    "V006": "Supportive update: the English note says she 'now faints on standing' and the Japanese note says she fainted on standing up (once). Each patient version follows its own language's note.",
+    "V008": "Diagnosis update: the English note says 'he' for a female patient; the first-person version has no pronoun.",
+    "V012": "Diagnosis update: 'reports active suicidal intent' is put in the first person as a plain statement of intent."
+  },
+  "updates": {
+    "V001": {
+      "en": ["I've had similar symptoms before, and they cleared up with antibiotics.", "There's a lot of blood in my pee.", "I'm no longer producing any pee. The last time I peed was over 12 hours ago."],
+      "zh": ["我以前也有过类似的症状，用了抗生素就好了。", "我的尿里有明显的血。", "我已经没有尿了，距离上次尿尿已经超过12个小时。"],
+      "ja": ["以前にも同じような症状があり、抗菌薬で良くなりました。", "尿に明らかに血が混じっています。", "おしっこが出なくなっていて、最後に出てから12時間以上たっています。"]
+    },
+    "V002": {
+      "en": ["I haven't taken the sumatriptan I was prescribed.", "For the last 6 hours I haven't been able to keep any fluids down.", "I've developed a fever. My temperature measured 39.5 C."],
+      "zh": ["医生给我开的舒马曲普坦，我还没吃。", "这6个小时我喝什么都吐。", "我量了体温，升到了39.5℃。"],
+      "ja": ["処方されたスマトリプタンは、まだ飲んでいません。", "ここ6時間、水分を取っても吐いてしまいます。", "熱を測ったら39.5℃ありました。"]
+    },
+    "V003": {
+      "en": ["I don't have any difficulty swallowing.", "The pain is now bad after all meals, not just spicy ones.", "I've developed a new pressure in my chest when I exert myself."],
+      "zh": ["我没有吞咽困难。", "现在我每顿饭后都疼得厉害，吃不辣的也一样。", "我新出现了一活动胸口就有压迫感的情况。"],
+      "ja": ["飲み込みにくさはありません。", "今は辛い物に限らず、毎食後に強く痛みます。", "体を動かしたときに胸が圧迫される感じが新たに出てきました。"]
+    },
+    "V004": {
+      "en": ["I don't get the pain when I'm resting.", "The pain now comes on while I'm resting.", "I've developed a sudden, severe tearing pain that extends between my shoulder blades."],
+      "zh": ["我休息的时候不疼。", "现在我休息的时候也会疼。", "我突然出现了剧烈的撕裂样疼痛，一直延伸到两边肩胛骨之间。"],
+      "ja": ["安静にしているときは胸は痛みません。", "安静にしているときにも痛むようになりました。", "突然、肩甲骨の間に広がる、引き裂かれるような激しい痛みが出ました。"]
+    },
+    "V005": {
+      "en": ["I'm on the combined contraceptive pill, and there's been no change in my bowel movements or my peeing.", "The pain has now completely gone.", "I've done a home pregnancy test and it's positive."],
+      "zh": ["我在吃复方口服避孕药，大便和小便都没有变化。", "我的疼痛已经完全消失了。", "我在家验孕，结果是阳性。"],
+      "ja": ["配合経口避妊薬を飲んでいます。排便や排尿に変化はありません。", "痛みは完全になくなりました。", "自宅で妊娠検査をしたら陽性でした。"]
+    },
+    "V006": {
+      "en": ["I now faint when I stand up.", null, "I now have a temperature of 39.2 C."],
+      "zh": ["我现在一站起来就晕倒。", null, "我现在体温升到了39.2℃。"],
+      "ja": ["立ち上がったときに気を失いました。", null, "新たに39.2℃の熱が出ました。"]
+    },
+    "V007": {
+      "en": ["I don't have a fever, and I've smoked a lot over the years.", "I'm moderately short of breath even when I'm resting.", "I've developed new swelling in one calf."],
+      "zh": ["我没有发烧，以前烟抽得比较多。", "我休息的时候也有中等程度的喘。", "我一侧的小腿新出现了肿胀。"],
+      "ja": ["熱はありません。たばこはかなりの量を吸ってきました。", "安静にしていても中くらいの息切れがあります。", "片方のふくらはぎが新たに腫れてきました。"]
+    },
+    "V008": {
+      "en": ["I don't have a fever, and I haven't coughed up any blood.", "The cough is interrupting my sleep.", "I've started to get small streaks of red in my phlegm."],
+      "zh": ["我没有发烧，也没有咳血。", "咳嗽影响了我的睡眠。", "我的痰里出现了少量红色血丝。"],
+      "ja": ["熱はなく、咳で血が出ることもありません。", "咳で眠りが妨げられています。", "痰に少量の赤い筋が混じるようになりました。"]
+    },
+    "V009": {
+      "en": ["I'm not drooling.", "I now can't swallow water, and I feel dehydrated.", "I've started making a harsh, high-pitched noise when I breathe."],
+      "zh": ["我没有流口水。", "我现在连水都咽不下去，感觉自己脱水了。", "我喘气的时候喉咙里出现了尖锐的响声。"],
+      "ja": ["よだれが垂れることはありません。", "水も飲み込めず、脱水になっている感じがします。", "息を吸うときにヒューヒューと高い音がするようになりました。"]
+    },
+    "V010": {
+      "en": ["I don't have any lasting weakness or numbness.", "Because of the same leg symptoms, I can now walk less than 20 metres.", "I've developed a fever, and one spot on my spine has become tender."],
+      "zh": ["我没有持续的无力或麻木。", "因为同样的腿部症状，我现在走不到20米。", "我发烧了，脊柱上还新出现了一处一按就疼的地方。"],
+      "ja": ["続くような脱力やしびれはありません。", "同じ脚の症状のため、20メートルも歩けなくなりました。", "熱が出て、背骨の一か所に押すと痛いところが新たに出てきました。"]
+    },
+    "V011": {
+      "en": ["I don't have a fever, blood in my pee or pain, and I haven't suddenly been unable to pee.", "I haven't been able to pee for the past 6 hours.", "I've started to see blood in my pee."],
+      "zh": ["我没有发烧、尿血、疼痛，也没有突然尿不出来。", "这6个小时我一直尿不出来。", "我的尿里新出现了肉眼能看见的血。"],
+      "ja": ["熱、血尿、痛みはなく、急に尿が出なくなったこともありません。", "ここ6時間、おしっこが出せていません。", "新たに、目で見てわかる血尿が出ました。"]
+    },
+    "V012": {
+      "en": ["I was investigated for heart problems before, and the results were reassuring.", "I'm now unable to leave the house to go to work.", "I now actively intend to take my own life."],
+      "zh": ["我以前做过心脏方面的检查，结果没有让人担心的问题。", "我现在已经没办法出门上班了。", "我现在明确有自杀的打算。"],
+      "ja": ["以前に心臓の精密検査を受けましたが、心配な所見はありませんでした。", "出勤のために家を出られなくなりました。", "今は、自殺しようという意思があります。"]
+    },
+    "V013": {
+      "en": ["I don't have a fever, and I don't have any pain that's spreading quickly.", "The itchy ring-shaped rash is getting bigger even though I've been using a cream.", "The area has become painful, far more than you'd expect from how the rash looks."],
+      "zh": ["我没有发烧，也没有迅速扩散的疼痛。", "我涂了药膏，可是发痒的环形皮疹还在扩大。", "我患处的疼痛明显超出了皮疹看上去该有的程度。"],
+      "ja": ["熱はなく、急速に広がる痛みもありません。", "塗り薬を塗っても、かゆみのある輪の形の発疹が広がっています。", "発疹の見た目に比べて、著しく強い痛みが出てきました。"]
+    },
+    "V014": {
+      "en": ["I'm alert at the moment. I missed several insulin doses while I was ill with a fever.", "I haven't peed in the last 8 hours.", "I have a new crushing pain in the centre of my chest while I'm resting."],
+      "zh": ["我现在意识清醒，发烧期间漏打了几次胰岛素。", "我这8个小时没有尿过。", "我休息的时候新出现了胸口正中的压榨样疼痛。"],
+      "ja": ["今は意識ははっきりしています。熱が出ている間、インスリンを数回打ちませんでした。", "ここ8時間、おしっこが出ていません。", "安静にしているときに、胸の真ん中に押しつぶされるような痛みが新たに出てきました。"]
+    },
+    "V015": {
+      "en": ["I don't have any pain in my testicles, and I don't have a fever.", "It stings so much to pee that I'm not peeing.", "I've developed a new tender swelling at the back of one testicle."],
+      "zh": ["我没有睾丸痛，也没有发烧。", "我小便时疼得太厉害，所以一直没有小便。", "我睾丸后面新出现了肿胀，一按就疼。"],
+      "ja": ["睾丸の痛みや熱はありません。", "おしっこのときの痛みが強くて、おしっこをしていません。", "睾丸の後ろ側が新たに腫れて、押すと痛みます。"]
+    },
+    "V016": {
+      "en": ["I haven't had any bleeding from my back passage, fever or weight loss.", "I've been constipated for four days, which is causing moderate pain, but none of my other symptoms have got worse.", "I've now been losing weight persistently, and I can't explain why."],
+      "zh": ["我没有肛门出血、发烧或体重下降。", "我已经便秘4天了，有中等程度的疼痛，其他症状没有加重。", "我现在体重持续下降，找不到原因。"],
+      "ja": ["お尻からの出血、熱、体重減少はありません。", "便秘が4日続いていて中くらいの痛みがありますが、ほかに悪くなった症状はありません。", "原因のわからない体重減少が続いています。"]
+    },
+    "V017": {
+      "en": ["I've recently had a cold.", "There's a lot of thick yellow pus, and it builds up again after I wipe it away, but my vision hasn't changed.", "I've developed a blistering rash on one side of my nose and forehead."],
+      "zh": ["我最近感冒过。", "我眼睛有很多黏稠的黄色脓性分泌物，擦掉后又会积起来，视力没有变化。", "我鼻子和额头的一侧出现了水疱样的皮疹。"],
+      "ja": ["最近かぜをひきました。", "粘り気の強い黄色い膿のような目やにが多く、拭いてもまたたまります。見え方に変化はありません。", "鼻と額の片側に水ぶくれのような発疹が出ました。"]
+    },
+    "V018": {
+      "en": ["I don't have a fever, and my immune system isn't weakened.", "One side of my face has become weak.", "The itchiness has settled, but my hearing is still muffled."],
+      "zh": ["我没有发烧，免疫力也没有受到抑制。", "我一侧的脸出现了无力。", "我的耳朵已经不痒了，但听声音还是发闷。"],
+      "ja": ["熱はなく、免疫が抑えられている状態でもありません。", "顔の片側に力が入らなくなりました。", "かゆみは治まりましたが、音はまだこもって聞こえます。"]
+    },
+    "V019": {
+      "en": ["I've had similar episodes of knee pain before, and they got better without treatment.", "I can no longer put weight on that leg.", "My knee suddenly became very hot and red overnight."],
+      "zh": ["我以前也有过类似的膝盖疼，没有治疗就自己好了。", "我这条腿已经没办法承重了。", "我的膝盖一夜之间突然明显发红、发热。"],
+      "ja": ["以前にも同じような膝の痛みがあり、治療せずに良くなりました。", "痛いほうの脚に体重をかけられなくなりました。", "一晩で膝が急に赤くなり、強い熱を持ちました。"]
+    },
+    "V020": {
+      "en": ["I don't have any lasting swelling, or any changes in feeling or strength.", "The cramps come back when I'm resting, and they interrupt my sleep.", "My pee has turned dark brown after strenuous exercise."],
+      "zh": ["我没有持续的肿胀，感觉和力气也没有变化。", "我休息的时候也会抽筋，影响睡眠。", "我剧烈运动后尿变成了深褐色。"],
+      "ja": ["続くような腫れや、感覚や力の入り方の変化はありません。", "安静にしているときにも脚がつり、眠りが妨げられます。", "激しい運動の後、尿が濃い茶色になりました。"]
+    }
+  }
+}

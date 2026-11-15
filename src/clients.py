@@ -118,14 +118,17 @@ class MockModel:
                  error_plan=None, empty_plan=None):
         self.p = params or MockParams()
         self.name = name
-        # The 18 scripts of a vignette x language x perspective share their opening, so the mock recognises
-        # the unit from the opening and each turn's kind and noise type from the message text itself.
+        # The scripts of a vignette x language x perspective share their opening, so the mock recognises
+        # the unit from the opening and each turn's kind and noise type from the message text itself. Each
+        # discordant update has its own post-update answers, kept by the update's text.
         self.lookup: dict[tuple, dict] = {}
         for s in scripts:
             u = self.lookup.setdefault((s["system_prompt"], s["opening"]), {
-                "gold": s["gold"], "unit": s["script_id"].rsplit("_", 2)[0], "kinds": {}})
+                "gold": s["gold"], "unit": s["script_id"].rsplit("_", 2)[0], "kinds": {}, "post": {}})
             for text, kind in zip(s["turns"], s["turn_kinds"]):
                 u["kinds"][text] = s["factors"]["noise_type"] if kind == "noise" else kind
+                if kind.startswith("discordant"):
+                    u["post"][text] = (s["gold"]["post_urgency"], s["gold"]["post_dx"])
         self.rng = random.Random(self.p.seed)
         self.requests: list[dict] = []
         self.calls = 0
@@ -172,9 +175,9 @@ class MockModel:
                     uc = max(0, uc - 10)
             elif kind == "supportive":
                 uc, dc = min(100, uc + 10), min(100, dc + 10)
-            elif kind == "discordant":
+            elif kind.startswith("discordant"):
                 if r.random() < self.p.p_uptake:
-                    urg, dx = gold["post_urgency"], gold["post_dx"]
+                    urg, dx = unit["post"][msgs[-1]["content"]]
         urg_text = urg
         if r.random() < self.p.p_malformed:
             urg_text = "unsure"

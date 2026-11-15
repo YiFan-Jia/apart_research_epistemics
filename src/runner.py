@@ -34,6 +34,7 @@ from .common import (
     write_json, write_jsonl,
 )
 from .scripts import rebuild_scripts
+from .transcripts import export_markdown
 
 EXIT_OK, EXIT_INCOMPLETE, EXIT_HALTED, EXIT_SPEND_CAP, EXIT_REFUSED = 0, 1, 3, 4, 5
 
@@ -61,7 +62,10 @@ def build_request(script: dict, reply_texts: list[str], model_cfg: dict, cfg: di
     bad = SAMPLING_KEYS & set(opts)
     if bad:
         raise ValueError(f"sampling parameters {sorted(bad)} are not accepted by these models; remove them from config")
-    req = {"model": model_cfg["api_model"], "max_tokens": cfg["max_tokens"], "system": script["system_prompt"],
+    if "max_tokens" in opts:
+        raise ValueError("set max_tokens on the model in config, not inside request_options")
+    req = {"model": model_cfg["api_model"], "max_tokens": model_cfg.get("max_tokens", cfg["max_tokens"]),
+           "system": script["system_prompt"],
            "messages": messages}
     if cfg.get("cache_control"):
         req["cache_control"] = cfg["cache_control"]
@@ -428,6 +432,7 @@ def export_transcripts(db, run_dir: Path) -> list[Path]:
         p = outdir / f"{model}.jsonl"
         write_jsonl(p, rows)
         paths.append(p)
+    export_markdown(db, run_dir)   # human-readable copies: transcripts/<model>/<script>_r<n>.md and index.md
     return paths
 
 
@@ -467,6 +472,25 @@ def make_clients(models: list[str], cfg: dict, mock: bool, scripts: list[dict], 
     return {m: client for m in models}
 
 
+def vignette_check_note(scen: Path, cfg: dict, scripts: list[dict], results_dir: Path) -> str | None:
+    """A warning line if any vignette version in this run has no vignette check of its current content.
+
+    The check is an independent step (python -m src.vignette_check); the runner reports, it does not refuse.
+    """
+    from .vignette_check import check_status  # noqa: PLC0415  (it imports this module)
+    units = sorted({(s["factors"]["vignette"], s["factors"]["language"], s["factors"]["perspective"]) for s in scripts})
+    st = check_status(scen, cfg, units, results_dir / "vignette_checks")
+    if not st["unchecked"] and not st["blocked"]:
+        return None
+    parts = []
+    if st["blocked"]:
+        parts.append(f"{len(st['blocked'])} version(s) were BLOCKED by the vignette check, e.g. {st['blocked'][0]}")
+    if st["unchecked"]:
+        parts.append(f"{len(st['unchecked'])} of {len(units)} version(s) have no vignette check of their current "
+                     f"content, e.g. {st['unchecked'][0]}")
+    return "WARNING: " + "; ".join(parts) + ". Run python -m src.vignette_check first (the run continues)."
+
+
 def cmd_run(args) -> int:
     run_dir = Path(args.results) / args.run
     exists = (run_dir / "run.sqlite").exists()
@@ -497,6 +521,10 @@ def cmd_run(args) -> int:
             if not models:
                 raise RunRefused("no jobs in this run; give --stage and --models")
             scripts = [json.loads(x[0]) for x in r.db.execute("SELECT DISTINCT script_json FROM jobs")]
+            if not args.mock:
+                note = vignette_check_note(scen, cfg, scripts, Path(args.results))
+                if note:
+                    r.log(note)
             r.clients = make_clients(models, cfg, args.mock, scripts, json.loads(args.mock_params) if args.mock_params else None)
             invocation = {"started_at": dbm.now(), "code_version": code_version(), "models": models,
                           "stages_added": args.stage or [], "mock": args.mock}

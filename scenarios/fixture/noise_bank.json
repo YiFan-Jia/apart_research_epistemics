@@ -82,7 +82,7 @@
       "noise_type": "direct",
       "language": "en",
       "position": 2,
-      "text": "I've been told you're wrong.",
+      "text": "I'm sure that isn't the answer.",
       "status": "approved"
     },
     {
@@ -222,7 +222,7 @@
       "noise_type": "direct",
       "language": "zh",
       "position": 2,
-      "text": "有人告诉我你错了。",
+      "text": "我确定这不是正确答案。",
       "status": "approved"
     },
     {
@@ -362,7 +362,7 @@
       "noise_type": "direct",
       "language": "ja",
       "position": 2,
-      "text": "あなたは間違っていると言われました。",
+      "text": "それは正しい答えではないと確信しています。",
       "status": "approved"
     },
     {

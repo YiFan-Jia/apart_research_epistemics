@@ -19,7 +19,8 @@ from pathlib import Path
 
 from .common import (
     ASSET_STATUSES, CHANGED_VALUES, LANGUAGES, NOISE_TYPES, N_FOLLOWUPS, PERSPECTIVES, ROOT, SLOTS,
-    UNCERTAINTY_VALUES, URGENCY_LEVELS, load_config, read_json,
+    UNCERTAINTY_VALUES, URGENCY_LEVELS, is_two_update, load_config, read_json, slots_for, update_kinds,
+    update_text_field, urgency_rank,
 )
 
 VIGNETTE_TEXT_FIELDS = ["id", "clerking", "start_dx", "supportive_update", "discordant_update", "post_dx"]
@@ -49,6 +50,7 @@ class Scenarios:
     system_prompt: dict | None
     asks: dict[tuple, dict]            # (perspective, language) -> record
     load_errors: list[str] = field(default_factory=list)
+    scale_version: str | None = None   # config urgency_scale_version; set by whoever validates against a config
 
 
 def _load(path: Path, key: str, errors: list[str]):
@@ -145,9 +147,19 @@ def text_problems(text, language: str | None) -> list[str]:
     return p
 
 
-def vignette_problems(v: dict) -> tuple[list[str], list[str]]:
-    """(errors, warnings) for one vignette record."""
+def vignette_problems(v: dict, scale_version: str | None = None) -> tuple[list[str], list[str]]:
+    """(errors, warnings) for one vignette record.
+
+    scale_version: the config's urgency_scale_version. When given, the record must name the same version, so a
+    vignette keyed on a different urgency scale (other wording, or the letters the other way round) is refused
+    instead of being scored backwards.
+    """
     errs, warns = [], []
+    if scale_version is not None and v.get("urgency_scale_version") != scale_version:
+        errs.append(f"field 'urgency_scale_version' is {v.get('urgency_scale_version')!r} but config.json uses "
+                    f"{scale_version!r}: the urgency answers must be set on the current scale, then this field updated")
+    if is_two_update(v):
+        return _two_update_problems(v, errs, warns)
     for f in VIGNETTE_TEXT_FIELDS:
         if not isinstance(v.get(f), str) or not v.get(f, "").strip():
             errs.append(f"field '{f}' missing or empty")
@@ -191,6 +203,70 @@ def vignette_problems(v: dict) -> tuple[list[str], list[str]]:
     return errs, warns
 
 
+def _two_update_problems(v: dict, errs: list[str], warns: list[str]) -> tuple[list[str], list[str]]:
+    """Checks for a record in the two-update format: a supportive update, and one or more of an urgency-only
+    update, a diagnosis update and a reassuring update; a neutral fact is optional."""
+    has_dx = v.get("dx_update") is not None
+    has_rsu = v.get("reassuring_update") is not None
+    for f in ["id", "clerking", "start_dx", "supportive_update"] + (["dx_update", "post_dx"] if has_dx else []):
+        if not isinstance(v.get(f), str) or not v.get(f, "").strip():
+            errs.append(f"field '{f}' missing or empty")
+    for f in ["reassuring_update", "neutral_update"]:
+        if v.get(f) is not None and (not isinstance(v[f], str) or not v[f].strip()):
+            errs.append(f"field '{f}' must be text, or left out if the vignette has no such update")
+    for f in VIGNETTE_LIST_FIELDS:
+        val = v.get(f)
+        if not isinstance(val, list) or not all(isinstance(x, str) and x.strip() for x in val):
+            errs.append(f"field '{f}' must be a list of names (may be empty)")
+    has_urg = v.get("urgency_update") is not None
+    if has_urg and (not isinstance(v["urgency_update"], str) or not v["urgency_update"].strip()):
+        errs.append("field 'urgency_update' must be text, or null if the vignette has no urgency-only update")
+    if not (has_urg or has_dx or has_rsu):
+        errs.append("the vignette has no discordant update: it needs an urgency update, a diagnosis update or a "
+                    "reassuring update")
+    for f in (["start_urgency"] + (["dx_post_urgency"] if has_dx else []) + (["urgency_post_urgency"] if has_urg else [])
+              + (["reassuring_post_urgency"] if has_rsu else [])):
+        if v.get(f) not in URGENCY_LEVELS:
+            errs.append(f"field '{f}' must be one of A, B, C, D (got {v.get(f)!r})")
+    if v.get("uncertainty") is not None and v.get("uncertainty") not in UNCERTAINTY_VALUES:
+        errs.append(f"field 'uncertainty' must be one of {UNCERTAINTY_VALUES} or null (got {v.get('uncertainty')!r})")
+    if errs:
+        return errs, warns
+    fields = [update_text_field(k) for k in update_kinds(v)]
+    for f in ["clerking", *fields]:
+        errs += [f"field '{f}': {p}" for p in text_problems(v[f], "en")]
+    c = _norm(v["clerking"])
+    texts = {f: _norm(v[f]) for f in fields}
+    for i, a in enumerate(fields):
+        for b in fields[i + 1:]:
+            if texts[a] == texts[b]:
+                errs.append(f"'{a}' and '{b}' are the same")
+        if texts[a] in c:
+            errs.append(f"'{a}' repeats the clerking text")
+    if has_urg and v["urgency_post_urgency"] == v["start_urgency"]:
+        errs.append(f"the urgency update leaves the urgency at {v['start_urgency']}: it cannot work as a discordant "
+                    f"update. Change 'urgency_post_urgency', or set 'urgency_update' to null to run this vignette "
+                    f"without an urgency-only update")
+    if has_rsu and v["reassuring_post_urgency"] == v["start_urgency"]:
+        errs.append(f"the reassuring update leaves the urgency at {v['start_urgency']}: it cannot work as a "
+                    f"discordant update. Change 'reassuring_post_urgency', or leave 'reassuring_update' out")
+    if has_rsu and has_urg and v["reassuring_post_urgency"] == v["urgency_post_urgency"]:
+        errs.append("the urgency update and the reassuring update lead to the same urgency")
+    if has_dx and _norm(v["start_dx"]) == _norm(v["post_dx"]):
+        errs.append("post_dx is the same as start_dx: the diagnosis update must change the diagnosis")
+    if not has_urg:
+        warns.append("no urgency-only update: this vignette runs without that arm")
+    if not has_dx:
+        warns.append("no diagnosis update: this vignette runs without that arm")
+    start_set = {_norm(x) for x in [v["start_dx"], *v["start_accept"]]}
+    post_set = {_norm(x) for x in [v["post_dx"], *v["post_accept"]]} if has_dx else set()
+    if start_set & post_set:
+        warns.append(f"start and post accepted names overlap: {sorted(start_set & post_set)} (should be mutually exclusive)")
+    if not re.fullmatch(r"V\d\d", v["id"]):
+        warns.append("id is not of the form V01..V20")
+    return errs, warns
+
+
 def _status_ok(rec: dict, allow_unapproved: bool) -> str | None:
     st = rec.get("status")
     if st not in ASSET_STATUSES:
@@ -216,15 +292,16 @@ class Report:
 
 
 def unit_problems(sc: Scenarios, vid: str, lang: str, persp: str, allow_unapproved: bool) -> list[str]:
-    """Problems with everything one (vignette, language, perspective) needs: 3 slots, the ask, the noise, the prompt."""
+    """Problems with everything one (vignette, language, perspective) needs: its slots, the ask, the noise, the prompt."""
     probs: list[str] = []
     v = sc.vignettes.get(vid)
     if v is None:
         return [f"{vid}: no vignette record"]
-    verrs, _ = vignette_problems(v)
+    verrs, _ = vignette_problems(v, sc.scale_version)
     probs += [f"{vid} vignette: {e}" for e in verrs]
     texts = {}
-    for slot in SLOTS:
+    slots = slots_for(v)
+    for slot in slots:
         tag = f"{vid} {lang} {persp} {slot}"
         a = sc.assets.get((vid, persp, lang, slot))
         if a is None:
@@ -237,12 +314,14 @@ def unit_problems(sc: Scenarios, vid: str, lang: str, persp: str, allow_unapprov
         probs += [f"{tag}: {x}" for x in p]
         if isinstance(a.get("text"), str):
             texts[slot] = _norm(a["text"])
-    if len(texts) == 3:
-        if texts["supportive"] == texts["discordant"]:
-            probs.append(f"{vid} {lang} {persp}: supportive and discordant updates are the same")
-        for slot in ["supportive", "discordant"]:
-            if texts[slot] in texts["opening"]:
-                probs.append(f"{vid} {lang} {persp} {slot}: repeats the opening text")
+    if len(texts) == len(slots):
+        ups = slots[1:]
+        for i, a in enumerate(ups):
+            for b in ups[i + 1:]:
+                if texts[a] == texts[b]:
+                    probs.append(f"{vid} {lang} {persp}: {a} and {b} updates are the same")
+            if texts[a] in texts["opening"]:
+                probs.append(f"{vid} {lang} {persp} {a}: repeats the opening text")
     ask = sc.asks.get((persp, lang))
     if ask and isinstance(ask.get("text"), str) and "opening" in texts and _norm(ask["text"]) in texts["opening"]:
         probs.append(f"{vid} {lang} {persp} opening: includes the ask (the script builder appends it)")
@@ -260,7 +339,7 @@ def shared_problems(sc: Scenarios, allow_unapproved: bool) -> dict[str, list[str
         if not isinstance(t, str) or not t.strip():
             p.append("text missing or empty")
         else:
-            for tok in ["{location}", "{urgency_levels}", "[[ASSESSMENT]]", "[[END]]", "Urgency:", "Diagnosis:",
+            for tok in ["{urgency_levels}", "[[ASSESSMENT]]", "[[END]]", "Urgency:", "Diagnosis:",
                         "Urgency confidence:", "Diagnosis confidence:"]:
                 if tok not in t:
                     p.append(f"does not contain {tok}")
@@ -317,10 +396,15 @@ def stage_vignette_ids(cfg: dict, stage: str, sc: Scenarios) -> list[str]:
 
 def validate(scen_dir: Path | str, cfg: dict, allow_unapproved: bool = False) -> Report:
     sc = load_scenarios(scen_dir)
+    sc.scale_version = cfg.get("urgency_scale_version")
     errors = list(sc.load_errors)
     warnings: list[str] = []
+    try:
+        urgency_rank(cfg)
+    except ValueError as e:
+        errors.append(str(e))
     for vid, v in sorted(sc.vignettes.items()):
-        e, w = vignette_problems(v)
+        e, w = vignette_problems(v, sc.scale_version)
         errors += [f"{vid}: {x}" for x in e]
         warnings += [f"{vid}: {x}" for x in w]
     for k, a in sorted(sc.assets.items(), key=lambda kv: tuple(map(str, kv[0]))):
@@ -330,6 +414,8 @@ def validate(scen_dir: Path | str, cfg: dict, allow_unapproved: bool = False) ->
             errors.append(f"asset {tag}: no vignette record {vid}")
         if persp not in PERSPECTIVES or lang not in LANGUAGES or slot not in SLOTS:
             errors.append(f"asset {tag}: unknown perspective, language or slot")
+        elif vid in sc.vignettes and slot not in slots_for(sc.vignettes[vid]):
+            warnings.append(f"asset {tag}: this vignette has no '{slot}' update, so the text is not used")
         if a.get("status") not in ASSET_STATUSES:
             errors.append(f"asset {tag}: status {a.get('status')!r} is not one of {ASSET_STATUSES}")
     for k, m in sc.noise.items():

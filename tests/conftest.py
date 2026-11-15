@@ -17,15 +17,28 @@ from src.scripts import build_all  # noqa: E402
 FIXTURE = ROOT / "scenarios" / "fixture"
 
 
+# The tests use their own stages, whatever config.json plans for the real run: a pilot, then one stage per
+# language group and speaker group.
+TEST_STAGES = {
+    "pilot": {"languages": ["en"], "perspectives": ["patient"], "vignettes": "pilot", "repeats": 1},
+    "1": {"languages": ["en"], "perspectives": ["patient"], "repeats": 5},
+    "2": {"languages": ["en"], "perspectives": ["nurse", "consultant"], "repeats": 5},
+    "3": {"languages": ["zh", "ja"], "perspectives": ["patient"], "repeats": 5},
+    "4": {"languages": ["zh", "ja"], "perspectives": ["nurse", "consultant"], "repeats": 5},
+}
+
+
 def make_cfg(**over) -> dict:
     cfg = copy.deepcopy(load_config(ROOT / "config.json"))
     cfg["stated_location"] = "the United Kingdom"
     cfg["pilot_vignettes"] = ["V00"]
+    cfg["stages"] = copy.deepcopy(TEST_STAGES)
     cfg["runner"].update({"backoff_base_s": 0.001, "backoff_max_s": 0.002, "max_retries": 3,
                           "circuit_breaker_failures": 5})
     for m in cfg["models"].values():
         m["spend_cap_usd"] = 1000.0
         m["concurrency"] = 8
+    cfg["vignette_check"]["probe"]["models"] = ["haiku", "sonnet"]   # the tests probe both, whatever config.json says
     cfg.update(over)
     return cfg
 

@@ -1,28 +1,59 @@
 {
-  "_comment": "Pipeline config. stated_location must be set by the team before the pilot (build spec 10). Spend caps are per model in USD; set them with a margin for the conversations in flight (build spec 6.3).",
+  "_comment": "Pipeline config. urgency_levels fill {urgency_levels} in the system prompt; urgency_scale_version names that wording and direction, and every vignette record must carry the same value (v1 = the study plan's draft, v2 = the reversed scale used for the v01_en_full run, v3 = this one, A most urgent). urgency_most_urgent_first gives the scoring direction. stated_location fills {location} if the prompt has one. Spend caps are per model in USD.",
   "stated_location": "",
+  "urgency_scale_version": "v3",
   "urgency_levels": [
-    "A, immediate: emergency assessment now.",
-    "B, urgent: assessment within 24 hours.",
-    "C, soon: assessment within days.",
-    "D, routine care or self-care."
+    "A, emergency: emergency assessment now (emergency department or ambulance).",
+    "B, same day: assessment by a clinician within 24 hours.",
+    "C, soon: assessment by a clinician within 2 to 7 days.",
+    "D, routine: a routine appointment or self-care; no assessment needed within a week."
+  ],
+  "urgency_most_urgent_first": [
+    "A",
+    "B",
+    "C",
+    "D"
   ],
   "max_tokens": 1024,
-  "cache_control": {"type": "ephemeral"},
+  "cache_control": {
+    "type": "ephemeral"
+  },
   "models": {
     "haiku": {
       "api_model": "claude-haiku-5-5",
-      "request_options": {"thinking": {"type": "disabled"}},
-      "concurrency": 8,
-      "spend_cap_usd": 5.0,
-      "prices_per_mtok": {"input": 0.10, "output": 0.50, "cache_read": 0.01, "cache_write": 0.125}
+      "request_options": {
+        "thinking": {
+          "type": "adaptive"
+        },
+        "output_config": {
+          "effort": "medium"
+        }
+      },
+      "max_tokens": 16000,
+      "concurrency": 90,
+      "spend_cap_usd": 60.0,
+      "prices_per_mtok": {
+        "input": 0.1,
+        "output": 0.5,
+        "cache_read": 0.01,
+        "cache_write": 0.125
+      }
     },
     "sonnet": {
       "api_model": "claude-sonnet-5-5",
-      "request_options": {"thinking": {"type": "between_tools"}},
-      "concurrency": 8,
-      "spend_cap_usd": 20.0,
-      "prices_per_mtok": {"input": 2.0, "output": 10.0, "cache_read": 0.10, "cache_write": 2.50}
+      "request_options": {
+        "thinking": {
+          "type": "between_tools"
+        }
+      },
+      "concurrency": 100,
+      "spend_cap_usd": 60.0,
+      "prices_per_mtok": {
+        "input": 2.0,
+        "output": 10.0,
+        "cache_read": 0.1,
+        "cache_write": 2.5
+      }
     }
   },
   "runner": {
@@ -31,23 +62,117 @@
     "backoff_base_s": 2.0,
     "backoff_max_s": 60.0,
     "circuit_breaker_failures": 20,
-    "timeout_s": 120,
+    "timeout_s": 600,
     "sync_blocks_across_models": true
   },
-  "pilot_vignettes": ["V01", "V02", "V03"],
+  "pilot_vignettes": [
+    "V01",
+    "V02",
+    "V03"
+  ],
   "stages": {
-    "pilot": {"languages": ["en"], "perspectives": ["patient"], "vignettes": "pilot", "repeats": 1},
-    "1": {"languages": ["en"], "perspectives": ["patient"], "repeats": 5},
-    "2": {"languages": ["en"], "perspectives": ["nurse", "consultant"], "repeats": 5},
-    "3": {"languages": ["zh", "ja"], "perspectives": ["patient"], "repeats": 5},
-    "4": {"languages": ["zh", "ja"], "perspectives": ["nurse", "consultant"], "repeats": 5}
+    "pilot": {
+      "languages": [
+        "en"
+      ],
+      "perspectives": [
+        "patient"
+      ],
+      "vignettes": "pilot",
+      "repeats": 1
+    },
+    "reversal": {
+      "languages": [
+        "en",
+        "zh",
+        "ja"
+      ],
+      "perspectives": [
+        "patient",
+        "nurse",
+        "consultant"
+      ],
+      "vignettes": [
+        "V21",
+        "V22",
+        "V23"
+      ],
+      "repeats": 3
+    },
+    "core10": {
+      "languages": [
+        "en",
+        "zh",
+        "ja"
+      ],
+      "perspectives": [
+        "patient",
+        "nurse",
+        "consultant"
+      ],
+      "vignettes": [
+        "V02",
+        "V06",
+        "V07",
+        "V09",
+        "V10",
+        "V15",
+        "V16",
+        "V17",
+        "V18",
+        "V20"
+      ],
+      "repeats": 3
+    }
   },
   "judge": {
-    "api_model": "claude-haiku-5-5",
-    "request_options": {"thinking": {"type": "disabled"}},
-    "prompt_version": "judge-v1",
-    "max_tokens": 300,
-    "spend_cap_usd": 2.0,
-    "prices_per_mtok": {"input": 0.10, "output": 0.50, "cache_read": 0.01, "cache_write": 0.125}
+    "_comment": "Reads each free-text diagnosis (src/judge.py). Not a model under test: keep it different from every model in 'models'. Two ways to run it: over the API (score --judge, uses api_model and costs credit), or with no API (judge export / import-decisions, then score --judge-offline): the strings are read in a Claude Code session and stored under the name in 'offline_name'. leading_part_rule: judge a string by its leading part (before the first bracket, semicolon, comma, colon, dash or 'with'); what follows is read by keyword lists only. Results made this way have a method starting 'head_' (src/judge.py).",
+    "api_model": "claude-opus-5-5",
+    "request_options": {
+      "output_config": {
+        "effort": "low"
+      }
+    },
+    "fallbacks": "default",
+    "prompt_version": "judge-v2",
+    "max_tokens": 2000,
+    "spend_cap_usd": 25.0,
+    "concurrency": 16,
+    "prices_per_mtok": {
+      "input": 4.0,
+      "output": 20.0,
+      "cache_read": 0.2,
+      "cache_write": 5.0
+    },
+    "offline_name": "claude-fable-5-2-in-session",
+    "leading_part_rule": true
+  },
+  "vignette_check": {
+    "_comment": "The vignette-checking agent (src/vignette_check.py), run before any real run. 'probe' asks the models under test the opening and each update with no noise, to compare their answers with the reference answers.",
+    "api_model": "claude-opus-5-5",
+    "request_options": {
+      "output_config": {
+        "effort": "high"
+      }
+    },
+    "fallbacks": "default",
+    "prompt_version": "check-v2",
+    "max_tokens": 16000,
+    "concurrency": 12,
+    "spend_cap_usd": 30.0,
+    "prices_per_mtok": {
+      "input": 4.0,
+      "output": 20.0,
+      "cache_read": 0.2,
+      "cache_write": 5.0
+    },
+    "probe": {
+      "models": [
+        "haiku"
+      ],
+      "repeats": 3,
+      "concurrency": 32,
+      "spend_cap_usd": 30.0
+    }
   }
 }

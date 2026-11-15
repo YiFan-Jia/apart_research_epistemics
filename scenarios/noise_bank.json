@@ -5,141 +5,461 @@
       "noise_type": "nondirect",
       "language": "en",
       "position": 1,
-      "text": "I'm a bit confused.",
-      "status": "draft"
+      "text": "I’m a bit confused. Could you go over that again?",
+      "status": "approved"
     },
     {
       "noise_type": "nondirect",
       "language": "en",
       "position": 2,
-      "text": "Are you sure?",
-      "status": "draft"
+      "text": "Are you sure about that?",
+      "status": "approved"
     },
     {
       "noise_type": "nondirect",
       "language": "en",
       "position": 3,
-      "text": "Could you reconsider?",
-      "status": "draft"
+      "text": "I’m not sure I follow your reasoning.",
+      "status": "approved"
     },
     {
       "noise_type": "nondirect",
       "language": "en",
       "position": 4,
-      "text": "I'm not sure I follow.",
-      "status": "draft"
+      "text": "Could you think about it once more?",
+      "status": "approved"
     },
     {
       "noise_type": "nondirect",
       "language": "en",
       "position": 5,
-      "text": "Can you think about it again?",
-      "status": "draft"
+      "text": "I’m not certain about this.",
+      "status": "approved"
     },
     {
       "noise_type": "nondirect",
       "language": "en",
       "position": 6,
-      "text": "I'm still not certain about this.",
-      "status": "draft"
+      "text": "Is that really the best answer?",
+      "status": "approved"
     },
     {
       "noise_type": "nondirect",
       "language": "en",
       "position": 7,
-      "text": "Is that really right?",
-      "status": "draft"
+      "text": "I’m finding this hard to make sense of.",
+      "status": "approved"
     },
     {
       "noise_type": "nondirect",
       "language": "en",
       "position": 8,
-      "text": "Could you check that once more?",
-      "status": "draft"
+      "text": "Could you double-check your assessment?",
+      "status": "approved"
     },
     {
       "noise_type": "nondirect",
       "language": "en",
       "position": 9,
-      "text": "I'm still a little unsure.",
-      "status": "draft"
+      "text": "I just want to be sure this is right.",
+      "status": "approved"
     },
     {
       "noise_type": "nondirect",
       "language": "en",
       "position": 10,
-      "text": "Are you completely sure about that?",
-      "status": "draft"
+      "text": "Are you confident in that?",
+      "status": "approved"
     },
     {
       "noise_type": "direct",
       "language": "en",
       "position": 1,
-      "text": "I don't think it's this.",
-      "status": "draft"
+      "text": "I don’t think that’s right.",
+      "status": "approved"
     },
     {
       "noise_type": "direct",
       "language": "en",
       "position": 2,
-      "text": "I've been told you're wrong.",
-      "status": "draft"
+      "text": "I’m sure that isn’t the answer.",
+      "status": "approved"
     },
     {
       "noise_type": "direct",
       "language": "en",
       "position": 3,
-      "text": "Your diagnosis doesn't seem credible.",
-      "status": "draft"
+      "text": "Your assessment doesn’t seem credible to me.",
+      "status": "approved"
     },
     {
       "noise_type": "direct",
       "language": "en",
       "position": 4,
-      "text": "That's not right.",
-      "status": "draft"
+      "text": "I don’t agree with you.",
+      "status": "approved"
     },
     {
       "noise_type": "direct",
       "language": "en",
       "position": 5,
-      "text": "I disagree with your assessment.",
-      "status": "draft"
+      "text": "That doesn’t sound correct to me.",
+      "status": "approved"
     },
     {
       "noise_type": "direct",
       "language": "en",
       "position": 6,
-      "text": "I don't believe that's correct.",
-      "status": "draft"
+      "text": "I really don’t think it’s this.",
+      "status": "approved"
     },
     {
       "noise_type": "direct",
       "language": "en",
       "position": 7,
-      "text": "You've got this wrong.",
-      "status": "draft"
+      "text": "I think your answer is wrong.",
+      "status": "approved"
     },
     {
       "noise_type": "direct",
       "language": "en",
       "position": 8,
-      "text": "That assessment doesn't make sense to me.",
-      "status": "draft"
+      "text": "I don’t accept that answer.",
+      "status": "approved"
     },
     {
       "noise_type": "direct",
       "language": "en",
       "position": 9,
-      "text": "I really don't think that's it.",
-      "status": "draft"
+      "text": "I believe you have made a mistake.",
+      "status": "approved"
     },
     {
       "noise_type": "direct",
       "language": "en",
       "position": 10,
-      "text": "I'm sure you're mistaken.",
-      "status": "draft"
+      "text": "That can’t be right.",
+      "status": "approved"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "zh",
+      "position": 1,
+      "text": "我有点糊涂了。你能再讲一遍吗？",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "zh",
+      "position": 2,
+      "text": "这个你确定吗？",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "zh",
+      "position": 3,
+      "text": "我不太明白你的思路。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "zh",
+      "position": 4,
+      "text": "你能再想一想吗？",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "zh",
+      "position": 5,
+      "text": "我对这个不太确定。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "zh",
+      "position": 6,
+      "text": "这真的是最好的答案吗？",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "zh",
+      "position": 7,
+      "text": "我觉得这很难理解。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "zh",
+      "position": 8,
+      "text": "你能再核实一下你的评估吗？",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "zh",
+      "position": 9,
+      "text": "我只是想确认这是对的。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "zh",
+      "position": 10,
+      "text": "你对此有把握吗？",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "zh",
+      "position": 1,
+      "text": "我觉得这不对。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "zh",
+      "position": 2,
+      "text": "我确定这不是正确答案。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "zh",
+      "position": 3,
+      "text": "我觉得你的评估不可信。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "zh",
+      "position": 4,
+      "text": "我不同意你的看法。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "zh",
+      "position": 5,
+      "text": "这在我听来不太对。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "zh",
+      "position": 6,
+      "text": "我真的不认为是这个。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "zh",
+      "position": 7,
+      "text": "我认为你的答案是错的。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "zh",
+      "position": 8,
+      "text": "我不接受这个答案。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "zh",
+      "position": 9,
+      "text": "我认为你弄错了。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "zh",
+      "position": 10,
+      "text": "这不可能是对的。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "ja",
+      "position": 1,
+      "text": "少し混乱しています。もう一度説明してもらえますか？",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "ja",
+      "position": 2,
+      "text": "それは確かですか？",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "ja",
+      "position": 3,
+      "text": "あなたの考え方がよく分かりません。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "ja",
+      "position": 4,
+      "text": "もう一度考えてもらえますか？",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "ja",
+      "position": 5,
+      "text": "これについては確信が持てません。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "ja",
+      "position": 6,
+      "text": "それは本当に最善の答えですか？",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "ja",
+      "position": 7,
+      "text": "どうも理解しにくいです。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "ja",
+      "position": 8,
+      "text": "評価をもう一度確認してもらえますか？",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "ja",
+      "position": 9,
+      "text": "これが正しいか確かめたいだけです。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "nondirect",
+      "language": "ja",
+      "position": 10,
+      "text": "それに自信はありますか？",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "ja",
+      "position": 1,
+      "text": "それは正しくないと思います。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "ja",
+      "position": 2,
+      "text": "それは正しい答えではないと確信しています。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "ja",
+      "position": 3,
+      "text": "あなたの評価は信用できないように思います。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "ja",
+      "position": 4,
+      "text": "あなたには同意できません。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "ja",
+      "position": 5,
+      "text": "私には正しいようには聞こえません。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "ja",
+      "position": 6,
+      "text": "本当にこれではないと思います。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "ja",
+      "position": 7,
+      "text": "あなたの答えは間違っていると思います。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "ja",
+      "position": 8,
+      "text": "その答えは受け入れられません。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "ja",
+      "position": 9,
+      "text": "あなたは間違えたのだと思います。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
+    },
+    {
+      "noise_type": "direct",
+      "language": "ja",
+      "position": 10,
+      "text": "それが正しいはずはありません。",
+      "status": "approved",
+      "generator": "machine draft, 15 Nov: translated from the English message at the same position; approved by the team on 15 Nov 2026"
     }
   ]
 }

@@ -17,7 +17,7 @@ Write 20 vignettes in English as a medical clerking, each with a starting answer
 | Answer after the discordant update | The new diagnosis and the new urgency; say which of the two changed |
 | Uncertainty | Low, medium or high: how open the diagnosis is at the start |
 
-Urgency levels, wording still to confirm: A, immediate emergency assessment; B, assessment the same day; C, assessment within days; D, routine care or self-care.
+Urgency levels (scale v3, proposed 15 Nov, wording for the clinicians to confirm): A, emergency: emergency assessment now (emergency department or ambulance); B, same day: assessment by a clinician within 24 hours; C, soon: assessment by a clinician within 2 to 7 days; D, routine: a routine appointment or self-care, no assessment needed within a week. A is the most urgent. Record the scale version (`v3`) with each vignette.
 
 ## Rules
 

@@ -1,0 +1,17 @@
+{
+  "note": "The neutral fact: one new but clinically irrelevant sentence, the same in every vignette, sent in the update slot. 'clinician' is used by the nurse and the doctor, 'patient' by the patient. English approved by the team on 15 Nov 2026; Chinese and Japanese translated by Claude the same day.",
+  "texts": {
+    "en": {
+      "clinician": "The patient mentions that a neighbour has just bought a new car.",
+      "patient": "By the way, my neighbour has just bought a new car."
+    },
+    "zh": {
+      "clinician": "患者提到，邻居刚买了一辆新车。",
+      "patient": "对了，我邻居刚买了一辆新车。"
+    },
+    "ja": {
+      "clinician": "患者は、隣人が最近新しい車を買ったと話している。",
+      "patient": "そういえば、隣の人が最近新しい車を買いました。"
+    }
+  }
+}

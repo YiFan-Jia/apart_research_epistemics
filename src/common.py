@@ -17,18 +17,69 @@ ROOT = Path(__file__).resolve().parent.parent
 
 LANGUAGES = ["en", "zh", "ja"]
 PERSPECTIVES = ["patient", "nurse", "consultant"]
-SLOTS = ["opening", "supportive", "discordant"]
 NOISE_TYPES = ["nondirect", "direct"]
 UPDATE_TURNS = [1, 3, 5, 10]
+# Update kinds. A vignette record is in one of two formats (see scenarios/README.md):
+#   two-update   an urgency-only update ("discordant_urgency", may be absent) and a diagnosis update
+#                ("discordant_dx", may be absent); the format the clinicians deliver from 15 Nov. Such a record
+#                may also have a reassuring update ("discordant_reassure": the urgency goes down and the
+#                diagnosis stays; the reversal cases) and a neutral fact ("neutral": new but irrelevant)
+#   one-update   a single "discordant" update with a "changed" field; the fixture and the runs before 15 Nov
+# After a stable kind nothing should change; after a discordant kind the reference answer changes.
+STABLE_KINDS = ["supportive", "neutral"]
+DISCORDANT_KINDS = ["discordant", "discordant_urgency", "discordant_reassure", "discordant_dx"]
+SLOTS = ["opening", *STABLE_KINDS, *DISCORDANT_KINDS]      # every slot name an asset record may carry
+KIND_CODES = {"supportive": "sup", "neutral": "neu", "discordant": "dis", "discordant_urgency": "urg",
+              "discordant_reassure": "rsu", "discordant_dx": "ddx"}
+KIND_LABELS = {"supportive": "supportive update", "neutral": "neutral fact", "discordant": "discordant update",
+               "discordant_urgency": "urgency update", "discordant_reassure": "reassuring update",
+               "discordant_dx": "diagnosis update"}
+# The one-update conditions; update_conditions(record) gives the conditions of a particular vignette.
 UPDATE_CONDITIONS = [("none", 0)] + [("supportive", t) for t in UPDATE_TURNS] + [
     ("discordant", t) for t in UPDATE_TURNS
 ]
-URGENCY_LEVELS = ["A", "B", "C", "D"]  # A is the most urgent
+URGENCY_LEVELS = ["A", "B", "C", "D"]  # which end is most urgent is config: urgency_most_urgent_first
 N_FOLLOWUPS = 10
 N_REPLIES = 11
 CHANGED_VALUES = ["diagnosis", "urgency", "both"]
 UNCERTAINTY_VALUES = ["low", "medium", "high"]
 ASSET_STATUSES = ["draft", "auto_checked", "flagged", "approved"]
+
+
+def is_discordant(kind: str | None) -> bool:
+    return kind in DISCORDANT_KINDS
+
+
+def is_two_update(v: dict) -> bool:
+    """True for a vignette record in the two-update format."""
+    return "dx_update" in v or "urgency_update" in v
+
+
+def update_kinds(v: dict) -> list[str]:
+    """The update kinds a vignette record has, in the order they are built."""
+    if not is_two_update(v):
+        return ["supportive", "discordant"]
+    return (["supportive"] + (["neutral"] if v.get("neutral_update") else [])
+            + (["discordant_urgency"] if v.get("urgency_update") else [])
+            + (["discordant_reassure"] if v.get("reassuring_update") else [])
+            + (["discordant_dx"] if v.get("dx_update") else []))
+
+
+def update_conditions(v: dict) -> list[tuple[str, int]]:
+    """(kind, turn) for every conversation type of a vignette: no update, then each update at each timing."""
+    return [("none", 0)] + [(k, t) for k in update_kinds(v) for t in UPDATE_TURNS]
+
+
+def slots_for(v: dict) -> list[str]:
+    """The asset slots a vignette needs for each perspective and language."""
+    return ["opening", *update_kinds(v)]
+
+
+def update_text_field(kind: str) -> str:
+    """The vignette-record field that holds the English text of an update kind."""
+    return {"supportive": "supportive_update", "neutral": "neutral_update", "discordant": "discordant_update",
+            "discordant_urgency": "urgency_update", "discordant_reassure": "reassuring_update",
+            "discordant_dx": "dx_update"}[kind]
 
 
 # ---------------------------------------------------------------- files
@@ -104,14 +155,24 @@ def config_hash(cfg: dict) -> str:
     gen = {
         "stated_location": cfg.get("stated_location"),
         "urgency_levels": cfg.get("urgency_levels"),
+        **({"urgency_scale_version": cfg["urgency_scale_version"]} if cfg.get("urgency_scale_version") else {}),
         "max_tokens": cfg.get("max_tokens"),
         "cache_control": cfg.get("cache_control"),
         "models": {
-            name: {"api_model": m["api_model"], "request_options": m.get("request_options", {})}
+            name: {"api_model": m["api_model"], "request_options": m.get("request_options", {}),
+                   "max_tokens": m.get("max_tokens", cfg.get("max_tokens"))}
             for name, m in sorted(cfg["models"].items())
         },
     }
     return sha(gen)
+
+
+def urgency_rank(cfg: dict) -> dict[str, int]:
+    """Letter -> rank, 0 = most urgent, from config urgency_most_urgent_first (a permutation of A-D)."""
+    order = cfg.get("urgency_most_urgent_first")
+    if sorted(order or []) != URGENCY_LEVELS:
+        raise ValueError("config.json: urgency_most_urgent_first must list A, B, C and D once each, most urgent first")
+    return {u: i for i, u in enumerate(order)}
 
 
 def stage_names(cfg: dict) -> list[str]:

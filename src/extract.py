@@ -165,3 +165,21 @@ def extract(reply_text: str | None, stop_reason: str | None = None, committed: b
     else:
         out["status"] = "answered"
     return out
+
+
+RE_PROSE_LEVEL = re.compile(r"\(\s*([ABCD])\s*\)|\b(?i:level|urgency)\s*:?\s*([ABCD])\b(?!['’-])")
+
+
+def prose_levels(reply_text: str | None) -> list[str]:
+    """Urgency letters the prose names outright, outside the assessment block: "(C)", "level B", "urgency: A".
+
+    Used only to flag a reply whose prose names urgency levels that do not include the level in its block.
+    It is deliberately narrow: capital letters only, and it cannot read "come in today" as a level. So it
+    finds some contradictions, not all of them.
+    """
+    if not reply_text:
+        return []
+    text = normalise(reply_text)
+    m = RE_BLOCK_START.search(text)
+    prose = RE_MARKUP.sub("", text[: m.start()] if m else text)
+    return sorted({g.group(1) or g.group(2) for g in RE_PROSE_LEVEL.finditer(prose)})

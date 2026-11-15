@@ -70,8 +70,9 @@ def test_no_request_contains_gold_or_later_turns(tmp_path, cfg, scen):
             assert set(req) <= ALLOWED_REQUEST_KEYS
             assert not ({"temperature", "top_p", "top_k"} & set(req))
             assert req["cache_control"] == {"type": "ephemeral"}
-            assert req["thinking"] == cfg["models"][model]["request_options"]["thinking"]
-            assert req["max_tokens"] == 1024 and req["model"] == cfg["models"][model]["api_model"]
+            assert req.get("thinking") == cfg["models"][model]["request_options"].get("thinking")
+            assert req["max_tokens"] == cfg["models"][model].get("max_tokens", cfg["max_tokens"])
+            assert req["model"] == cfg["models"][model]["api_model"]
             # What the pipeline sends (system prompt and user turns). The model's own replies are its own words.
             text = (req["system"] + "\n" + "\n".join(m["content"] for m in req["messages"]
                                                      if m["role"] == "user")).lower()
@@ -93,9 +94,12 @@ def test_no_request_contains_gold_or_later_turns(tmp_path, cfg, scen):
 def test_build_request_per_model(cfg, scen):
     s = next(iter(load_scripts(scen).values()))
     h = build_request(s, ["first reply"], cfg["models"]["haiku"], cfg)
-    assert h["thinking"] == {"type": "disabled"} and h["model"] == "claude-haiku-5-5"
+    assert h["model"] == "claude-haiku-5-5"
+    assert h["thinking"] == {"type": "adaptive"} and h["output_config"] == {"effort": "medium"}   # thinking on, medium
+    assert h["max_tokens"] == cfg["models"]["haiku"]["max_tokens"] == 16000
     so = build_request(s, ["first reply"], cfg["models"]["sonnet"], cfg)
     assert so["thinking"] == {"type": "between_tools"} and so["model"] == "claude-sonnet-5-5"
+    assert so["max_tokens"] == cfg["max_tokens"] == 1024
     assert [m["role"] for m in h["messages"]] == ["user", "assistant", "user"]
     assert h["messages"][2]["content"] == s["turns"][0]
     bad = dict(cfg["models"]["haiku"], request_options={"temperature": 0.7})
@@ -178,7 +182,7 @@ def test_empty_reply_ends_conversation(tmp_path, cfg, scen):
     counts = reply_counts(r.db)
     assert all(counts[e[0]] == 4 for e in ended)
     dbm.update_blocks(r.db)
-    long_df = build_long_table(r.db, DiagnosisJudge(None, "t"))
+    long_df = build_long_table(r.db, DiagnosisJudge(None, "t"), cfg["urgency_most_urgent_first"])
     rows = long_df[long_df.job_id == ended[0][0]].sort_values("reply")
     assert rows.iloc[3]["status"] == "technical_failure"
     assert set(rows.iloc[4:]["status"]) == {"technical_failure"}
@@ -275,7 +279,7 @@ def test_scorer_recovers_mock_rates(tmp_path, scen):
     r = make_runner(tmp_path, cfg, scen, stage="1", mock_params=params)
     assert run(r) == EXIT_OK
     judge = DiagnosisJudge(None, "t", FunctionJudge(lambda t, g, k: ("Mock wrong diagnosis", "neither")))
-    long_df = build_long_table(r.db, judge)
+    long_df = build_long_table(r.db, judge, cfg["urgency_most_urgent_first"])
     conv = build_conversation_table(long_df)
     agg = aggregate(conv)
 
@@ -336,8 +340,15 @@ def test_chinese_and_japanese_round_trip(tmp_path, cfg, scen):
     js = {row["job_id"]: row for row in rows}
     one = r.db.execute("SELECT job_id, script_id FROM jobs WHERE script_id LIKE '%_ja_%' LIMIT 1").fetchone()
     assert js[one[0]]["turns"][0]["user"] == s_by[one[1]]["opening"]
+    # Markdown transcripts: one per conversation plus an index, Japanese text intact.
+    md_dir = tmp_path / "r1" / "transcripts" / "haiku"
+    md = (md_dir / f"{one[1]}_r1.md").read_text(encoding="utf-8")
+    assert s_by[one[1]]["opening"].splitlines()[0] in md and "こんにちは" in md
+    assert "## Summary" in md and "### Reply 11" in md and "```text" in md
+    assert len(list(md_dir.glob("*.md"))) == 36 * 5 + 1   # 36 scripts x 5 repeats, plus the index
+    assert "](" in (md_dir / "index.md").read_text(encoding="utf-8")
     dbm.update_blocks(r.db)
-    long_df = build_long_table(r.db, DiagnosisJudge(None, "t"), extractions_out=tmp_path / "ext.jsonl")
+    long_df = build_long_table(r.db, DiagnosisJudge(None, "t"), cfg["urgency_most_urgent_first"], extractions_out=tmp_path / "ext.jsonl")
     assert long_df["urgency"].notna().all()      # full-width blocks parsed
     p = tmp_path / "long.csv"
     long_df.to_csv(p, index=False, encoding="utf-8")

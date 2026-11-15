@@ -21,4 +21,5 @@ results/*
 *.sqlite-shm
 *.lock
 scenarios/scripts.jsonl
+scenarios/*.bak
 .pytest_cache/

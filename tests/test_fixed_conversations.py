@@ -4,7 +4,7 @@ Every expected value below was worked out by hand from the metric definitions in
 the scorer. Each conversation goes through the real path: run database -> extractor -> judge -> scorer.
 
 Shorthand: V00 starts at urgency C, "Chronic heart failure, not acutely decompensated" (CHF); after the discordant
-update it is urgency A, "Acute decompensated heart failure" (ADHF). The discordant update at turn T is answered at
+update it is urgency A (emergency; A is the most urgent level), "Acute decompensated heart failure" (ADHF). The discordant update at turn T is answered at
 reply T+1.
 """
 import json
@@ -203,7 +203,7 @@ def scored(tmp_path_factory):
         dbm.mark_job(db, job_id, "complete")
     dbm.update_blocks(db)
     judge = DiagnosisJudge(None, "test", FunctionJudge(stub))
-    long_df = build_long_table(db, judge)
+    long_df = build_long_table(db, judge, cfg["urgency_most_urgent_first"])
     return long_df
 
 

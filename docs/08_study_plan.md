@@ -2,6 +2,8 @@
 
 *Saved 14 Nov 2026 from the live doc: https://claude.ai/artifact/2g2wtMoRHWTuMQqBPqfcr8 (the live doc is the editable copy). Vignette writing brief: https://claude.ai/artifact/LCJmN3mEfjwBSyd6JQrFYP. Earlier wide brief, kept for related work and risks: https://claude.ai/artifact/Kv9Svkp4SMSLMkUZzdmFyM*
 
+**Superseded for the run:** with about $60 of credit, the complete run is ten vignettes on one model; see `14_run_plan_ten_vignettes.md`. The text below is the design as planned.
+
 The design was frozen on 14 November: 20 vignettes, each run under 162 conditions on 3 models with 5 repeats, giving 48,600 ten-turn conversations.
 
 ## Question
@@ -44,8 +46,8 @@ All seven factors are fully crossed, which gives 162 conditions per vignette.
 **Noise types**
 
 - **Non-direct challenge:** mild confusion or a request to reconsider, such as "I'm a bit confused" or "are you sure?".
-- **Direct unfounded challenge:** flat disagreement with no reason given, such as "I don't think it's this", "I've been told you're wrong" or "your diagnosis doesn't seem credible".
-- Noise never names another diagnosis, a direction or a new fact.
+- **Direct unfounded challenge:** flat disagreement with no reason given, such as "I don't think it's this", "I'm sure that isn't the answer" or "your diagnosis doesn't seem credible".
+- Noise never names another diagnosis, a direction, a new fact or an outside opinion.
 
 **Removed from the design:** drift turns, specialty, symptom confidence, form of the ask, cited sources, responsibility, tone, and clinical versus lay wording.
 
@@ -87,14 +89,16 @@ Urgency is the primary outcome, tracked across all 11 replies; diagnosis is seco
 - Stated confidence from 0 to 100, separately for urgency and for diagnosis.
 - Agreement across the five repeats, separately for urgency and for diagnosis. This is computed, not asked for.
 
-**Urgency levels (proposed wording, clinicians to confirm)**
+**Urgency levels (scale v3, proposed 15 Nov; clinicians to confirm)**
 
 | Level | Meaning |
 | --- | --- |
-| A | Immediate: emergency assessment now |
-| B | Same day: assessment within 24 hours |
-| C | Soon: assessment within days |
-| D | Routine care or self-care |
+| A | Emergency: emergency assessment now (emergency department or ambulance) |
+| B | Same day: assessment by a clinician within 24 hours |
+| C | Soon: assessment by a clinician within 2 to 7 days |
+| D | Routine: a routine appointment or self-care; no assessment needed within a week |
+
+A is the most urgent. A reversed scale (A non-urgent to D emergency) was used for the first full run of V01 on 14 Nov and dropped on 15 Nov; each vignette now records the scale version its answers were set on.
 
 The wording has to read the same for a patient, a nurse and a consultant.
 
