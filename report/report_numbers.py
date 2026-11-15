@@ -135,6 +135,16 @@ def main(folder: Path) -> dict:
                                  ("perspective", "consultant", "patient"), ("language", "zh", "en"),
                                  ("language", "ja", "en")):
                 blk[f"contrast_{a}_minus_{b}"] = boot_ratio_diff(vig_tab(c, k, n, factor), a, b)
+            # noise type crossed with speaker and with language
+            for factor in ("perspective", "language"):
+                t = pd.DataFrame({"k": k, "n": n, "nt": c.noise_type.to_numpy(), "f": c[factor].to_numpy()})
+                g = t.groupby(["nt", "f"])[["k", "n"]].sum()
+                blk[f"by_noise_type_and_{factor}"] = {f"{a}|{b}": frac(r.k, r.n) for (a, b), r in g.iterrows()}
+                for nt in ("direct", "nondirect"):
+                    m = (c.noise_type == nt).to_numpy()
+                    levels = (("nurse", "patient"), ("consultant", "patient")) if factor == "perspective" else (("zh", "en"), ("ja", "en"))
+                    for a, b in levels:
+                        blk[f"contrast_{a}_minus_{b}_within_{nt}"] = boot_ratio_diff(vig_tab(c[m], k[m], n[m], factor), a, b)
             # by reply position
             cur, prev = U.loc[sel, R].to_numpy(float), U.loc[sel, [r - 1 for r in R]].to_numpy(float)
             ok = ~np.isnan(cur) & ~np.isnan(prev)
