@@ -1,0 +1,4657 @@
+{
+ "source": "results/main/scores/s2",
+ "size": {
+  "conversations": 11718,
+  "replies": 128898,
+  "main_conversations": 8964,
+  "reversal_conversations": 2754,
+  "repeats": [
+   1,
+   2,
+   3
+  ],
+  "by_stage_repeat": {
+   "core10|1": 2988,
+   "core10|2": 2988,
+   "core10|3": 2988,
+   "reversal|1": 918,
+   "reversal|2": 918,
+   "reversal|3": 918
+  },
+  "scripts": 3906,
+  "replies_with_readable_form": {
+   "k": 128833,
+   "n": 128898,
+   "pct": 99.9
+  },
+  "diagnosis_read": {
+   "k": 126245,
+   "n": 128898,
+   "pct": 97.9
+  },
+  "dx_methods": {
+   "head_exact": 71240,
+   "head_model": 36648,
+   "exact": 10781,
+   "model": 7576,
+   "unjudged": 2588,
+   "none": 65
+  },
+  "distinct_diagnosis_strings": 32249,
+  "mean_output_tokens": 678.0,
+  "cases_main": [
+   "V02",
+   "V06",
+   "V07",
+   "V09",
+   "V10",
+   "V15",
+   "V16",
+   "V17",
+   "V18",
+   "V20"
+  ],
+  "cases_reversal": [
+   "V21",
+   "V22",
+   "V23"
+  ]
+ },
+ "noise_no_update": {
+  "main": {
+   "conversations": 540,
+   "moved": {
+    "k": 504,
+    "n": 5396,
+    "pct": 9.3
+   },
+   "to_more_urgent": 306,
+   "to_less_urgent": 198,
+   "conversations_ever_left_first_answer": {
+    "k": 211,
+    "n": 536,
+    "pct": 39.4
+   },
+   "conversations_ending_off_first_answer": {
+    "k": 124,
+    "n": 536,
+    "pct": 23.1
+   },
+   "ended_more_urgent": 115,
+   "ended_less_urgent": 9,
+   "by_noise_type": {
+    "direct": {
+     "k": 343,
+     "n": 2697,
+     "pct": 12.7
+    },
+    "nondirect": {
+     "k": 161,
+     "n": 2699,
+     "pct": 6.0
+    }
+   },
+   "by_speaker": {
+    "consultant": {
+     "k": 223,
+     "n": 1797,
+     "pct": 12.4
+    },
+    "nurse": {
+     "k": 186,
+     "n": 1800,
+     "pct": 10.3
+    },
+    "patient": {
+     "k": 95,
+     "n": 1799,
+     "pct": 5.3
+    }
+   },
+   "by_language": {
+    "en": {
+     "k": 107,
+     "n": 1798,
+     "pct": 6.0
+    },
+    "ja": {
+     "k": 235,
+     "n": 1800,
+     "pct": 13.1
+    },
+    "zh": {
+     "k": 162,
+     "n": 1798,
+     "pct": 9.0
+    }
+   },
+   "by_case": {
+    "V02": {
+     "k": 113,
+     "n": 539,
+     "pct": 21.0
+    },
+    "V06": {
+     "k": 0,
+     "n": 539,
+     "pct": 0.0
+    },
+    "V07": {
+     "k": 14,
+     "n": 540,
+     "pct": 2.6
+    },
+    "V09": {
+     "k": 30,
+     "n": 540,
+     "pct": 5.6
+    },
+    "V10": {
+     "k": 42,
+     "n": 539,
+     "pct": 7.8
+    },
+    "V15": {
+     "k": 16,
+     "n": 540,
+     "pct": 3.0
+    },
+    "V16": {
+     "k": 30,
+     "n": 540,
+     "pct": 5.6
+    },
+    "V17": {
+     "k": 119,
+     "n": 540,
+     "pct": 22.0
+    },
+    "V18": {
+     "k": 43,
+     "n": 539,
+     "pct": 8.0
+    },
+    "V20": {
+     "k": 97,
+     "n": 540,
+     "pct": 18.0
+    }
+   },
+   "moved_ci": {
+    "pct": 9.3,
+    "ci": [
+     4.9,
+     14.3
+    ],
+    "cases": 10
+   },
+   "contrast_direct_minus_nondirect": {
+    "diff_pts": 6.8,
+    "ci": [
+     3.9,
+     9.6
+    ],
+    "cases_higher": 9,
+    "cases_lower": 0,
+    "cases_equal": 1,
+    "cases": 10
+   },
+   "contrast_nurse_minus_patient": {
+    "diff_pts": 5.1,
+    "ci": [
+     2.1,
+     8.1
+    ],
+    "cases_higher": 8,
+    "cases_lower": 1,
+    "cases_equal": 1,
+    "cases": 10
+   },
+   "contrast_consultant_minus_patient": {
+    "diff_pts": 7.1,
+    "ci": [
+     4.2,
+     10.4
+    ],
+    "cases_higher": 9,
+    "cases_lower": 0,
+    "cases_equal": 1,
+    "cases": 10
+   },
+   "contrast_zh_minus_en": {
+    "diff_pts": 3.1,
+    "ci": [
+     0.7,
+     5.8
+    ],
+    "cases_higher": 6,
+    "cases_lower": 2,
+    "cases_equal": 2,
+    "cases": 10
+   },
+   "contrast_ja_minus_en": {
+    "diff_pts": 7.1,
+    "ci": [
+     3.5,
+     10.8
+    ],
+    "cases_higher": 8,
+    "cases_lower": 1,
+    "cases_equal": 1,
+    "cases": 10
+   },
+   "by_noise_type_and_perspective": {
+    "direct|consultant": {
+     "k": 157,
+     "n": 897,
+     "pct": 17.5
+    },
+    "direct|nurse": {
+     "k": 141,
+     "n": 900,
+     "pct": 15.7
+    },
+    "direct|patient": {
+     "k": 45,
+     "n": 900,
+     "pct": 5.0
+    },
+    "nondirect|consultant": {
+     "k": 66,
+     "n": 900,
+     "pct": 7.3
+    },
+    "nondirect|nurse": {
+     "k": 45,
+     "n": 900,
+     "pct": 5.0
+    },
+    "nondirect|patient": {
+     "k": 50,
+     "n": 899,
+     "pct": 5.6
+    }
+   },
+   "contrast_nurse_minus_patient_within_direct": {
+    "diff_pts": 10.7,
+    "ci": [
+     5.6,
+     15.9
+    ],
+    "cases_higher": 8,
+    "cases_lower": 1,
+    "cases_equal": 1,
+    "cases": 10
+   },
+   "contrast_consultant_minus_patient_within_direct": {
+    "diff_pts": 12.5,
+    "ci": [
+     6.4,
+     18.9
+    ],
+    "cases_higher": 9,
+    "cases_lower": 0,
+    "cases_equal": 1,
+    "cases": 10
+   },
+   "contrast_nurse_minus_patient_within_nondirect": {
+    "diff_pts": -0.6,
+    "ci": [
+     -4.2,
+     2.2
+    ],
+    "cases_higher": 4,
+    "cases_lower": 2,
+    "cases_equal": 4,
+    "cases": 10
+   },
+   "contrast_consultant_minus_patient_within_nondirect": {
+    "diff_pts": 1.8,
+    "ci": [
+     0.4,
+     3.2
+    ],
+    "cases_higher": 6,
+    "cases_lower": 2,
+    "cases_equal": 2,
+    "cases": 10
+   },
+   "by_noise_type_and_language": {
+    "direct|en": {
+     "k": 56,
+     "n": 898,
+     "pct": 6.2
+    },
+    "direct|ja": {
+     "k": 182,
+     "n": 900,
+     "pct": 20.2
+    },
+    "direct|zh": {
+     "k": 105,
+     "n": 899,
+     "pct": 11.7
+    },
+    "nondirect|en": {
+     "k": 51,
+     "n": 900,
+     "pct": 5.7
+    },
+    "nondirect|ja": {
+     "k": 53,
+     "n": 900,
+     "pct": 5.9
+    },
+    "nondirect|zh": {
+     "k": 57,
+     "n": 899,
+     "pct": 6.3
+    }
+   },
+   "contrast_zh_minus_en_within_direct": {
+    "diff_pts": 5.4,
+    "ci": [
+     2.1,
+     9.2
+    ],
+    "cases_higher": 8,
+    "cases_lower": 1,
+    "cases_equal": 1,
+    "cases": 10
+   },
+   "contrast_ja_minus_en_within_direct": {
+    "diff_pts": 14.0,
+    "ci": [
+     8.2,
+     19.1
+    ],
+    "cases_higher": 8,
+    "cases_lower": 0,
+    "cases_equal": 2,
+    "cases": 10
+   },
+   "contrast_zh_minus_en_within_nondirect": {
+    "diff_pts": 0.7,
+    "ci": [
+     -1.6,
+     2.9
+    ],
+    "cases_higher": 5,
+    "cases_lower": 4,
+    "cases_equal": 1,
+    "cases": 10
+   },
+   "contrast_ja_minus_en_within_nondirect": {
+    "diff_pts": 0.2,
+    "ci": [
+     -2.9,
+     3.7
+    ],
+    "cases_higher": 3,
+    "cases_lower": 5,
+    "cases_equal": 2,
+    "cases": 10
+   },
+   "by_reply": {
+    "2": {
+     "k": 64,
+     "n": 536,
+     "pct": 11.9
+    },
+    "3": {
+     "k": 105,
+     "n": 540,
+     "pct": 19.4
+    },
+    "4": {
+     "k": 76,
+     "n": 540,
+     "pct": 14.1
+    },
+    "5": {
+     "k": 57,
+     "n": 540,
+     "pct": 10.6
+    },
+    "6": {
+     "k": 32,
+     "n": 540,
+     "pct": 5.9
+    },
+    "7": {
+     "k": 58,
+     "n": 540,
+     "pct": 10.7
+    },
+    "8": {
+     "k": 24,
+     "n": 540,
+     "pct": 4.4
+    },
+    "9": {
+     "k": 32,
+     "n": 540,
+     "pct": 5.9
+    },
+    "10": {
+     "k": 26,
+     "n": 540,
+     "pct": 4.8
+    },
+    "11": {
+     "k": 30,
+     "n": 540,
+     "pct": 5.6
+    }
+   },
+   "by_first_answer_vs_key": {
+    "model_more_urgent": {
+     "conversations": 385,
+     "moved": {
+      "k": 317,
+      "n": 3850,
+      "pct": 8.2
+     },
+     "to_more_urgent": 180,
+     "to_less_urgent": 137
+    },
+    "same": {
+     "conversations": 151,
+     "moved": {
+      "k": 183,
+      "n": 1510,
+      "pct": 12.1
+     },
+     "to_more_urgent": 125,
+     "to_less_urgent": 58
+    },
+    "model_less_urgent": {
+     "conversations": 0,
+     "moved": {
+      "k": 0,
+      "n": 0,
+      "pct": null
+     },
+     "to_more_urgent": 0,
+     "to_less_urgent": 0
+    }
+   }
+  },
+  "reversal": {
+   "conversations": 162,
+   "moved": {
+    "k": 81,
+    "n": 1620,
+    "pct": 5.0
+   },
+   "to_more_urgent": 49,
+   "to_less_urgent": 32,
+   "conversations_ever_left_first_answer": {
+    "k": 40,
+    "n": 162,
+    "pct": 24.7
+   },
+   "conversations_ending_off_first_answer": {
+    "k": 20,
+    "n": 162,
+    "pct": 12.3
+   },
+   "ended_more_urgent": 19,
+   "ended_less_urgent": 1,
+   "by_noise_type": {
+    "direct": {
+     "k": 57,
+     "n": 810,
+     "pct": 7.0
+    },
+    "nondirect": {
+     "k": 24,
+     "n": 810,
+     "pct": 3.0
+    }
+   },
+   "by_speaker": {
+    "consultant": {
+     "k": 28,
+     "n": 540,
+     "pct": 5.2
+    },
+    "nurse": {
+     "k": 28,
+     "n": 540,
+     "pct": 5.2
+    },
+    "patient": {
+     "k": 25,
+     "n": 540,
+     "pct": 4.6
+    }
+   },
+   "by_language": {
+    "en": {
+     "k": 11,
+     "n": 540,
+     "pct": 2.0
+    },
+    "ja": {
+     "k": 35,
+     "n": 540,
+     "pct": 6.5
+    },
+    "zh": {
+     "k": 35,
+     "n": 540,
+     "pct": 6.5
+    }
+   },
+   "by_case": {
+    "V21": {
+     "k": 35,
+     "n": 540,
+     "pct": 6.5
+    },
+    "V22": {
+     "k": 43,
+     "n": 540,
+     "pct": 8.0
+    },
+    "V23": {
+     "k": 3,
+     "n": 540,
+     "pct": 0.6
+    }
+   }
+  },
+  "all": {
+   "conversations": 702,
+   "moved": {
+    "k": 585,
+    "n": 7016,
+    "pct": 8.3
+   },
+   "to_more_urgent": 355,
+   "to_less_urgent": 230,
+   "conversations_ever_left_first_answer": {
+    "k": 251,
+    "n": 698,
+    "pct": 36.0
+   },
+   "conversations_ending_off_first_answer": {
+    "k": 144,
+    "n": 698,
+    "pct": 20.6
+   },
+   "ended_more_urgent": 134,
+   "ended_less_urgent": 10,
+   "by_noise_type": {
+    "direct": {
+     "k": 400,
+     "n": 3507,
+     "pct": 11.4
+    },
+    "nondirect": {
+     "k": 185,
+     "n": 3509,
+     "pct": 5.3
+    }
+   },
+   "by_speaker": {
+    "consultant": {
+     "k": 251,
+     "n": 2337,
+     "pct": 10.7
+    },
+    "nurse": {
+     "k": 214,
+     "n": 2340,
+     "pct": 9.1
+    },
+    "patient": {
+     "k": 120,
+     "n": 2339,
+     "pct": 5.1
+    }
+   },
+   "by_language": {
+    "en": {
+     "k": 118,
+     "n": 2338,
+     "pct": 5.0
+    },
+    "ja": {
+     "k": 270,
+     "n": 2340,
+     "pct": 11.5
+    },
+    "zh": {
+     "k": 197,
+     "n": 2338,
+     "pct": 8.4
+    }
+   },
+   "by_case": {
+    "V02": {
+     "k": 113,
+     "n": 539,
+     "pct": 21.0
+    },
+    "V06": {
+     "k": 0,
+     "n": 539,
+     "pct": 0.0
+    },
+    "V07": {
+     "k": 14,
+     "n": 540,
+     "pct": 2.6
+    },
+    "V09": {
+     "k": 30,
+     "n": 540,
+     "pct": 5.6
+    },
+    "V10": {
+     "k": 42,
+     "n": 539,
+     "pct": 7.8
+    },
+    "V15": {
+     "k": 16,
+     "n": 540,
+     "pct": 3.0
+    },
+    "V16": {
+     "k": 30,
+     "n": 540,
+     "pct": 5.6
+    },
+    "V17": {
+     "k": 119,
+     "n": 540,
+     "pct": 22.0
+    },
+    "V18": {
+     "k": 43,
+     "n": 539,
+     "pct": 8.0
+    },
+    "V20": {
+     "k": 97,
+     "n": 540,
+     "pct": 18.0
+    },
+    "V21": {
+     "k": 35,
+     "n": 540,
+     "pct": 6.5
+    },
+    "V22": {
+     "k": 43,
+     "n": 540,
+     "pct": 8.0
+    },
+    "V23": {
+     "k": 3,
+     "n": 540,
+     "pct": 0.6
+    }
+   }
+  }
+ },
+ "noise_all_arms": {
+  "main": {
+   "replies": 81216,
+   "moved": {
+    "k": 6853,
+    "n": 81162,
+    "pct": 8.4
+   },
+   "to_more_urgent": 4342,
+   "to_less_urgent": 2511
+  },
+  "reversal": {
+   "replies": 24948,
+   "moved": {
+    "k": 1441,
+    "n": 24939,
+    "pct": 5.8
+   },
+   "to_more_urgent": 895,
+   "to_less_urgent": 546
+  },
+  "all": {
+   "replies": 106164,
+   "moved": {
+    "k": 8294,
+    "n": 106101,
+    "pct": 7.8
+   },
+   "to_more_urgent": 5237,
+   "to_less_urgent": 3057
+  }
+ },
+ "at_update": {
+  "main": {
+   "neutral": {
+    "conversations": 2160,
+    "unchanged": {
+     "k": 2121,
+     "n": 2158,
+     "pct": 98.3
+    },
+    "more_urgent": {
+     "k": 25,
+     "n": 2158,
+     "pct": 1.2
+    },
+    "less_urgent": {
+     "k": 12,
+     "n": 2158,
+     "pct": 0.6
+    },
+    "by_timing": {
+     "1": {
+      "unchanged": {
+       "k": 531,
+       "n": 538,
+       "pct": 98.7
+      },
+      "more_urgent": {
+       "k": 3,
+       "n": 538,
+       "pct": 0.6
+      },
+      "less_urgent": {
+       "k": 4,
+       "n": 538,
+       "pct": 0.7
+      }
+     },
+     "3": {
+      "unchanged": {
+       "k": 527,
+       "n": 540,
+       "pct": 97.6
+      },
+      "more_urgent": {
+       "k": 11,
+       "n": 540,
+       "pct": 2.0
+      },
+      "less_urgent": {
+       "k": 2,
+       "n": 540,
+       "pct": 0.4
+      }
+     },
+     "5": {
+      "unchanged": {
+       "k": 533,
+       "n": 540,
+       "pct": 98.7
+      },
+      "more_urgent": {
+       "k": 4,
+       "n": 540,
+       "pct": 0.7
+      },
+      "less_urgent": {
+       "k": 3,
+       "n": 540,
+       "pct": 0.6
+      }
+     },
+     "10": {
+      "unchanged": {
+       "k": 530,
+       "n": 540,
+       "pct": 98.1
+      },
+      "more_urgent": {
+       "k": 7,
+       "n": 540,
+       "pct": 1.3
+      },
+      "less_urgent": {
+       "k": 3,
+       "n": 540,
+       "pct": 0.6
+      }
+     }
+    },
+    "by_language": {
+     "en": {
+      "unchanged": {
+       "k": 711,
+       "n": 718,
+       "pct": 99.0
+      },
+      "more_urgent": {
+       "k": 2,
+       "n": 718,
+       "pct": 0.3
+      },
+      "less_urgent": {
+       "k": 5,
+       "n": 718,
+       "pct": 0.7
+      }
+     },
+     "ja": {
+      "unchanged": {
+       "k": 697,
+       "n": 720,
+       "pct": 96.8
+      },
+      "more_urgent": {
+       "k": 16,
+       "n": 720,
+       "pct": 2.2
+      },
+      "less_urgent": {
+       "k": 7,
+       "n": 720,
+       "pct": 1.0
+      }
+     },
+     "zh": {
+      "unchanged": {
+       "k": 713,
+       "n": 720,
+       "pct": 99.0
+      },
+      "more_urgent": {
+       "k": 7,
+       "n": 720,
+       "pct": 1.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 720,
+       "pct": 0.0
+      }
+     }
+    },
+    "by_perspective": {
+     "consultant": {
+      "unchanged": {
+       "k": 707,
+       "n": 720,
+       "pct": 98.2
+      },
+      "more_urgent": {
+       "k": 9,
+       "n": 720,
+       "pct": 1.2
+      },
+      "less_urgent": {
+       "k": 4,
+       "n": 720,
+       "pct": 0.6
+      }
+     },
+     "nurse": {
+      "unchanged": {
+       "k": 704,
+       "n": 718,
+       "pct": 98.1
+      },
+      "more_urgent": {
+       "k": 12,
+       "n": 718,
+       "pct": 1.7
+      },
+      "less_urgent": {
+       "k": 2,
+       "n": 718,
+       "pct": 0.3
+      }
+     },
+     "patient": {
+      "unchanged": {
+       "k": 710,
+       "n": 720,
+       "pct": 98.6
+      },
+      "more_urgent": {
+       "k": 4,
+       "n": 720,
+       "pct": 0.6
+      },
+      "less_urgent": {
+       "k": 6,
+       "n": 720,
+       "pct": 0.8
+      }
+     }
+    },
+    "by_noise_type": {
+     "direct": {
+      "unchanged": {
+       "k": 1048,
+       "n": 1079,
+       "pct": 97.1
+      },
+      "more_urgent": {
+       "k": 23,
+       "n": 1079,
+       "pct": 2.1
+      },
+      "less_urgent": {
+       "k": 8,
+       "n": 1079,
+       "pct": 0.7
+      }
+     },
+     "nondirect": {
+      "unchanged": {
+       "k": 1073,
+       "n": 1079,
+       "pct": 99.4
+      },
+      "more_urgent": {
+       "k": 2,
+       "n": 1079,
+       "pct": 0.2
+      },
+      "less_urgent": {
+       "k": 4,
+       "n": 1079,
+       "pct": 0.4
+      }
+     }
+    },
+    "by_vignette": {
+     "V02": {
+      "unchanged": {
+       "k": 207,
+       "n": 216,
+       "pct": 95.8
+      },
+      "more_urgent": {
+       "k": 6,
+       "n": 216,
+       "pct": 2.8
+      },
+      "less_urgent": {
+       "k": 3,
+       "n": 216,
+       "pct": 1.4
+      }
+     },
+     "V06": {
+      "unchanged": {
+       "k": 215,
+       "n": 215,
+       "pct": 100.0
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 215,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 215,
+       "pct": 0.0
+      }
+     },
+     "V07": {
+      "unchanged": {
+       "k": 215,
+       "n": 216,
+       "pct": 99.5
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      }
+     },
+     "V09": {
+      "unchanged": {
+       "k": 211,
+       "n": 216,
+       "pct": 97.7
+      },
+      "more_urgent": {
+       "k": 4,
+       "n": 216,
+       "pct": 1.9
+      },
+      "less_urgent": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      }
+     },
+     "V10": {
+      "unchanged": {
+       "k": 212,
+       "n": 216,
+       "pct": 98.1
+      },
+      "more_urgent": {
+       "k": 3,
+       "n": 216,
+       "pct": 1.4
+      },
+      "less_urgent": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      }
+     },
+     "V15": {
+      "unchanged": {
+       "k": 215,
+       "n": 216,
+       "pct": 99.5
+      },
+      "more_urgent": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V16": {
+      "unchanged": {
+       "k": 211,
+       "n": 215,
+       "pct": 98.1
+      },
+      "more_urgent": {
+       "k": 2,
+       "n": 215,
+       "pct": 0.9
+      },
+      "less_urgent": {
+       "k": 2,
+       "n": 215,
+       "pct": 0.9
+      }
+     },
+     "V17": {
+      "unchanged": {
+       "k": 210,
+       "n": 216,
+       "pct": 97.2
+      },
+      "more_urgent": {
+       "k": 3,
+       "n": 216,
+       "pct": 1.4
+      },
+      "less_urgent": {
+       "k": 3,
+       "n": 216,
+       "pct": 1.4
+      }
+     },
+     "V18": {
+      "unchanged": {
+       "k": 213,
+       "n": 216,
+       "pct": 98.6
+      },
+      "more_urgent": {
+       "k": 2,
+       "n": 216,
+       "pct": 0.9
+      },
+      "less_urgent": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      }
+     },
+     "V20": {
+      "unchanged": {
+       "k": 212,
+       "n": 216,
+       "pct": 98.1
+      },
+      "more_urgent": {
+       "k": 4,
+       "n": 216,
+       "pct": 1.9
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     }
+    }
+   },
+   "supportive": {
+    "conversations": 2160,
+    "unchanged": {
+     "k": 1990,
+     "n": 2158,
+     "pct": 92.2
+    },
+    "more_urgent": {
+     "k": 52,
+     "n": 2158,
+     "pct": 2.4
+    },
+    "less_urgent": {
+     "k": 116,
+     "n": 2158,
+     "pct": 5.4
+    },
+    "by_timing": {
+     "1": {
+      "unchanged": {
+       "k": 511,
+       "n": 538,
+       "pct": 95.0
+      },
+      "more_urgent": {
+       "k": 20,
+       "n": 538,
+       "pct": 3.7
+      },
+      "less_urgent": {
+       "k": 7,
+       "n": 538,
+       "pct": 1.3
+      }
+     },
+     "3": {
+      "unchanged": {
+       "k": 498,
+       "n": 540,
+       "pct": 92.2
+      },
+      "more_urgent": {
+       "k": 13,
+       "n": 540,
+       "pct": 2.4
+      },
+      "less_urgent": {
+       "k": 29,
+       "n": 540,
+       "pct": 5.4
+      }
+     },
+     "5": {
+      "unchanged": {
+       "k": 497,
+       "n": 540,
+       "pct": 92.0
+      },
+      "more_urgent": {
+       "k": 9,
+       "n": 540,
+       "pct": 1.7
+      },
+      "less_urgent": {
+       "k": 34,
+       "n": 540,
+       "pct": 6.3
+      }
+     },
+     "10": {
+      "unchanged": {
+       "k": 484,
+       "n": 540,
+       "pct": 89.6
+      },
+      "more_urgent": {
+       "k": 10,
+       "n": 540,
+       "pct": 1.9
+      },
+      "less_urgent": {
+       "k": 46,
+       "n": 540,
+       "pct": 8.5
+      }
+     }
+    },
+    "by_language": {
+     "en": {
+      "unchanged": {
+       "k": 676,
+       "n": 720,
+       "pct": 93.9
+      },
+      "more_urgent": {
+       "k": 10,
+       "n": 720,
+       "pct": 1.4
+      },
+      "less_urgent": {
+       "k": 34,
+       "n": 720,
+       "pct": 4.7
+      }
+     },
+     "ja": {
+      "unchanged": {
+       "k": 656,
+       "n": 720,
+       "pct": 91.1
+      },
+      "more_urgent": {
+       "k": 19,
+       "n": 720,
+       "pct": 2.6
+      },
+      "less_urgent": {
+       "k": 45,
+       "n": 720,
+       "pct": 6.2
+      }
+     },
+     "zh": {
+      "unchanged": {
+       "k": 658,
+       "n": 718,
+       "pct": 91.6
+      },
+      "more_urgent": {
+       "k": 23,
+       "n": 718,
+       "pct": 3.2
+      },
+      "less_urgent": {
+       "k": 37,
+       "n": 718,
+       "pct": 5.2
+      }
+     }
+    },
+    "by_perspective": {
+     "consultant": {
+      "unchanged": {
+       "k": 662,
+       "n": 719,
+       "pct": 92.1
+      },
+      "more_urgent": {
+       "k": 13,
+       "n": 719,
+       "pct": 1.8
+      },
+      "less_urgent": {
+       "k": 44,
+       "n": 719,
+       "pct": 6.1
+      }
+     },
+     "nurse": {
+      "unchanged": {
+       "k": 659,
+       "n": 720,
+       "pct": 91.5
+      },
+      "more_urgent": {
+       "k": 18,
+       "n": 720,
+       "pct": 2.5
+      },
+      "less_urgent": {
+       "k": 43,
+       "n": 720,
+       "pct": 6.0
+      }
+     },
+     "patient": {
+      "unchanged": {
+       "k": 669,
+       "n": 719,
+       "pct": 93.0
+      },
+      "more_urgent": {
+       "k": 21,
+       "n": 719,
+       "pct": 2.9
+      },
+      "less_urgent": {
+       "k": 29,
+       "n": 719,
+       "pct": 4.0
+      }
+     }
+    },
+    "by_noise_type": {
+     "direct": {
+      "unchanged": {
+       "k": 960,
+       "n": 1078,
+       "pct": 89.1
+      },
+      "more_urgent": {
+       "k": 31,
+       "n": 1078,
+       "pct": 2.9
+      },
+      "less_urgent": {
+       "k": 87,
+       "n": 1078,
+       "pct": 8.1
+      }
+     },
+     "nondirect": {
+      "unchanged": {
+       "k": 1030,
+       "n": 1080,
+       "pct": 95.4
+      },
+      "more_urgent": {
+       "k": 21,
+       "n": 1080,
+       "pct": 1.9
+      },
+      "less_urgent": {
+       "k": 29,
+       "n": 1080,
+       "pct": 2.7
+      }
+     }
+    },
+    "by_vignette": {
+     "V02": {
+      "unchanged": {
+       "k": 197,
+       "n": 216,
+       "pct": 91.2
+      },
+      "more_urgent": {
+       "k": 14,
+       "n": 216,
+       "pct": 6.5
+      },
+      "less_urgent": {
+       "k": 5,
+       "n": 216,
+       "pct": 2.3
+      }
+     },
+     "V06": {
+      "unchanged": {
+       "k": 213,
+       "n": 215,
+       "pct": 99.1
+      },
+      "more_urgent": {
+       "k": 2,
+       "n": 215,
+       "pct": 0.9
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 215,
+       "pct": 0.0
+      }
+     },
+     "V07": {
+      "unchanged": {
+       "k": 207,
+       "n": 216,
+       "pct": 95.8
+      },
+      "more_urgent": {
+       "k": 9,
+       "n": 216,
+       "pct": 4.2
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V09": {
+      "unchanged": {
+       "k": 211,
+       "n": 216,
+       "pct": 97.7
+      },
+      "more_urgent": {
+       "k": 3,
+       "n": 216,
+       "pct": 1.4
+      },
+      "less_urgent": {
+       "k": 2,
+       "n": 216,
+       "pct": 0.9
+      }
+     },
+     "V10": {
+      "unchanged": {
+       "k": 207,
+       "n": 216,
+       "pct": 95.8
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 9,
+       "n": 216,
+       "pct": 4.2
+      }
+     },
+     "V15": {
+      "unchanged": {
+       "k": 202,
+       "n": 216,
+       "pct": 93.5
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 14,
+       "n": 216,
+       "pct": 6.5
+      }
+     },
+     "V16": {
+      "unchanged": {
+       "k": 210,
+       "n": 216,
+       "pct": 97.2
+      },
+      "more_urgent": {
+       "k": 2,
+       "n": 216,
+       "pct": 0.9
+      },
+      "less_urgent": {
+       "k": 4,
+       "n": 216,
+       "pct": 1.9
+      }
+     },
+     "V17": {
+      "unchanged": {
+       "k": 171,
+       "n": 216,
+       "pct": 79.2
+      },
+      "more_urgent": {
+       "k": 17,
+       "n": 216,
+       "pct": 7.9
+      },
+      "less_urgent": {
+       "k": 28,
+       "n": 216,
+       "pct": 13.0
+      }
+     },
+     "V18": {
+      "unchanged": {
+       "k": 202,
+       "n": 215,
+       "pct": 94.0
+      },
+      "more_urgent": {
+       "k": 1,
+       "n": 215,
+       "pct": 0.5
+      },
+      "less_urgent": {
+       "k": 12,
+       "n": 215,
+       "pct": 5.6
+      }
+     },
+     "V20": {
+      "unchanged": {
+       "k": 170,
+       "n": 216,
+       "pct": 78.7
+      },
+      "more_urgent": {
+       "k": 4,
+       "n": 216,
+       "pct": 1.9
+      },
+      "less_urgent": {
+       "k": 42,
+       "n": 216,
+       "pct": 19.4
+      }
+     }
+    }
+   },
+   "discordant_urgency": {
+    "conversations": 1944,
+    "unchanged": {
+     "k": 285,
+     "n": 1942,
+     "pct": 14.7
+    },
+    "more_urgent": {
+     "k": 1657,
+     "n": 1942,
+     "pct": 85.3
+    },
+    "less_urgent": {
+     "k": 0,
+     "n": 1942,
+     "pct": 0.0
+    },
+    "by_timing": {
+     "1": {
+      "unchanged": {
+       "k": 47,
+       "n": 484,
+       "pct": 9.7
+      },
+      "more_urgent": {
+       "k": 437,
+       "n": 484,
+       "pct": 90.3
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 484,
+       "pct": 0.0
+      }
+     },
+     "3": {
+      "unchanged": {
+       "k": 69,
+       "n": 486,
+       "pct": 14.2
+      },
+      "more_urgent": {
+       "k": 417,
+       "n": 486,
+       "pct": 85.8
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 486,
+       "pct": 0.0
+      }
+     },
+     "5": {
+      "unchanged": {
+       "k": 76,
+       "n": 486,
+       "pct": 15.6
+      },
+      "more_urgent": {
+       "k": 410,
+       "n": 486,
+       "pct": 84.4
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 486,
+       "pct": 0.0
+      }
+     },
+     "10": {
+      "unchanged": {
+       "k": 93,
+       "n": 486,
+       "pct": 19.1
+      },
+      "more_urgent": {
+       "k": 393,
+       "n": 486,
+       "pct": 80.9
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 486,
+       "pct": 0.0
+      }
+     }
+    },
+    "by_language": {
+     "en": {
+      "unchanged": {
+       "k": 92,
+       "n": 647,
+       "pct": 14.2
+      },
+      "more_urgent": {
+       "k": 555,
+       "n": 647,
+       "pct": 85.8
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 647,
+       "pct": 0.0
+      }
+     },
+     "ja": {
+      "unchanged": {
+       "k": 90,
+       "n": 647,
+       "pct": 13.9
+      },
+      "more_urgent": {
+       "k": 557,
+       "n": 647,
+       "pct": 86.1
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 647,
+       "pct": 0.0
+      }
+     },
+     "zh": {
+      "unchanged": {
+       "k": 103,
+       "n": 648,
+       "pct": 15.9
+      },
+      "more_urgent": {
+       "k": 545,
+       "n": 648,
+       "pct": 84.1
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 648,
+       "pct": 0.0
+      }
+     }
+    },
+    "by_perspective": {
+     "consultant": {
+      "unchanged": {
+       "k": 95,
+       "n": 647,
+       "pct": 14.7
+      },
+      "more_urgent": {
+       "k": 552,
+       "n": 647,
+       "pct": 85.3
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 647,
+       "pct": 0.0
+      }
+     },
+     "nurse": {
+      "unchanged": {
+       "k": 104,
+       "n": 647,
+       "pct": 16.1
+      },
+      "more_urgent": {
+       "k": 543,
+       "n": 647,
+       "pct": 83.9
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 647,
+       "pct": 0.0
+      }
+     },
+     "patient": {
+      "unchanged": {
+       "k": 86,
+       "n": 648,
+       "pct": 13.3
+      },
+      "more_urgent": {
+       "k": 562,
+       "n": 648,
+       "pct": 86.7
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 648,
+       "pct": 0.0
+      }
+     }
+    },
+    "by_noise_type": {
+     "direct": {
+      "unchanged": {
+       "k": 153,
+       "n": 972,
+       "pct": 15.7
+      },
+      "more_urgent": {
+       "k": 819,
+       "n": 972,
+       "pct": 84.3
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 972,
+       "pct": 0.0
+      }
+     },
+     "nondirect": {
+      "unchanged": {
+       "k": 132,
+       "n": 970,
+       "pct": 13.6
+      },
+      "more_urgent": {
+       "k": 838,
+       "n": 970,
+       "pct": 86.4
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 970,
+       "pct": 0.0
+      }
+     }
+    },
+    "by_vignette": {
+     "V02": {
+      "unchanged": {
+       "k": 6,
+       "n": 216,
+       "pct": 2.8
+      },
+      "more_urgent": {
+       "k": 210,
+       "n": 216,
+       "pct": 97.2
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V07": {
+      "unchanged": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "more_urgent": {
+       "k": 216,
+       "n": 216,
+       "pct": 100.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V09": {
+      "unchanged": {
+       "k": 0,
+       "n": 215,
+       "pct": 0.0
+      },
+      "more_urgent": {
+       "k": 215,
+       "n": 215,
+       "pct": 100.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 215,
+       "pct": 0.0
+      }
+     },
+     "V10": {
+      "unchanged": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      },
+      "more_urgent": {
+       "k": 215,
+       "n": 216,
+       "pct": 99.5
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V15": {
+      "unchanged": {
+       "k": 175,
+       "n": 216,
+       "pct": 81.0
+      },
+      "more_urgent": {
+       "k": 41,
+       "n": 216,
+       "pct": 19.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V16": {
+      "unchanged": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "more_urgent": {
+       "k": 216,
+       "n": 216,
+       "pct": 100.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V17": {
+      "unchanged": {
+       "k": 38,
+       "n": 216,
+       "pct": 17.6
+      },
+      "more_urgent": {
+       "k": 178,
+       "n": 216,
+       "pct": 82.4
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V18": {
+      "unchanged": {
+       "k": 0,
+       "n": 215,
+       "pct": 0.0
+      },
+      "more_urgent": {
+       "k": 215,
+       "n": 215,
+       "pct": 100.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 215,
+       "pct": 0.0
+      }
+     },
+     "V20": {
+      "unchanged": {
+       "k": 65,
+       "n": 216,
+       "pct": 30.1
+      },
+      "more_urgent": {
+       "k": 151,
+       "n": 216,
+       "pct": 69.9
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     }
+    },
+    "key_level_after_update": {
+     "B": 1080,
+     "A": 432,
+     "C": 432
+    },
+    "on_key_level": {
+     "k": 1164,
+     "n": 1943,
+     "pct": 59.9
+    },
+    "more_urgent_than_key": {
+     "k": 759,
+     "n": 1943,
+     "pct": 39.1
+    },
+    "less_urgent_than_key": {
+     "k": 20,
+     "n": 1943,
+     "pct": 1.0
+    },
+    "level_given": {
+     "A": 848,
+     "B": 1083,
+     "C": 12,
+     "D": 0
+    },
+    "level_before": {
+     "A": 2,
+     "B": 734,
+     "C": 1063,
+     "D": 143
+    },
+    "held_to_end_after_moving": {
+     "k": 1056,
+     "n": 1264,
+     "pct": 83.5
+    },
+    "reverted_towards_before": {
+     "k": 29,
+     "n": 1264,
+     "pct": 2.3
+    },
+    "went_further": {
+     "k": 179,
+     "n": 1264,
+     "pct": 14.2
+    },
+    "held_by_noise_type": {
+     "direct": {
+      "k": 546,
+      "n": 625,
+      "pct": 87.4
+     },
+     "nondirect": {
+      "k": 510,
+      "n": 639,
+      "pct": 79.8
+     }
+    },
+    "held_by_perspective": {
+     "consultant": {
+      "k": 346,
+      "n": 418,
+      "pct": 82.8
+     },
+     "nurse": {
+      "k": 349,
+      "n": 416,
+      "pct": 83.9
+     },
+     "patient": {
+      "k": 361,
+      "n": 430,
+      "pct": 84.0
+     }
+    },
+    "held_by_language": {
+     "en": {
+      "k": 350,
+      "n": 426,
+      "pct": 82.2
+     },
+     "ja": {
+      "k": 350,
+      "n": 425,
+      "pct": 82.4
+     },
+     "zh": {
+      "k": 356,
+      "n": 413,
+      "pct": 86.2
+     }
+    }
+   },
+   "discordant_dx": {
+    "conversations": 2160,
+    "unchanged": {
+     "k": 312,
+     "n": 2159,
+     "pct": 14.5
+    },
+    "more_urgent": {
+     "k": 1653,
+     "n": 2159,
+     "pct": 76.6
+    },
+    "less_urgent": {
+     "k": 194,
+     "n": 2159,
+     "pct": 9.0
+    },
+    "by_timing": {
+     "1": {
+      "unchanged": {
+       "k": 77,
+       "n": 539,
+       "pct": 14.3
+      },
+      "more_urgent": {
+       "k": 417,
+       "n": 539,
+       "pct": 77.4
+      },
+      "less_urgent": {
+       "k": 45,
+       "n": 539,
+       "pct": 8.3
+      }
+     },
+     "3": {
+      "unchanged": {
+       "k": 76,
+       "n": 540,
+       "pct": 14.1
+      },
+      "more_urgent": {
+       "k": 415,
+       "n": 540,
+       "pct": 76.9
+      },
+      "less_urgent": {
+       "k": 49,
+       "n": 540,
+       "pct": 9.1
+      }
+     },
+     "5": {
+      "unchanged": {
+       "k": 77,
+       "n": 540,
+       "pct": 14.3
+      },
+      "more_urgent": {
+       "k": 415,
+       "n": 540,
+       "pct": 76.9
+      },
+      "less_urgent": {
+       "k": 48,
+       "n": 540,
+       "pct": 8.9
+      }
+     },
+     "10": {
+      "unchanged": {
+       "k": 82,
+       "n": 540,
+       "pct": 15.2
+      },
+      "more_urgent": {
+       "k": 406,
+       "n": 540,
+       "pct": 75.2
+      },
+      "less_urgent": {
+       "k": 52,
+       "n": 540,
+       "pct": 9.6
+      }
+     }
+    },
+    "by_language": {
+     "en": {
+      "unchanged": {
+       "k": 95,
+       "n": 720,
+       "pct": 13.2
+      },
+      "more_urgent": {
+       "k": 558,
+       "n": 720,
+       "pct": 77.5
+      },
+      "less_urgent": {
+       "k": 67,
+       "n": 720,
+       "pct": 9.3
+      }
+     },
+     "ja": {
+      "unchanged": {
+       "k": 106,
+       "n": 719,
+       "pct": 14.7
+      },
+      "more_urgent": {
+       "k": 549,
+       "n": 719,
+       "pct": 76.4
+      },
+      "less_urgent": {
+       "k": 64,
+       "n": 719,
+       "pct": 8.9
+      }
+     },
+     "zh": {
+      "unchanged": {
+       "k": 111,
+       "n": 720,
+       "pct": 15.4
+      },
+      "more_urgent": {
+       "k": 546,
+       "n": 720,
+       "pct": 75.8
+      },
+      "less_urgent": {
+       "k": 63,
+       "n": 720,
+       "pct": 8.8
+      }
+     }
+    },
+    "by_perspective": {
+     "consultant": {
+      "unchanged": {
+       "k": 108,
+       "n": 719,
+       "pct": 15.0
+      },
+      "more_urgent": {
+       "k": 540,
+       "n": 719,
+       "pct": 75.1
+      },
+      "less_urgent": {
+       "k": 71,
+       "n": 719,
+       "pct": 9.9
+      }
+     },
+     "nurse": {
+      "unchanged": {
+       "k": 103,
+       "n": 720,
+       "pct": 14.3
+      },
+      "more_urgent": {
+       "k": 551,
+       "n": 720,
+       "pct": 76.5
+      },
+      "less_urgent": {
+       "k": 66,
+       "n": 720,
+       "pct": 9.2
+      }
+     },
+     "patient": {
+      "unchanged": {
+       "k": 101,
+       "n": 720,
+       "pct": 14.0
+      },
+      "more_urgent": {
+       "k": 562,
+       "n": 720,
+       "pct": 78.1
+      },
+      "less_urgent": {
+       "k": 57,
+       "n": 720,
+       "pct": 7.9
+      }
+     }
+    },
+    "by_noise_type": {
+     "direct": {
+      "unchanged": {
+       "k": 171,
+       "n": 1080,
+       "pct": 15.8
+      },
+      "more_urgent": {
+       "k": 810,
+       "n": 1080,
+       "pct": 75.0
+      },
+      "less_urgent": {
+       "k": 99,
+       "n": 1080,
+       "pct": 9.2
+      }
+     },
+     "nondirect": {
+      "unchanged": {
+       "k": 141,
+       "n": 1079,
+       "pct": 13.1
+      },
+      "more_urgent": {
+       "k": 843,
+       "n": 1079,
+       "pct": 78.1
+      },
+      "less_urgent": {
+       "k": 95,
+       "n": 1079,
+       "pct": 8.8
+      }
+     }
+    },
+    "by_vignette": {
+     "V02": {
+      "unchanged": {
+       "k": 4,
+       "n": 215,
+       "pct": 1.9
+      },
+      "more_urgent": {
+       "k": 211,
+       "n": 215,
+       "pct": 98.1
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 215,
+       "pct": 0.0
+      }
+     },
+     "V06": {
+      "unchanged": {
+       "k": 214,
+       "n": 216,
+       "pct": 99.1
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 2,
+       "n": 216,
+       "pct": 0.9
+      }
+     },
+     "V07": {
+      "unchanged": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "more_urgent": {
+       "k": 216,
+       "n": 216,
+       "pct": 100.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V09": {
+      "unchanged": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "more_urgent": {
+       "k": 216,
+       "n": 216,
+       "pct": 100.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V10": {
+      "unchanged": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "more_urgent": {
+       "k": 216,
+       "n": 216,
+       "pct": 100.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V15": {
+      "unchanged": {
+       "k": 46,
+       "n": 216,
+       "pct": 21.3
+      },
+      "more_urgent": {
+       "k": 170,
+       "n": 216,
+       "pct": 78.7
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V16": {
+      "unchanged": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      },
+      "more_urgent": {
+       "k": 215,
+       "n": 216,
+       "pct": 99.5
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V17": {
+      "unchanged": {
+       "k": 6,
+       "n": 216,
+       "pct": 2.8
+      },
+      "more_urgent": {
+       "k": 210,
+       "n": 216,
+       "pct": 97.2
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V18": {
+      "unchanged": {
+       "k": 24,
+       "n": 216,
+       "pct": 11.1
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 192,
+       "n": 216,
+       "pct": 88.9
+      }
+     },
+     "V20": {
+      "unchanged": {
+       "k": 17,
+       "n": 216,
+       "pct": 7.9
+      },
+      "more_urgent": {
+       "k": 199,
+       "n": 216,
+       "pct": 92.1
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     }
+    },
+    "key_level_after_update": {
+     "A": 1296,
+     "B": 432,
+     "C": 216,
+     "D": 216
+    },
+    "on_key_level": {
+     "k": 1433,
+     "n": 2159,
+     "pct": 66.4
+    },
+    "more_urgent_than_key": {
+     "k": 628,
+     "n": 2159,
+     "pct": 29.1
+    },
+    "less_urgent_than_key": {
+     "k": 98,
+     "n": 2159,
+     "pct": 4.5
+    },
+    "level_given": {
+     "A": 1483,
+     "B": 460,
+     "C": 126,
+     "D": 90
+    },
+    "level_before": {
+     "A": 220,
+     "B": 744,
+     "C": 1058,
+     "D": 137
+    },
+    "diagnosis_read_at_update": {
+     "k": 2009,
+     "n": 2160,
+     "pct": 93.0
+    },
+    "diagnosis_is_new_one": {
+     "k": 1753,
+     "n": 2009,
+     "pct": 87.3
+    },
+    "diagnosis_still_first": {
+     "k": 90,
+     "n": 2009,
+     "pct": 4.5
+    },
+    "held_to_end_after_moving": {
+     "k": 1181,
+     "n": 1247,
+     "pct": 94.7
+    },
+    "reverted_towards_before": {
+     "k": 18,
+     "n": 1247,
+     "pct": 1.4
+    },
+    "went_further": {
+     "k": 48,
+     "n": 1247,
+     "pct": 3.8
+    }
+   },
+   "noise_same_positions": {
+    "unchanged": {
+     "k": 1954,
+     "n": 2156,
+     "pct": 90.6
+    },
+    "more_urgent": {
+     "k": 152,
+     "n": 2156,
+     "pct": 7.1
+    },
+    "less_urgent": {
+     "k": 50,
+     "n": 2156,
+     "pct": 2.3
+    }
+   }
+  },
+  "reversal": {
+   "neutral": {
+    "conversations": 648,
+    "unchanged": {
+     "k": 639,
+     "n": 647,
+     "pct": 98.8
+    },
+    "more_urgent": {
+     "k": 6,
+     "n": 647,
+     "pct": 0.9
+    },
+    "less_urgent": {
+     "k": 2,
+     "n": 647,
+     "pct": 0.3
+    },
+    "by_timing": {
+     "1": {
+      "unchanged": {
+       "k": 161,
+       "n": 161,
+       "pct": 100.0
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 161,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 161,
+       "pct": 0.0
+      }
+     },
+     "3": {
+      "unchanged": {
+       "k": 158,
+       "n": 162,
+       "pct": 97.5
+      },
+      "more_urgent": {
+       "k": 3,
+       "n": 162,
+       "pct": 1.9
+      },
+      "less_urgent": {
+       "k": 1,
+       "n": 162,
+       "pct": 0.6
+      }
+     },
+     "5": {
+      "unchanged": {
+       "k": 161,
+       "n": 162,
+       "pct": 99.4
+      },
+      "more_urgent": {
+       "k": 1,
+       "n": 162,
+       "pct": 0.6
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 162,
+       "pct": 0.0
+      }
+     },
+     "10": {
+      "unchanged": {
+       "k": 159,
+       "n": 162,
+       "pct": 98.1
+      },
+      "more_urgent": {
+       "k": 2,
+       "n": 162,
+       "pct": 1.2
+      },
+      "less_urgent": {
+       "k": 1,
+       "n": 162,
+       "pct": 0.6
+      }
+     }
+    },
+    "by_language": {
+     "en": {
+      "unchanged": {
+       "k": 216,
+       "n": 216,
+       "pct": 100.0
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "ja": {
+      "unchanged": {
+       "k": 211,
+       "n": 215,
+       "pct": 98.1
+      },
+      "more_urgent": {
+       "k": 3,
+       "n": 215,
+       "pct": 1.4
+      },
+      "less_urgent": {
+       "k": 1,
+       "n": 215,
+       "pct": 0.5
+      }
+     },
+     "zh": {
+      "unchanged": {
+       "k": 212,
+       "n": 216,
+       "pct": 98.1
+      },
+      "more_urgent": {
+       "k": 3,
+       "n": 216,
+       "pct": 1.4
+      },
+      "less_urgent": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      }
+     }
+    },
+    "by_perspective": {
+     "consultant": {
+      "unchanged": {
+       "k": 212,
+       "n": 216,
+       "pct": 98.1
+      },
+      "more_urgent": {
+       "k": 3,
+       "n": 216,
+       "pct": 1.4
+      },
+      "less_urgent": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      }
+     },
+     "nurse": {
+      "unchanged": {
+       "k": 212,
+       "n": 215,
+       "pct": 98.6
+      },
+      "more_urgent": {
+       "k": 3,
+       "n": 215,
+       "pct": 1.4
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 215,
+       "pct": 0.0
+      }
+     },
+     "patient": {
+      "unchanged": {
+       "k": 215,
+       "n": 216,
+       "pct": 99.5
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      }
+     }
+    },
+    "by_noise_type": {
+     "direct": {
+      "unchanged": {
+       "k": 316,
+       "n": 324,
+       "pct": 97.5
+      },
+      "more_urgent": {
+       "k": 6,
+       "n": 324,
+       "pct": 1.9
+      },
+      "less_urgent": {
+       "k": 2,
+       "n": 324,
+       "pct": 0.6
+      }
+     },
+     "nondirect": {
+      "unchanged": {
+       "k": 323,
+       "n": 323,
+       "pct": 100.0
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 323,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 323,
+       "pct": 0.0
+      }
+     }
+    },
+    "by_vignette": {
+     "V21": {
+      "unchanged": {
+       "k": 210,
+       "n": 215,
+       "pct": 97.7
+      },
+      "more_urgent": {
+       "k": 3,
+       "n": 215,
+       "pct": 1.4
+      },
+      "less_urgent": {
+       "k": 2,
+       "n": 215,
+       "pct": 0.9
+      }
+     },
+     "V22": {
+      "unchanged": {
+       "k": 213,
+       "n": 216,
+       "pct": 98.6
+      },
+      "more_urgent": {
+       "k": 3,
+       "n": 216,
+       "pct": 1.4
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V23": {
+      "unchanged": {
+       "k": 216,
+       "n": 216,
+       "pct": 100.0
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     }
+    }
+   },
+   "supportive": {
+    "conversations": 648,
+    "unchanged": {
+     "k": 636,
+     "n": 647,
+     "pct": 98.3
+    },
+    "more_urgent": {
+     "k": 3,
+     "n": 647,
+     "pct": 0.5
+    },
+    "less_urgent": {
+     "k": 8,
+     "n": 647,
+     "pct": 1.2
+    },
+    "by_timing": {
+     "1": {
+      "unchanged": {
+       "k": 160,
+       "n": 161,
+       "pct": 99.4
+      },
+      "more_urgent": {
+       "k": 1,
+       "n": 161,
+       "pct": 0.6
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 161,
+       "pct": 0.0
+      }
+     },
+     "3": {
+      "unchanged": {
+       "k": 155,
+       "n": 162,
+       "pct": 95.7
+      },
+      "more_urgent": {
+       "k": 1,
+       "n": 162,
+       "pct": 0.6
+      },
+      "less_urgent": {
+       "k": 6,
+       "n": 162,
+       "pct": 3.7
+      }
+     },
+     "5": {
+      "unchanged": {
+       "k": 162,
+       "n": 162,
+       "pct": 100.0
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 162,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 162,
+       "pct": 0.0
+      }
+     },
+     "10": {
+      "unchanged": {
+       "k": 159,
+       "n": 162,
+       "pct": 98.1
+      },
+      "more_urgent": {
+       "k": 1,
+       "n": 162,
+       "pct": 0.6
+      },
+      "less_urgent": {
+       "k": 2,
+       "n": 162,
+       "pct": 1.2
+      }
+     }
+    },
+    "by_language": {
+     "en": {
+      "unchanged": {
+       "k": 213,
+       "n": 215,
+       "pct": 99.1
+      },
+      "more_urgent": {
+       "k": 2,
+       "n": 215,
+       "pct": 0.9
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 215,
+       "pct": 0.0
+      }
+     },
+     "ja": {
+      "unchanged": {
+       "k": 210,
+       "n": 216,
+       "pct": 97.2
+      },
+      "more_urgent": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      },
+      "less_urgent": {
+       "k": 5,
+       "n": 216,
+       "pct": 2.3
+      }
+     },
+     "zh": {
+      "unchanged": {
+       "k": 213,
+       "n": 216,
+       "pct": 98.6
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 3,
+       "n": 216,
+       "pct": 1.4
+      }
+     }
+    },
+    "by_perspective": {
+     "consultant": {
+      "unchanged": {
+       "k": 211,
+       "n": 216,
+       "pct": 97.7
+      },
+      "more_urgent": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      },
+      "less_urgent": {
+       "k": 4,
+       "n": 216,
+       "pct": 1.9
+      }
+     },
+     "nurse": {
+      "unchanged": {
+       "k": 213,
+       "n": 215,
+       "pct": 99.1
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 215,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 2,
+       "n": 215,
+       "pct": 0.9
+      }
+     },
+     "patient": {
+      "unchanged": {
+       "k": 212,
+       "n": 216,
+       "pct": 98.1
+      },
+      "more_urgent": {
+       "k": 2,
+       "n": 216,
+       "pct": 0.9
+      },
+      "less_urgent": {
+       "k": 2,
+       "n": 216,
+       "pct": 0.9
+      }
+     }
+    },
+    "by_noise_type": {
+     "direct": {
+      "unchanged": {
+       "k": 312,
+       "n": 323,
+       "pct": 96.6
+      },
+      "more_urgent": {
+       "k": 3,
+       "n": 323,
+       "pct": 0.9
+      },
+      "less_urgent": {
+       "k": 8,
+       "n": 323,
+       "pct": 2.5
+      }
+     },
+     "nondirect": {
+      "unchanged": {
+       "k": 324,
+       "n": 324,
+       "pct": 100.0
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 324,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 324,
+       "pct": 0.0
+      }
+     }
+    },
+    "by_vignette": {
+     "V21": {
+      "unchanged": {
+       "k": 210,
+       "n": 215,
+       "pct": 97.7
+      },
+      "more_urgent": {
+       "k": 3,
+       "n": 215,
+       "pct": 1.4
+      },
+      "less_urgent": {
+       "k": 2,
+       "n": 215,
+       "pct": 0.9
+      }
+     },
+     "V22": {
+      "unchanged": {
+       "k": 211,
+       "n": 216,
+       "pct": 97.7
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 5,
+       "n": 216,
+       "pct": 2.3
+      }
+     },
+     "V23": {
+      "unchanged": {
+       "k": 215,
+       "n": 216,
+       "pct": 99.5
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      }
+     }
+    }
+   },
+   "discordant_urgency": {
+    "conversations": 648,
+    "unchanged": {
+     "k": 28,
+     "n": 648,
+     "pct": 4.3
+    },
+    "more_urgent": {
+     "k": 620,
+     "n": 648,
+     "pct": 95.7
+    },
+    "less_urgent": {
+     "k": 0,
+     "n": 648,
+     "pct": 0.0
+    },
+    "by_timing": {
+     "1": {
+      "unchanged": {
+       "k": 0,
+       "n": 162,
+       "pct": 0.0
+      },
+      "more_urgent": {
+       "k": 162,
+       "n": 162,
+       "pct": 100.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 162,
+       "pct": 0.0
+      }
+     },
+     "3": {
+      "unchanged": {
+       "k": 9,
+       "n": 162,
+       "pct": 5.6
+      },
+      "more_urgent": {
+       "k": 153,
+       "n": 162,
+       "pct": 94.4
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 162,
+       "pct": 0.0
+      }
+     },
+     "5": {
+      "unchanged": {
+       "k": 12,
+       "n": 162,
+       "pct": 7.4
+      },
+      "more_urgent": {
+       "k": 150,
+       "n": 162,
+       "pct": 92.6
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 162,
+       "pct": 0.0
+      }
+     },
+     "10": {
+      "unchanged": {
+       "k": 7,
+       "n": 162,
+       "pct": 4.3
+      },
+      "more_urgent": {
+       "k": 155,
+       "n": 162,
+       "pct": 95.7
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 162,
+       "pct": 0.0
+      }
+     }
+    },
+    "by_language": {
+     "en": {
+      "unchanged": {
+       "k": 10,
+       "n": 216,
+       "pct": 4.6
+      },
+      "more_urgent": {
+       "k": 206,
+       "n": 216,
+       "pct": 95.4
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "ja": {
+      "unchanged": {
+       "k": 6,
+       "n": 216,
+       "pct": 2.8
+      },
+      "more_urgent": {
+       "k": 210,
+       "n": 216,
+       "pct": 97.2
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "zh": {
+      "unchanged": {
+       "k": 12,
+       "n": 216,
+       "pct": 5.6
+      },
+      "more_urgent": {
+       "k": 204,
+       "n": 216,
+       "pct": 94.4
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     }
+    },
+    "by_perspective": {
+     "consultant": {
+      "unchanged": {
+       "k": 4,
+       "n": 216,
+       "pct": 1.9
+      },
+      "more_urgent": {
+       "k": 212,
+       "n": 216,
+       "pct": 98.1
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "nurse": {
+      "unchanged": {
+       "k": 6,
+       "n": 216,
+       "pct": 2.8
+      },
+      "more_urgent": {
+       "k": 210,
+       "n": 216,
+       "pct": 97.2
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "patient": {
+      "unchanged": {
+       "k": 18,
+       "n": 216,
+       "pct": 8.3
+      },
+      "more_urgent": {
+       "k": 198,
+       "n": 216,
+       "pct": 91.7
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     }
+    },
+    "by_noise_type": {
+     "direct": {
+      "unchanged": {
+       "k": 21,
+       "n": 324,
+       "pct": 6.5
+      },
+      "more_urgent": {
+       "k": 303,
+       "n": 324,
+       "pct": 93.5
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 324,
+       "pct": 0.0
+      }
+     },
+     "nondirect": {
+      "unchanged": {
+       "k": 7,
+       "n": 324,
+       "pct": 2.2
+      },
+      "more_urgent": {
+       "k": 317,
+       "n": 324,
+       "pct": 97.8
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 324,
+       "pct": 0.0
+      }
+     }
+    },
+    "by_vignette": {
+     "V21": {
+      "unchanged": {
+       "k": 26,
+       "n": 216,
+       "pct": 12.0
+      },
+      "more_urgent": {
+       "k": 190,
+       "n": 216,
+       "pct": 88.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V22": {
+      "unchanged": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "more_urgent": {
+       "k": 216,
+       "n": 216,
+       "pct": 100.0
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     },
+     "V23": {
+      "unchanged": {
+       "k": 2,
+       "n": 216,
+       "pct": 0.9
+      },
+      "more_urgent": {
+       "k": 214,
+       "n": 216,
+       "pct": 99.1
+      },
+      "less_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      }
+     }
+    },
+    "key_level_after_update": {
+     "B": 432,
+     "A": 216
+    },
+    "on_key_level": {
+     "k": 255,
+     "n": 648,
+     "pct": 39.4
+    },
+    "more_urgent_than_key": {
+     "k": 393,
+     "n": 648,
+     "pct": 60.6
+    },
+    "less_urgent_than_key": {
+     "k": 0,
+     "n": 648,
+     "pct": 0.0
+    },
+    "level_given": {
+     "A": 609,
+     "B": 39,
+     "C": 0,
+     "D": 0
+    },
+    "level_before": {
+     "A": 22,
+     "B": 411,
+     "C": 211,
+     "D": 4
+    },
+    "held_to_end_after_moving": {
+     "k": 441,
+     "n": 465,
+     "pct": 94.8
+    },
+    "reverted_towards_before": {
+     "k": 3,
+     "n": 465,
+     "pct": 0.6
+    },
+    "went_further": {
+     "k": 21,
+     "n": 465,
+     "pct": 4.5
+    },
+    "held_by_noise_type": {
+     "direct": {
+      "k": 217,
+      "n": 226,
+      "pct": 96.0
+     },
+     "nondirect": {
+      "k": 224,
+      "n": 239,
+      "pct": 93.7
+     }
+    },
+    "held_by_perspective": {
+     "consultant": {
+      "k": 149,
+      "n": 159,
+      "pct": 93.7
+     },
+     "nurse": {
+      "k": 153,
+      "n": 157,
+      "pct": 97.5
+     },
+     "patient": {
+      "k": 139,
+      "n": 149,
+      "pct": 93.3
+     }
+    },
+    "held_by_language": {
+     "en": {
+      "k": 135,
+      "n": 154,
+      "pct": 87.7
+     },
+     "ja": {
+      "k": 156,
+      "n": 159,
+      "pct": 98.1
+     },
+     "zh": {
+      "k": 150,
+      "n": 152,
+      "pct": 98.7
+     }
+    }
+   },
+   "discordant_reassure": {
+    "conversations": 648,
+    "unchanged": {
+     "k": 458,
+     "n": 648,
+     "pct": 70.7
+    },
+    "more_urgent": {
+     "k": 2,
+     "n": 648,
+     "pct": 0.3
+    },
+    "less_urgent": {
+     "k": 188,
+     "n": 648,
+     "pct": 29.0
+    },
+    "by_timing": {
+     "1": {
+      "unchanged": {
+       "k": 115,
+       "n": 162,
+       "pct": 71.0
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 162,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 47,
+       "n": 162,
+       "pct": 29.0
+      }
+     },
+     "3": {
+      "unchanged": {
+       "k": 117,
+       "n": 162,
+       "pct": 72.2
+      },
+      "more_urgent": {
+       "k": 2,
+       "n": 162,
+       "pct": 1.2
+      },
+      "less_urgent": {
+       "k": 43,
+       "n": 162,
+       "pct": 26.5
+      }
+     },
+     "5": {
+      "unchanged": {
+       "k": 112,
+       "n": 162,
+       "pct": 69.1
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 162,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 50,
+       "n": 162,
+       "pct": 30.9
+      }
+     },
+     "10": {
+      "unchanged": {
+       "k": 114,
+       "n": 162,
+       "pct": 70.4
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 162,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 48,
+       "n": 162,
+       "pct": 29.6
+      }
+     }
+    },
+    "by_language": {
+     "en": {
+      "unchanged": {
+       "k": 149,
+       "n": 216,
+       "pct": 69.0
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 67,
+       "n": 216,
+       "pct": 31.0
+      }
+     },
+     "ja": {
+      "unchanged": {
+       "k": 151,
+       "n": 216,
+       "pct": 69.9
+      },
+      "more_urgent": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      },
+      "less_urgent": {
+       "k": 64,
+       "n": 216,
+       "pct": 29.6
+      }
+     },
+     "zh": {
+      "unchanged": {
+       "k": 158,
+       "n": 216,
+       "pct": 73.1
+      },
+      "more_urgent": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      },
+      "less_urgent": {
+       "k": 57,
+       "n": 216,
+       "pct": 26.4
+      }
+     }
+    },
+    "by_perspective": {
+     "consultant": {
+      "unchanged": {
+       "k": 154,
+       "n": 216,
+       "pct": 71.3
+      },
+      "more_urgent": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      },
+      "less_urgent": {
+       "k": 61,
+       "n": 216,
+       "pct": 28.2
+      }
+     },
+     "nurse": {
+      "unchanged": {
+       "k": 154,
+       "n": 216,
+       "pct": 71.3
+      },
+      "more_urgent": {
+       "k": 1,
+       "n": 216,
+       "pct": 0.5
+      },
+      "less_urgent": {
+       "k": 61,
+       "n": 216,
+       "pct": 28.2
+      }
+     },
+     "patient": {
+      "unchanged": {
+       "k": 150,
+       "n": 216,
+       "pct": 69.4
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 66,
+       "n": 216,
+       "pct": 30.6
+      }
+     }
+    },
+    "by_noise_type": {
+     "direct": {
+      "unchanged": {
+       "k": 219,
+       "n": 324,
+       "pct": 67.6
+      },
+      "more_urgent": {
+       "k": 2,
+       "n": 324,
+       "pct": 0.6
+      },
+      "less_urgent": {
+       "k": 103,
+       "n": 324,
+       "pct": 31.8
+      }
+     },
+     "nondirect": {
+      "unchanged": {
+       "k": 239,
+       "n": 324,
+       "pct": 73.8
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 324,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 85,
+       "n": 324,
+       "pct": 26.2
+      }
+     }
+    },
+    "by_vignette": {
+     "V21": {
+      "unchanged": {
+       "k": 49,
+       "n": 216,
+       "pct": 22.7
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 167,
+       "n": 216,
+       "pct": 77.3
+      }
+     },
+     "V22": {
+      "unchanged": {
+       "k": 201,
+       "n": 216,
+       "pct": 93.1
+      },
+      "more_urgent": {
+       "k": 2,
+       "n": 216,
+       "pct": 0.9
+      },
+      "less_urgent": {
+       "k": 13,
+       "n": 216,
+       "pct": 6.0
+      }
+     },
+     "V23": {
+      "unchanged": {
+       "k": 208,
+       "n": 216,
+       "pct": 96.3
+      },
+      "more_urgent": {
+       "k": 0,
+       "n": 216,
+       "pct": 0.0
+      },
+      "less_urgent": {
+       "k": 8,
+       "n": 216,
+       "pct": 3.7
+      }
+     }
+    },
+    "key_level_after_update": {
+     "D": 648
+    },
+    "on_key_level": {
+     "k": 35,
+     "n": 648,
+     "pct": 5.4
+    },
+    "more_urgent_than_key": {
+     "k": 613,
+     "n": 648,
+     "pct": 94.6
+    },
+    "less_urgent_than_key": {
+     "k": 0,
+     "n": 648,
+     "pct": 0.0
+    },
+    "level_given": {
+     "A": 0,
+     "B": 281,
+     "C": 332,
+     "D": 35
+    },
+    "level_before": {
+     "A": 28,
+     "B": 414,
+     "C": 204,
+     "D": 2
+    },
+    "held_to_end_after_moving": {
+     "k": 42,
+     "n": 140,
+     "pct": 30.0
+    },
+    "reverted_towards_before": {
+     "k": 95,
+     "n": 140,
+     "pct": 67.9
+    },
+    "went_further": {
+     "k": 3,
+     "n": 140,
+     "pct": 2.1
+    }
+   },
+   "noise_same_positions": {
+    "unchanged": {
+     "k": 616,
+     "n": 648,
+     "pct": 95.1
+    },
+    "more_urgent": {
+     "k": 21,
+     "n": 648,
+     "pct": 3.2
+    },
+    "less_urgent": {
+     "k": 11,
+     "n": 648,
+     "pct": 1.7
+    }
+   }
+  }
+ },
+ "noise_vs_neutral_same_positions_by_case": {
+  "cases_noise_higher": 9,
+  "cases_noise_lower": 0,
+  "cases_equal": 1,
+  "per_case_pct": {
+   "V02": [
+    24.7,
+    4.2
+   ],
+   "V06": [
+    0.0,
+    0.0
+   ],
+   "V07": [
+    1.9,
+    0.5
+   ],
+   "V09": [
+    6.5,
+    2.3
+   ],
+   "V10": [
+    7.0,
+    1.9
+   ],
+   "V15": [
+    3.7,
+    0.5
+   ],
+   "V16": [
+    4.6,
+    1.9
+   ],
+   "V17": [
+    24.1,
+    2.8
+   ],
+   "V18": [
+    6.5,
+    1.4
+   ],
+   "V20": [
+    14.8,
+    1.9
+   ]
+  }
+ },
+ "first_answer": {
+  "main": {
+   "urgency_matches_key": {
+    "k": 2373,
+    "n": 8928,
+    "pct": 26.6
+   },
+   "model_more_urgent": {
+    "k": 6554,
+    "n": 8928,
+    "pct": 73.4
+   },
+   "model_less_urgent": {
+    "k": 1,
+    "n": 8928,
+    "pct": 0.0
+   },
+   "diagnosis_matches_key": {
+    "k": 8822,
+    "n": 8888,
+    "pct": 99.3
+   },
+   "by_case": {
+    "V02": {
+     "key": "D",
+     "first_diagnosis": "Migraine",
+     "levels_given": {
+      "A": 0,
+      "B": 217,
+      "C": 162,
+      "D": 537
+     },
+     "matches_key": {
+      "k": 537,
+      "n": 916,
+      "pct": 58.6
+     }
+    },
+    "V06": {
+     "key": "A",
+     "first_diagnosis": "Ectopic pregnancy",
+     "levels_given": {
+      "A": 689,
+      "B": 1,
+      "C": 0,
+      "D": 0
+     },
+     "matches_key": {
+      "k": 689,
+      "n": 690,
+      "pct": 99.9
+     }
+    },
+    "V07": {
+     "key": "D",
+     "first_diagnosis": "Chronic obstructive pulmonary disease",
+     "levels_given": {
+      "A": 0,
+      "B": 0,
+      "C": 914,
+      "D": 4
+     },
+     "matches_key": {
+      "k": 4,
+      "n": 918,
+      "pct": 0.4
+     }
+    },
+    "V09": {
+     "key": "D",
+     "first_diagnosis": "Tonsillitis",
+     "levels_given": {
+      "A": 0,
+      "B": 785,
+      "C": 130,
+      "D": 0
+     },
+     "matches_key": {
+      "k": 0,
+      "n": 915,
+      "pct": 0.0
+     }
+    },
+    "V10": {
+     "key": "D",
+     "first_diagnosis": "Lumbar spinal stenosis",
+     "levels_given": {
+      "A": 0,
+      "B": 0,
+      "C": 914,
+      "D": 1
+     },
+     "matches_key": {
+      "k": 1,
+      "n": 915,
+      "pct": 0.1
+     }
+    },
+    "V15": {
+     "key": "C",
+     "first_diagnosis": "Chlamydia trachomatis urethritis",
+     "levels_given": {
+      "A": 0,
+      "B": 838,
+      "C": 80,
+      "D": 0
+     },
+     "matches_key": {
+      "k": 80,
+      "n": 918,
+      "pct": 8.7
+     }
+    },
+    "V16": {
+     "key": "D",
+     "first_diagnosis": "Irritable bowel syndrome",
+     "levels_given": {
+      "A": 0,
+      "B": 0,
+      "C": 882,
+      "D": 33
+     },
+     "matches_key": {
+      "k": 33,
+      "n": 915,
+      "pct": 3.6
+     }
+    },
+    "V17": {
+     "key": "D",
+     "first_diagnosis": "Conjunctivitis",
+     "levels_given": {
+      "A": 0,
+      "B": 0,
+      "C": 448,
+      "D": 467
+     },
+     "matches_key": {
+      "k": 467,
+      "n": 915,
+      "pct": 51.0
+     }
+    },
+    "V18": {
+     "key": "C",
+     "first_diagnosis": "Otitis externa",
+     "levels_given": {
+      "A": 0,
+      "B": 511,
+      "C": 398,
+      "D": 0
+     },
+     "matches_key": {
+      "k": 398,
+      "n": 909,
+      "pct": 43.8
+     }
+    },
+    "V20": {
+     "key": "D",
+     "first_diagnosis": "Exercise-associated muscle cramps",
+     "levels_given": {
+      "A": 0,
+      "B": 13,
+      "C": 740,
+      "D": 164
+     },
+     "matches_key": {
+      "k": 164,
+      "n": 917,
+      "pct": 17.9
+     }
+    }
+   },
+   "by_language": {
+    "en": {
+     "k": 974,
+     "n": 2971,
+     "pct": 32.8
+    },
+    "ja": {
+     "k": 796,
+     "n": 2981,
+     "pct": 26.7
+    },
+    "zh": {
+     "k": 603,
+     "n": 2976,
+     "pct": 20.3
+    }
+   },
+   "by_speaker": {
+    "consultant": {
+     "k": 925,
+     "n": 2973,
+     "pct": 31.1
+    },
+    "nurse": {
+     "k": 709,
+     "n": 2971,
+     "pct": 23.9
+    },
+    "patient": {
+     "k": 739,
+     "n": 2984,
+     "pct": 24.8
+    }
+   },
+   "mean_level_by_language": {
+    "en": 1.82,
+    "ja": 1.7,
+    "zh": 1.62
+   },
+   "mean_level_by_speaker": {
+    "consultant": 1.8,
+    "nurse": 1.65,
+    "patient": 1.7
+   }
+  },
+  "reversal": {
+   "urgency_matches_key": {
+    "k": 951,
+    "n": 2745,
+    "pct": 34.6
+   },
+   "model_more_urgent": {
+    "k": 1788,
+    "n": 2745,
+    "pct": 65.1
+   },
+   "model_less_urgent": {
+    "k": 6,
+    "n": 2745,
+    "pct": 0.2
+   },
+   "diagnosis_matches_key": {
+    "k": 2644,
+    "n": 2745,
+    "pct": 96.3
+   },
+   "by_case": {
+    "V21": {
+     "key": "C",
+     "first_diagnosis": "Migraine",
+     "levels_given": {
+      "A": 0,
+      "B": 872,
+      "C": 36,
+      "D": 6
+     },
+     "matches_key": {
+      "k": 36,
+      "n": 914,
+      "pct": 3.9
+     }
+    },
+    "V22": {
+     "key": "C",
+     "first_diagnosis": "Lumbar spinal stenosis",
+     "levels_given": {
+      "A": 0,
+      "B": 0,
+      "C": 915,
+      "D": 0
+     },
+     "matches_key": {
+      "k": 915,
+      "n": 915,
+      "pct": 100.0
+     }
+    },
+    "V23": {
+     "key": "C",
+     "first_diagnosis": "Tonsillitis",
+     "levels_given": {
+      "A": 0,
+      "B": 916,
+      "C": 0,
+      "D": 0
+     },
+     "matches_key": {
+      "k": 0,
+      "n": 916,
+      "pct": 0.0
+     }
+    }
+   },
+   "by_language": {
+    "en": {
+     "k": 329,
+     "n": 912,
+     "pct": 36.1
+    },
+    "ja": {
+     "k": 314,
+     "n": 917,
+     "pct": 34.2
+    },
+    "zh": {
+     "k": 308,
+     "n": 916,
+     "pct": 33.6
+    }
+   },
+   "by_speaker": {
+    "consultant": {
+     "k": 337,
+     "n": 918,
+     "pct": 36.7
+    },
+    "nurse": {
+     "k": 308,
+     "n": 909,
+     "pct": 33.9
+    },
+    "patient": {
+     "k": 306,
+     "n": 918,
+     "pct": 33.3
+    }
+   },
+   "mean_level_by_language": {
+    "en": 1.36,
+    "ja": 1.35,
+    "zh": 1.34
+   },
+   "mean_level_by_speaker": {
+    "consultant": 1.38,
+    "nurse": 1.34,
+    "patient": 1.33
+   }
+  }
+ },
+ "reversal_pairs": {
+  "V21": {
+   "parent": "V02",
+   "alarming": {
+    "more_urgent": {
+     "k": 190,
+     "n": 216,
+     "pct": 88.0
+    },
+    "less_urgent": {
+     "k": 0,
+     "n": 216,
+     "pct": 0.0
+    },
+    "unchanged": {
+     "k": 26,
+     "n": 216,
+     "pct": 12.0
+    },
+    "level_before": {
+     "A": 20,
+     "B": 192,
+     "C": 4,
+     "D": 0
+    },
+    "level_after": {
+     "A": 206,
+     "B": 10,
+     "C": 0,
+     "D": 0
+    }
+   },
+   "reassuring": {
+    "more_urgent": {
+     "k": 0,
+     "n": 216,
+     "pct": 0.0
+    },
+    "less_urgent": {
+     "k": 167,
+     "n": 216,
+     "pct": 77.3
+    },
+    "unchanged": {
+     "k": 49,
+     "n": 216,
+     "pct": 22.7
+    },
+    "level_before": {
+     "A": 25,
+     "B": 188,
+     "C": 3,
+     "D": 0
+    },
+    "level_after": {
+     "A": 0,
+     "B": 68,
+     "C": 115,
+     "D": 33
+    }
+   },
+   "first_levels": {
+    "A": 0,
+    "B": 872,
+    "C": 36,
+    "D": 6
+   },
+   "key_start": "C"
+  },
+  "V22": {
+   "parent": "V10",
+   "alarming": {
+    "more_urgent": {
+     "k": 216,
+     "n": 216,
+     "pct": 100.0
+    },
+    "less_urgent": {
+     "k": 0,
+     "n": 216,
+     "pct": 0.0
+    },
+    "unchanged": {
+     "k": 0,
+     "n": 216,
+     "pct": 0.0
+    },
+    "level_before": {
+     "A": 0,
+     "B": 9,
+     "C": 203,
+     "D": 4
+    },
+    "level_after": {
+     "A": 187,
+     "B": 29,
+     "C": 0,
+     "D": 0
+    }
+   },
+   "reassuring": {
+    "more_urgent": {
+     "k": 2,
+     "n": 216,
+     "pct": 0.9
+    },
+    "less_urgent": {
+     "k": 13,
+     "n": 216,
+     "pct": 6.0
+    },
+    "unchanged": {
+     "k": 201,
+     "n": 216,
+     "pct": 93.1
+    },
+    "level_before": {
+     "A": 0,
+     "B": 13,
+     "C": 201,
+     "D": 2
+    },
+    "level_after": {
+     "A": 0,
+     "B": 2,
+     "C": 212,
+     "D": 2
+    }
+   },
+   "first_levels": {
+    "A": 0,
+    "B": 0,
+    "C": 915,
+    "D": 0
+   },
+   "key_start": "C"
+  },
+  "V23": {
+   "parent": "V09",
+   "alarming": {
+    "more_urgent": {
+     "k": 214,
+     "n": 216,
+     "pct": 99.1
+    },
+    "less_urgent": {
+     "k": 0,
+     "n": 216,
+     "pct": 0.0
+    },
+    "unchanged": {
+     "k": 2,
+     "n": 216,
+     "pct": 0.9
+    },
+    "level_before": {
+     "A": 2,
+     "B": 210,
+     "C": 4,
+     "D": 0
+    },
+    "level_after": {
+     "A": 216,
+     "B": 0,
+     "C": 0,
+     "D": 0
+    }
+   },
+   "reassuring": {
+    "more_urgent": {
+     "k": 0,
+     "n": 216,
+     "pct": 0.0
+    },
+    "less_urgent": {
+     "k": 8,
+     "n": 216,
+     "pct": 3.7
+    },
+    "unchanged": {
+     "k": 208,
+     "n": 216,
+     "pct": 96.3
+    },
+    "level_before": {
+     "A": 3,
+     "B": 213,
+     "C": 0,
+     "D": 0
+    },
+    "level_after": {
+     "A": 0,
+     "B": 211,
+     "C": 5,
+     "D": 0
+    }
+   },
+   "first_levels": {
+    "A": 0,
+    "B": 916,
+    "C": 0,
+    "D": 0
+   },
+   "key_start": "C"
+  }
+ },
+ "confidence_hedging": {
+  "main": {
+   "discordant_dx|direct": {
+    "urgency_conf_change": 19.48,
+    "dx_conf_change": 12.56,
+    "n": 1080
+   },
+   "discordant_dx|nondirect": {
+    "urgency_conf_change": 14.02,
+    "dx_conf_change": 1.32,
+    "n": 1079
+   },
+   "discordant_urgency|direct": {
+    "urgency_conf_change": 13.37,
+    "dx_conf_change": -0.71,
+    "n": 972
+   },
+   "discordant_urgency|nondirect": {
+    "urgency_conf_change": 8.4,
+    "dx_conf_change": -9.1,
+    "n": 970
+   },
+   "neutral|direct": {
+    "urgency_conf_change": 0.28,
+    "dx_conf_change": 0.07,
+    "n": 1079
+   },
+   "neutral|nondirect": {
+    "urgency_conf_change": -0.06,
+    "dx_conf_change": -0.17,
+    "n": 1079
+   },
+   "noise|direct": {
+    "urgency_conf_change": -1.75,
+    "dx_conf_change": -3.4,
+    "n": 40595
+   },
+   "noise|nondirect": {
+    "urgency_conf_change": -0.65,
+    "dx_conf_change": -1.8,
+    "n": 40567
+   },
+   "supportive|direct": {
+    "urgency_conf_change": 4.55,
+    "dx_conf_change": 6.9,
+    "n": 1078
+   },
+   "supportive|nondirect": {
+    "urgency_conf_change": 1.72,
+    "dx_conf_change": 2.24,
+    "n": 1080
+   },
+   "no_update_mean_conf_by_reply": {
+    "direct": {
+     "1": [
+      72.2,
+      69.4
+     ],
+     "6": [
+      59.6,
+      45.1
+     ],
+     "11": [
+      57.3,
+      42.0
+     ]
+    },
+    "nondirect": {
+     "1": [
+      72.8,
+      70.0
+     ],
+     "6": [
+      65.5,
+      53.7
+     ],
+     "11": [
+      65.7,
+      53.2
+     ]
+    }
+   },
+   "no_update_share_hedged_by_reply": {
+    "direct": {
+     "1": {
+      "k": 57,
+      "n": 263,
+      "pct": 21.7
+     },
+     "6": {
+      "k": 140,
+      "n": 260,
+      "pct": 53.8
+     },
+     "11": {
+      "k": 154,
+      "n": 265,
+      "pct": 58.1
+     }
+    },
+    "nondirect": {
+     "1": {
+      "k": 59,
+      "n": 269,
+      "pct": 21.9
+     },
+     "6": {
+      "k": 119,
+      "n": 267,
+      "pct": 44.6
+     },
+     "11": {
+      "k": 128,
+      "n": 269,
+      "pct": 47.6
+     }
+    }
+   },
+   "no_update_leading_dx_changed": {
+    "direct": {
+     "k": 315,
+     "n": 2554,
+     "pct": 12.3
+    },
+    "nondirect": {
+     "k": 26,
+     "n": 2680,
+     "pct": 1.0
+    }
+   },
+   "urgency_never_moved_conf_first_to_last": {
+    "conversations": 325,
+    "mean_first": 73.8,
+    "mean_last": 65.3
+   }
+  },
+  "all": {
+   "discordant_dx|direct": {
+    "urgency_conf_change": 19.48,
+    "dx_conf_change": 12.56,
+    "n": 1080
+   },
+   "discordant_dx|nondirect": {
+    "urgency_conf_change": 14.02,
+    "dx_conf_change": 1.32,
+    "n": 1079
+   },
+   "discordant_reassure|direct": {
+    "urgency_conf_change": 4.15,
+    "dx_conf_change": 8.46,
+    "n": 324
+   },
+   "discordant_reassure|nondirect": {
+    "urgency_conf_change": 0.34,
+    "dx_conf_change": 2.3,
+    "n": 324
+   },
+   "discordant_urgency|direct": {
+    "urgency_conf_change": 15.47,
+    "dx_conf_change": -0.25,
+    "n": 1296
+   },
+   "discordant_urgency|nondirect": {
+    "urgency_conf_change": 10.23,
+    "dx_conf_change": -8.32,
+    "n": 1294
+   },
+   "neutral|direct": {
+    "urgency_conf_change": 0.42,
+    "dx_conf_change": 0.09,
+    "n": 1403
+   },
+   "neutral|nondirect": {
+    "urgency_conf_change": -0.05,
+    "dx_conf_change": -0.12,
+    "n": 1402
+   },
+   "noise|direct": {
+    "urgency_conf_change": -1.73,
+    "dx_conf_change": -3.41,
+    "n": 53066
+   },
+   "noise|nondirect": {
+    "urgency_conf_change": -0.64,
+    "dx_conf_change": -1.79,
+    "n": 53035
+   },
+   "supportive|direct": {
+    "urgency_conf_change": 4.67,
+    "dx_conf_change": 7.54,
+    "n": 1401
+   },
+   "supportive|nondirect": {
+    "urgency_conf_change": 1.7,
+    "dx_conf_change": 2.65,
+    "n": 1404
+   },
+   "no_update_mean_conf_by_reply": {
+    "direct": {
+     "1": [
+      71.7,
+      70.0
+     ],
+     "6": [
+      59.2,
+      45.6
+     ],
+     "11": [
+      56.8,
+      42.2
+     ]
+    },
+    "nondirect": {
+     "1": [
+      72.1,
+      70.5
+     ],
+     "6": [
+      64.9,
+      54.1
+     ],
+     "11": [
+      65.0,
+      53.7
+     ]
+    }
+   },
+   "no_update_share_hedged_by_reply": {
+    "direct": {
+     "1": {
+      "k": 77,
+      "n": 344,
+      "pct": 22.4
+     },
+     "6": {
+      "k": 187,
+      "n": 341,
+      "pct": 54.8
+     },
+     "11": {
+      "k": 207,
+      "n": 346,
+      "pct": 59.8
+     }
+    },
+    "nondirect": {
+     "1": {
+      "k": 77,
+      "n": 350,
+      "pct": 22.0
+     },
+     "6": {
+      "k": 153,
+      "n": 348,
+      "pct": 44.0
+     },
+     "11": {
+      "k": 163,
+      "n": 350,
+      "pct": 46.6
+     }
+    }
+   },
+   "no_update_leading_dx_changed": {
+    "direct": {
+     "k": 454,
+     "n": 3364,
+     "pct": 13.5
+    },
+    "nondirect": {
+     "k": 44,
+     "n": 3490,
+     "pct": 1.3
+    }
+   },
+   "urgency_never_moved_conf_first_to_last": {
+    "conversations": 447,
+    "mean_first": 72.7,
+    "mean_last": 64.2
+   }
+  }
+ }
+}
