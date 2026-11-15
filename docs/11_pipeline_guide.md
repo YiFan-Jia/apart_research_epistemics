@@ -69,6 +69,7 @@ The Haiku probe shows the same gap from the other side: with no noise, Haiku's o
 - [x] The run fits the credit at 3 repeats. The account allows 1,000,000 output tokens a minute for Haiku, which is reached at about 97 conversations in progress, so Haiku's concurrency is 90. Measured on the run: about 127 conversations a minute and $0.0047 a conversation.
 - [ ] **Run `main` stopped at 21:37 on 15 Nov after $18.16:** the account's API usage limit was reached. The reversal cases are complete and scored; the ten vignettes are 12% done. Raise the limit in the Console, then run the same command again to resume (`docs/14_run_plan_ten_vignettes.md`).
 - [x] Diagnoses are judged with the leading-part rule (team, 15 Nov): `docs/14_run_plan_ten_vignettes.md`, "Judging the diagnoses".
+- [x] Run `main` complete and scored (15 Nov, 22:53): 11,718 conversations, $53.30. Figures: `python report/make_figures.py results/main/scores/s2 report/figures`.
 - [ ] Check the Console's rate limits. Concurrency is now 100 per model (set 15 Nov, not yet tried at that level); at 8 the V01 run managed about 10 conversations a minute. The runner backs off on rate-limit errors, so too high a setting slows the run rather than breaking it.
 
 ## Scoring (scorer version 2)
