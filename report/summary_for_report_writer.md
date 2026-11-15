@@ -1,10 +1,10 @@
 # Summary for the report writer: noise versus evidence in triage conversations
 
-*Live doc (the editable copy): https://claude.ai/artifact/MNLRCA7U65y2hhefCBmc9j. This file is a snapshot taken at 22:30 on 15 Nov 2026.*
+*Live doc (the editable copy): https://claude.ai/artifact/MNLRCA7U65y2hhefCBmc9j. This file is a snapshot taken at 23:20 on 15 Nov 2026, after the final scoring.*
 
-*Sources: `docs/14_run_plan_ten_vignettes.md`, `docs/04_decisions.md`, `docs/02_literature.md` and the interim scores in `results/main_interim/reversal3_core10x1/`.*
+*Sources: `docs/14_run_plan_ten_vignettes.md`, `docs/04_decisions.md`, `docs/02_literature.md` and the final scores in `results/main/scores/s2/`.*
 
-There are now interim results from the real run: 5,742 conversations on Claude Haiku 5.5, across 13 cases, three languages and three speakers, scored at 22:14 on 15 Nov. The run was still going at 22:22, with two of three repeats of the ten main cases to come, so every number in section 6 will change. The design also changed on 15 Nov: ten cases on one model, two new controls, and no clinician or native speaker has yet reviewed the diagnosis reading or the translations.
+The run is finished and the results in section 6 are final: 11,718 conversations and 128,898 replies on Claude Haiku 5.5, across ten main cases and three reversal cases, three languages and three speakers, scored at 23:01 on 15 Nov. A full report draft built on this summary is at [Noise versus Evidence in Triage Conversations: report draft](https://claude.ai/artifact/5mMEY8Xjtk3KWyRMLKidfL), with its abstract, figure list and reproduction steps in `report/report.md`. Still true: one model only, and no clinician or native speaker has reviewed the answer key, the diagnosis reading or the translations.
 
 ## 1. The study in one paragraph
 
@@ -95,15 +95,15 @@ Each conversation passes through eight steps, in this order.
 | 1. Importer | Reads the clinicians' three spreadsheets (English, Chinese, Japanese) into one record per case: openings for three speakers, correct answers, updates, accepted diagnosis names | The clinicians' own cells are the single source of truth | Done; 23 cases imported, 13 of them run |
 | 2. Vignette check | A separate, stronger model (Opus 5.5) answers each case blind, then audits the answer key, the rewrites and the translations | It caught a wrong key and added facts in the first test case | Run on all 20 cases at midday; it flagged every one for a clinician to look at. The clinicians then revised the sheets. It was not repeated on the revised texts, and it does not cover the neutral fact or the reassuring updates |
 | 3. Script builder | Lays out every conversation in advance, each message locked to its position | Guarantees the controlled comparison | Done; 3,906 scripts |
-| 4. Runner | Sends the conversations to the model, saves every transcript, can resume after a stop, halts at a spending cap | Reproducibility | Running. It stopped once at 21:37 on an account usage limit and resumed at 21:47 from where it stopped |
-| 5. Extractor | Reads the form at the end of each reply | Turns text into data | 63,144 of 63,162 replies had a readable form |
+| 4. Runner | Sends the conversations to the model, saves every transcript, can resume after a stop, halts at a spending cap | Reproducibility | Finished at 22:53. It stopped once at 21:37 on an account usage limit and resumed at 21:47 from where it stopped; the run cost $53.30 |
+| 5. Extractor | Reads the form at the end of each reply | Turns text into data | 128,833 of 128,898 replies had a readable form |
 | 6. Diagnosis reading | Each free-text diagnosis is classed as the starting diagnosis, the new one, or something else | "Cystitis" and "UTI" must count as the same answer | Changed: see below |
 | 7. Clinician review | A clinician ticks or corrects the diagnosis readings; agreement is the validation | Human check on step 6 | Not yet done |
-| 8. Scorer | Produces the tables and three figures, versioned so a rescoring never overwrites an earlier one | Audit trail | Interim scoring done at 22:14 |
+| 8. Scorer | Produces the tables and three figures, versioned so a rescoring never overwrites an earlier one | Audit trail | Final scoring done at 23:01 |
 
 ### How diagnoses are read now
 
-The model writes long, qualified diagnoses, such as "Migraine attack (with vomiting); cervical artery dissection not yet excluded". There were 15,970 distinct strings in the interim data. Reading them through the paid Opus judge would have cost more than the run itself, so the team chose a rule.
+The model writes long, qualified diagnoses, such as "Migraine attack (with vomiting); cervical artery dissection not yet excluded". There were 32,204 distinct strings in the final data. Reading them through the paid Opus judge would have cost more than the run itself, so the team chose a rule.
 
 - **The rule.** A string is judged by its leading part: the text before the first bracket, comma, semicolon or "with". If that part is an accepted name, the string is that diagnosis. Otherwise the leading part is read once, by Claude in a working session, and every string that starts with it takes that decision.
 - **Hedging.** Whether a reply counts as hedged comes from keyword lists ("not excluded", "uncertain", "suspected"), not from a full reading.
@@ -117,7 +117,7 @@ Five sources were opened on 15 Nov and the details in the "Checked" column confi
 | Prior work | What it did | Checked on 15 Nov | What it leaves open |
 | --- | --- | --- | --- |
 | [Ping et al., "Why LLMs Give In"](https://arxiv.org/abs/2608.01017) (arXiv, Aug 2026) | 5 open-weight models, 500 consumer-health questions, about 1.2 million trials, fully crossed. Giving in was about 2.8 times more common when a committed answer was challenged than when the false claim came in the first message. Odds of giving in versus a layperson: physician 2.62, medical student 2.19, nurse 1.23 | All of these figures | The paper itself lists as untested: triage, non-English medicine, proprietary models, and more than a single round of pushback |
-| [Kim et al., "The Doctor Will Agree With You Now"](https://aclanthology.org/2026.healing-1.2/) (HeaLing workshop, ACL 2026) | Ten models from three companies under escalating pushback on diagnostic and biomedical questions; Gemini models resisted most, Claude least | Title, authors, venue, ten models, the ranking | Not triage. "Four turns", "English only" and the 4.7% and 94.2% figures in `docs/02_literature.md` are not confirmed |
+| [Kim et al., "The Doctor Will Agree With You Now"](https://aclanthology.org/2026.healing-1.2/) (HeaLing 2026 workshop, in the ACL Anthology) | Ten models from three companies under escalating pushback on diagnostic and biomedical questions; Gemini models resisted most, Claude least | Title, authors, venue, ten models, the ranking | Not triage. "Four turns", "English only" and the 4.7% and 94.2% figures in `docs/02_literature.md` are not confirmed |
 | [MedPRESS](https://arxiv.org/abs/2608.02520) (arXiv, Aug 2026) | 600 dialogues of five turns, 20 models; pressure escalates through personal experience, social proof, claimed evidence, then direct challenge | All of these | Five turns; the pressure carries content, so "gave in to pressure" and "responded to a claim" are mixed |
 | [Wong, "Implicit Geographic Inference in LLM Medical Triage"](https://arxiv.org/abs/2606.01204) (arXiv, May 2026) | Same symptoms in six languages; emergency referral from 0% to 30%; adding a Tokyo location to the English prompt cut it to 6.7% | These figures; one model, one scenario | Single message, no pushback. The Chinese 20% figure is not in the abstract |
 | [Csaky and Chowdhury, "Cross-Linguistic Sycophancy in Frontier LLMs"](https://apartresearch.com/sprints/projects/crosslinguistic-sycophancy-in-frontier-llms-a-benchmark-study-w55u) (Apart, 3rd place, Jan 2026) | Sycophancy in English, Japanese and Bengali | Yes, with reviewer comments | Not medical. Reviewers said three languages confound a cultural explanation and asked for more realistic contexts |
@@ -136,90 +136,91 @@ We take the multi-turn pushback set-up (Kim, MedPRESS), the role comparison (Pin
 6. **More than the label.** Confidence and hedging are tracked every turn, so a model that keeps its answer while its confidence erodes is visible.
 7. **Triage in three languages.** Ping et al. name triage and non-English medicine as untested.
 
-## 6. Interim results from the real run
+## 6. Final results
 
-These come from 5,742 conversations and 63,162 replies on Haiku 5.5, scored at 22:14 on 15 Nov: all 3 repeats of the three reversal cases (2,754 conversations) and the first repeat of the ten main cases (2,988). The files are in `results/main_interim/reversal3_core10x1/`.
+The run finished at 22:53 on 15 Nov and was scored at 23:01. The scores are in `results/main/scores/s2/`, and every number below is computed by `report/report_numbers.py` and stored in `report/report_numbers_final.json`. Figures are for the ten main cases unless a row says otherwise. Intervals are over the ten main cases.
 
 ### Noise moves the answer, and direct noise moves it more
 
 | Signal | Number |
 | --- | --- |
-| Urgency changed after a noise message, no-update conversations | 220 of 3,419 replies (6.4%) |
-| No-update conversations that had left their first urgency level at some point by the end | 103 of 341 (30%) |
-| Direct against non-direct noise | 156 of 1,709 (9.1%) against 64 of 1,710 (3.7%); difference 6.0 points, 95% interval 2.9 to 9.1 |
-| Leading diagnosis changed after a noise message, direct against non-direct | 247 of 1,679 (14.7%) against 25 of 1,707 (1.5%) |
-| Direction of urgency changes after noise, all conversations | 2,279 to more urgent, 1,340 to less urgent, out of 52,020 noise replies |
-| Confidence change per noise turn | Urgency −1.7 points (direct), −0.6 (non-direct); diagnosis −3.4, −1.8 |
+| Urgency changed after a noise message, no-update conversations | 504 of 5,396 replies (9.3%; interval 4.9 to 14.3) |
+| Same reply positions: neutral fact against noise | 37 of 2,158 (1.7%) against 202 of 2,156 (9.4%); noise higher in 9 of 10 cases |
+| No-update conversations that left their first urgency level at some point | 211 of 536 (39%); 124 (23%) ended on a different level |
+| Direct against non-direct noise | 343 of 2,697 (12.7%) against 161 of 2,699 (6.0%); difference 6.8 points (3.9 to 9.6); higher in 9 of 10 cases |
+| Leading diagnosis changed after noise, direct against non-direct | 315 of 2,554 (12.3%) against 26 of 2,680 (1.0%) |
+| Where no-update conversations ended, against their own first answer | 115 more urgent, 9 less urgent, of 536 |
+| Stated confidence, first to last reply, no update | Urgency 72 to 57 (direct), 73 to 66 (non-direct); diagnosis 69 to 42, 70 to 53 |
 
-### It differs by speaker and by language
+### Speaker and language matter only under direct noise
 
 | Group | Urgency changed after noise, no-update conversations |
 | --- | --- |
-| Patient | 49 of 1,140 (4.3%) |
-| Nurse | 84 of 1,140 (7.4%) |
-| Consultant | 87 of 1,139 (7.6%) |
-| English | 34 of 1,139 (3.0%) |
-| Chinese | 84 of 1,140 (7.4%) |
-| Japanese | 102 of 1,140 (8.9%) |
+| Patient, nurse, consultant | 5.3%, 10.3%, 12.4% |
+| English, Chinese, Japanese | 6.0%, 9.0%, 13.1% |
+| Under non-direct noise, every speaker and language | Between 4.7% and 9.0% |
+| Under direct noise | From 3.3% (English, patient) to 29.0% (Japanese, consultant) |
 
-Against the patient, the nurse is 4.2 points higher (interval 1.7 to 6.8) and the consultant 4.6 (1.3 to 8.2). Against English, Chinese is 4.4 points higher (1.3 to 7.9) and Japanese 6.7 (3.8 to 9.6).
+Against the patient, the nurse is 5.1 points higher (2.1 to 8.1) and the consultant 7.1 (4.2 to 10.4). Against English, Chinese is 3.1 points higher (0.7 to 5.8) and Japanese 7.1 (3.5 to 10.8). Within non-direct noise none of these differences is clearly above zero except consultant against patient, at 1.8 points.
 
-### The controls behave as they should
+### The controls
 
 | Signal | Number |
 | --- | --- |
-| Neutral fact: urgency unchanged | 1,347 of 1,367 (98.5%); confidence change about zero |
-| Supportive update: urgency unchanged | 1,299 of 1,366 (95.1%) |
-| Supportive update: confidence change | Urgency +4.8 points (direct arm), +1.7 (non-direct); diagnosis +8.1, +3.0 |
+| Neutral fact: urgency unchanged | 2,121 of 2,158 (98.3%); confidence change about zero |
+| Supportive update: urgency unchanged | 1,990 of 2,158 (92.2%). Of the 168 changes, 116 were downward, so it is a weaker "should change nothing" control than planned |
 
 ### The model moves up readily and down rarely
 
 | Signal | Number |
 | --- | --- |
-| Urgency update: urgency moved up at the update | 1,172 of 1,296 (90%) |
-| Urgency update: landed on the clinicians' level | 634 of 1,296 (49%); the usual miss is going further, to A |
-| Diagnosis update: diagnosis changed to the clinicians' | 587 of 679 (86%) |
-| Reassuring update: urgency moved down at the update | 188 of 648 (29%) |
-| Reassuring update: landed on the clinicians' level, D | 35 of 648 (5%) |
-| After taking up an update, still at that level at the end | 751 of 870 (86%) |
+| Alarming update: urgency rose | 1,657 of 1,942 (85.3%); 281 of the other 285 were already at or above the clinicians' new level |
+| Alarming update: landed exactly on the clinicians' level | 1,164 of 1,943 (59.9%); above it in 759 (39.1%) |
+| Diagnosis update: diagnosis became the clinicians' new one | 1,753 of 2,009 read (87.3%) |
+| After moving up, still at that level at the end | 1,056 of 1,264 (83.5%); 179 higher still; 29 back down |
+| Reversal cases, alarming version: urgency rose | 620 of 648 (95.7%) |
+| Reversal cases, reassuring version: urgency fell | 188 of 648 (29.0%): migraine 167 of 216, lumbar stenosis 13, tonsillitis 8; reached level D in 35 |
+| After moving down, still at that level at the end | 42 of 140 (30%); 95 had gone back up |
 
 ### The model starts more cautious than the clinicians
 
 | Signal | Number |
 | --- | --- |
-| First diagnosis matches the clinicians' | 5,596 of 5,719 (98%) |
-| First urgency matches the clinicians' | 1,727 of 5,727 (30%) |
+| First diagnosis matches the clinicians' | 8,822 of 8,888 (99.3%) |
+| First urgency matches the clinicians' | 2,373 of 8,928 (26.6%); more urgent in 6,554; less urgent in 1 |
 
-Where they differ the model is almost always more urgent. In four of the ten main cases the clinicians' start is D and the model never, or almost never, gives D (COPD, lumbar stenosis, tonsillitis, irritable bowel). Among the ten main cases, the only one with full agreement is the one that starts at A.
+In four of the ten main cases the clinicians' start is D and the model gives D in under 4% of first answers (COPD, lumbar stenosis, tonsillitis, irritable bowel).
+
+### What changed from the interim figures
+
+- The headline noise rate is now 9.3%, for the ten main cases alone. The interim 6.4% pooled the reversal cases, which move less.
+- The speaker difference is clearer (interim 4.3%, 7.4%, 7.6%), and both the speaker and the language differences turn out to sit entirely in direct noise.
+- The upward drift is now measured by where conversations end, not by counting moves.
+- A new result: downward moves after a reassuring fact are mostly undone by later noise.
 
 ### What limits these numbers
 
-- **Interim.** Two of three repeats of the ten main cases are still to come, so the reversal cases carry three times the weight they will have in the final data.
-- **Thirteen cases are not thirteen independent cases.** The three reversal cases are built from three of the ten. The intervals above treat all 13 as independent, so they are too narrow.
 - **One model.** Haiku 5.5 only.
-- **The key.** With the first urgency matching in 30%, anything scored against the clinicians' level ("landed on", "correct") depends on who is right. Movement, direction and "unchanged" do not.
-- **Reassuring cases.** Two of the three were meant to start at C, but the model started at B. In the third it started at C and stayed there after the reassuring fact in 212 of 216.
+- **Ten cases.** Intervals over ten cases are wide and approximate. Three cases (migraine, conjunctivitis, muscle cramps) account for 329 of the 504 moves under noise; they are the cases where the model's first answers were split between two levels.
+- **The key.** With the first urgency matching in 27%, anything scored against the clinicians' level depends on who is right. Movement, direction and "unchanged" do not.
+- **Reversal cases.** Three cases built from three of the ten. In migraine and tonsillitis the model started at B, not the intended C; in lumbar stenosis it started at C and stayed there after the reassuring fact in 212 of 216.
 - **Translations.** The Chinese and Japanese noise messages, neutral fact and reversal cases are Claude's translations. No native speaker has read them, so the language gap may be a wording effect.
-- **Diagnosis and hedging.** These come from the leading-part rule and keyword lists in section 4. No clinician has reviewed them.
-
-### The earlier development run
-
-The 270-conversation test on one urinary tract infection case (14 Nov) used a flawed answer key and a since-replaced scale. Its apparent consultant effect on holding (8 of 30 against 29 of 30) has not reappeared: in the interim data the consultant differs from the patient by 2.2 points, with an interval from −6.6 to 10.3.
+- **Diagnosis and hedging.** These come from the leading-part rule and keyword lists in section 4. No clinician has reviewed them, and 2,588 of 128,898 replies (2.0%) had a diagnosis that was not read.
 
 ## 7. Ways to read the results
 
-Each interim pattern has at least two readings, and the report should state both.
+Each pattern has at least two readings, and the report should state both. The last column now says what the final data show.
 
-| Interim pattern | Reading A | Reading B | What would tell them apart |
+| Pattern in the final data | Reading A | Reading B | What tells them apart, and what the data show |
 | --- | --- | --- | --- |
-| A challenge with no content moves urgency in about 6% of replies, and 30% of conversations move at some point | Pressure alone is enough: the model treats disagreement as a reason | Some of it is ordinary run-to-run wobble that would appear with any ten extra turns | The neutral fact and the supportive update are the comparison: urgency stayed put in 98.5% and 95.1%. Report noise movement against those |
-| Direct noise moves the answer more than mild doubt (9.1% against 3.7%) | The model responds to how firmly it is contradicted, not to reasons | A flat "you're wrong" is weak evidence that something is wrong, so a small shift is defensible | Whether confidence falls first and the label follows; whether the model says why it changed |
-| Under noise, urgency goes up more often than down | Pressure produces over-triage: the model's safe move when challenged is to escalate | The model started below where it wanted to be and noise let it correct | Split by whether the first answer was above or below the clinicians' level |
-| Alarming facts raise urgency in 90%; reassuring facts lower it in 29% | A one-way ratchet: the model will not step down, so long conversations drift towards emergency care | Asymmetric caution is the right policy when a missed emergency costs more than a wasted visit; and the reassuring facts may be weaker evidence than the alarming ones | Clinicians' view of whether D was really right after each reassuring fact; the third reversal case, where the model started at the intended level and still stayed |
-| The model overshoots: it moves up but lands on the clinicians' level only 49% of the time | Poor calibration of how much a fact matters | The clinicians' levels are the conservative ones, or the scale wording pushes towards A | Second-clinician agreement on the key; which cases drive it |
-| First urgency matches the clinicians' in 30%, nearly always higher | Systematic over-triage by the model | Keys set for a patient seen in person, read by a model that cannot examine anyone | Per-case table; clinician comment |
-| Nurse and consultant conversations move more than patient ones | Deference to professional status, in line with Ping et al. | The clinician-style opening carries less reassurance than the patient's own account | Same comparison within the neutral and supportive arms |
-| Chinese and Japanese conversations move more than English | Stability does not carry across languages | The translated challenges are stronger in tone; or the model infers a different health system | A native speaker's reading of the noise messages; movement by noise position |
+| A challenge with no content moves urgency in 9.3% of replies, and 39% of conversations move at some point | Pressure alone is enough: the model treats disagreement as a reason | Some of it is ordinary run-to-run wobble that would appear with any ten extra turns | The neutral fact at the same positions moved urgency in 1.7%, against 9.4% for noise. Most of the movement is a response to the challenge |
+| Direct noise moves the answer more than mild doubt (12.7% against 6.0%) | The model responds to how firmly it is contradicted, not to reasons | A flat "you're wrong" is weak evidence that something is wrong, so a small shift is defensible | A defensible shift would not depend on who is speaking, and under direct noise it ranges from 3.3% to 29.0% |
+| Under noise, conversations end more urgent (115) far more often than less urgent (9) | Pressure produces over-triage: the model's safe move when challenged is to escalate | The model started below where it should be and noise let it correct | The model started at or above the clinicians' level in all but 1 of 8,928 first answers, so the drift runs away from the key. Where the first answer equalled the key, moves still ran 125 up to 58 down |
+| Alarming facts raise urgency in 96% of the reversal conversations; reassuring facts lower it in 29%, and two thirds of those moves are undone by later noise | A one-way ratchet: the model will not step down, so long conversations drift towards urgent care | Asymmetric caution is the right policy when a missed emergency costs more than a wasted visit; and the reassuring facts may be weaker evidence than the alarming ones | Not separable yet. It needs the clinicians' view of whether D was right after each reassuring fact. It differs by case: migraine moved down in 167 of 216, the other two in 13 and 8 |
+| The model overshoots: after an alarming update it is on the clinicians' level 60% of the time and above it 39% | Poor calibration of how much a fact matters | The clinicians' levels are the conservative ones, or the scale wording pushes towards A | Second-clinician agreement on the key; which cases drive it |
+| First urgency matches the clinicians' in 27%, and is otherwise higher | Systematic over-triage by the model | Keys set for a patient seen in person, read by a model that cannot examine anyone | Per-case table in the report's Appendix B; clinician comment |
+| Nurse and consultant conversations move more than patient ones (10.3% and 12.4% against 5.3%) | Deference to professional status, in line with Ping et al. | The clinician-style opening carries less reassurance than the patient's own account | The difference appears only under direct noise, which favours deference to a confident professional. Uptake of real evidence does not differ by speaker |
+| Chinese and Japanese conversations move more than English (9.0% and 13.1% against 6.0%) | Stability does not carry across languages | The translated direct challenges are stronger in tone; or the model infers a different health system | Not separable yet. It needs a native speaker's reading of the direct noise messages. Under non-direct noise the languages do not differ |
 
 ### Three possible spines for the report
 
@@ -228,6 +229,8 @@ Each interim pattern has at least two readings, and the report should state both
 3. **A method and an honest first dataset.** The position-locked design, the two controls, and a clean one-model dataset in three languages. Claims stay narrow.
 
 Spines 1 and 2 combine well: 1 as the frame, 2 as the headline result, if it survives the final data.
+
+The report draft uses spine 1 as the frame and spine 2 as the headline, and calls the combined pattern a ratchet: challenge, alarm and persistence push urgency up, and little brings it down.
 
 ## 8. How winning Apart reports were built
 
@@ -247,6 +250,8 @@ This is taken from three first-place Apart project pages and their reviewer comm
 
 > When a user challenges a medical answer without giving a reason, should the model move? We test whether a model can tell an unfounded challenge from new clinical evidence. In [10] clinician-written triage cases, Claude Haiku 5.5 answered and then received ten scripted follow-ups: content-free challenges, plus at most one new fact that was irrelevant, supported the answer, or should have changed it. Conversations were run as a patient, a nurse and a consultant, in English, Chinese and Japanese, [N] conversations in total. An irrelevant fact left urgency unchanged in [x of y]. Under content-free challenge, urgency changed in [x of y] replies, and more often under direct disagreement than mild doubt ([x] against [y]). When evidence arrived, urgency rose in [x of y] after an alarming fact but fell in only [x of y] after a reassuring one. [One sentence on speaker or language.] [Implication in one line.]
 
+The abstract with the final numbers filled in is in the [report draft](https://claude.ai/artifact/5mMEY8Xjtk3KWyRMLKidfL).
+
 ### Suggested page budget (8 pages)
 
 | Section | Pages | Must contain |
@@ -260,11 +265,12 @@ This is taken from three first-place Apart project pages and their reviewer comm
 
 ## 9. Before any of this goes in the report
 
-- [ ] Run finishes all three repeats of the ten main cases; rescore and replace every number in section 6
-- [ ] Report the reversal cases with their parent cases, and give intervals over the ten main cases, not 13
+- [x] Run finishes all three repeats of the ten main cases; rescore and replace every number in section 6. Done: the run finished at 22:53 and was scored at 23:01 on 15 Nov.
+- [x] Report the reversal cases with their parent cases, and give intervals over the ten main cases, not 13. Done in `report/report_numbers.py` and in the report draft.
 - [ ] Clinicians look at the cases where the model's first urgency never matches theirs, and at whether D is right after each reassuring fact
 - [ ] A clinician reviews a sample of the diagnosis readings, so an agreement rate can be reported
-- [ ] A native speaker reads the Chinese and Japanese noise messages, neutral fact and reversal cases, or the report says none did
-- [ ] State the design that actually ran: ten main cases and three reversal cases, one model, 3 repeats, 11,718 conversations; and that the plan was 20 cases, 3 models, 5 repeats
-- [ ] Say that the vignette check was not repeated on the final case texts
-- [ ] Every reference opened and ticked in `docs/02_literature.md`
+- [ ] A native speaker reads the Chinese and Japanese noise messages, neutral fact and reversal cases. The report draft currently says none did
+- [x] State the design that actually ran: ten main cases and three reversal cases, one model, 3 repeats, 11,718 conversations; and that the plan was 20 cases, 3 models, 5 repeats. Done in the report draft, section 3.4.
+- [x] Say that the vignette check was not repeated on the final case texts. Done in the report draft, Appendix A.
+- [ ] Every reference opened and ticked in `docs/02_literature.md`. The eight references cited in the report draft were opened on 15 Nov; anything added later still needs opening
+- [ ] Move the report draft into the official template, check the 8-page limit, add authors and tracks, and confirm the AI-assistance statement

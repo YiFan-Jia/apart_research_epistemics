@@ -88,3 +88,18 @@ MASK, DarkBench, SycEval, ELEPHANT, "Why Language Models Hallucinate", ForecastB
 - Doctor demographics and model behaviour
 - Reddit "crux" tool
 - Verbal-uncertainty phrases and their numeric meaning (for the hedge audit in direction J)
+
+## 8. Cited in the report draft: opened on 15 Nov 2026
+
+These eight are the only references in the report draft. Each page was opened on 15 Nov and the details in the second column were confirmed on it. The rows above stay unticked where they carry details that were not confirmed.
+
+| Reference | Confirmed on the page | Not confirmed; do not cite |
+|---|---|---|
+| Laban, Murakhovs'ka, Xiong, Wu (2023), "Are You Sure? Challenging LLMs Leads to Performance Drops in The FlipFlop Experiment". https://arxiv.org/abs/2311.08596 | Title, authors; ten LLMs, seven classification tasks; flips 46% on average; accuracy drop 17% | |
+| Sharma et al. (2023), "Towards Understanding Sycophancy in Language Models". https://arxiv.org/abs/2310.13548 | Title, 19 authors; five assistants; sycophancy as a general behaviour, likely driven in part by human preference judgments | |
+| Fanous, Goldberg, Agarwal, Lin, Zhou, Daneshjou, Koyejo (2025), "SycEval: Evaluating LLM Sycophancy". https://arxiv.org/abs/2502.08177 | Title, authors; sycophancy in 58.19% of cases; progressive 43.52%, regressive 14.66%; persistence 78.5% | Number of rebuttal rounds |
+| Ping, Çarık, Wohn, Ding, Wang, Rho (2026), "Why LLMs Give In". https://arxiv.org/abs/2608.01017 | Title, authors; 5 open-weight models, 500 questions, about 1.2 million trials; 2.8 times; odds 2.62, 2.19, 1.23; the untested list | |
+| Kim, Luo, Kim, Manrai, Topol, Rajpurkar (2026), "The Doctor Will Agree With You Now". https://aclanthology.org/2026.healing-1.2/ | Title, authors; HeaLing 2026 (1st Workshop on Linguistic Analysis for Health), pages 19 to 34; ten models, three companies; the ranking | "Four turns", "English only", 4.7% and 94.2% (PDF not read) |
+| Joy, Farhan (2026), "MedPRESS". https://arxiv.org/abs/2608.02520 | Title, authors; 600 dialogues, five turns, 20 models; the four kinds of pressure | |
+| Wong (2026), "Implicit Geographic Inference in LLM Medical Triage". https://arxiv.org/abs/2606.01204 | Title, author; six languages; 0% to 30%; Tokyo 6.7%; one model, one scenario | The Chinese 20% figure |
+| Csaky, Chowdhury (2026), "Cross-Linguistic Sycophancy in Frontier LLMs". Apart project page | Title, authors; English, Japanese, Bengali; reviewer comments | |
