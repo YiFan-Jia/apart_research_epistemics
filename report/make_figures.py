@@ -452,7 +452,7 @@ for name, section, title, caption in FIGS:
                  f"<figcaption>{html.escape(caption)}</figcaption></figure>")
 page = f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Noise versus evidence in triage conversations: results so far</title>
+<title>Noise versus evidence in triage conversations: results</title>
 <style>
 body {{ font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: #f9f9f7; color: #0b0b0b; margin: 0; }}
 main {{ max-width: 1080px; margin: 0 auto; padding: 28px 20px 60px; }}
@@ -465,7 +465,7 @@ figcaption {{ color: #52514e; font-size: 14px; line-height: 1.5; margin-top: 10p
 .note {{ background: #fcfcfb; border-left: 3px solid #eda100; padding: 10px 14px; margin: 14px 0; }}
 </style></head><body><main>
 <h1>Noise versus evidence in triage conversations</h1>
-<p class="lead">Results so far for Claude Haiku. {html.escape(STATUS)}</p>
+<p class="lead">Results for Claude Haiku. {html.escape(STATUS)}</p>
 <p>{n_conv:,} conversations and {n_rep:,} replies are in these figures:</p><ul>{stage_lines}</ul>
 <div class="note"><p><b>How to read these.</b> Urgency figures use the direction of change (more urgent, unchanged, less urgent),
 which does not depend on the clinicians' reference level. Diagnosis figures use the replies whose diagnosis has been read
