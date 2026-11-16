@@ -1,0 +1,57 @@
+model,update_kind,metric,factor,contrast,missing_as_failure,estimate,ci_low,ci_high,n_vignettes,ci_note
+haiku,all,u_noise_control,noise_type,direct - nondirect,False,0.06134676283375169,0.03643334498353086,0.08531151039515353,13,
+haiku,all,u_noise_control,noise_type,direct - nondirect,True,0.06182336182336183,0.03702991452991452,0.08603988603988603,13,
+haiku,all,u_noise_pre,noise_type,direct - nondirect,False,0.08163561061488905,0.05263065465123053,0.10998610153406106,13,
+haiku,all,u_noise_pre,noise_type,direct - nondirect,True,0.08086419753086421,0.05151828110161444,0.10955484330484325,13,
+haiku,all,u_noise_post,noise_type,direct - nondirect,False,0.01900382080992067,0.01095810569416725,0.02803316683491947,13,
+haiku,all,u_noise_post,noise_type,direct - nondirect,True,0.01840546284990729,0.010502023696468141,0.02718988830099942,13,
+haiku,all,u_disc_accuracy,noise_type,direct - nondirect,False,-0.00022692638971708674,-0.020301836944278805,0.021606042536275086,13,
+haiku,all,u_disc_accuracy,noise_type,direct - nondirect,True,0.00035612535612535343,-0.019586894586894596,0.02207977207977207,13,
+haiku,all,u_hold_final,noise_type,direct - nondirect,False,0.02584747512283745,0.005892584334613329,0.04795821462488129,13,
+haiku,all,u_hold_final,noise_type,direct - nondirect,True,0.026115859449192782,0.006160968660968658,0.0479582146248813,13,
+haiku,all,u_noise_control,perspective,nurse - patient,False,0.04015184071049993,0.015773289404574314,0.06666666666666667,13,
+haiku,all,u_noise_control,perspective,nurse - patient,True,0.03974358974358974,0.014957264957264956,0.06623931623931624,13,
+haiku,all,u_noise_control,perspective,consultant - patient,False,0.05612376450365278,0.026989447548106768,0.08490187652198825,13,
+haiku,all,u_noise_control,perspective,consultant - patient,True,0.05683760683760683,0.028205128205128202,0.08504273504273503,13,
+haiku,all,u_hold_final,perspective,nurse - patient,False,0.012820512820512822,-0.0170940170940171,0.047008547008547015,13,
+haiku,all,u_hold_final,perspective,nurse - patient,True,0.012820512820512822,-0.0170940170940171,0.047008547008547015,13,
+haiku,all,u_hold_final,perspective,consultant - patient,False,0.03890087067657162,-0.01737791889661048,0.09474032803472053,13,
+haiku,all,u_hold_final,perspective,consultant - patient,True,0.03846153846153847,-0.017806267806267793,0.09472934472934472,13,
+haiku,all,u_noise_control,language,zh - en,False,0.03387289309077019,0.013779783221124005,0.05706853125149215,13,
+haiku,all,u_noise_control,language,zh - en,True,0.03376068376068376,0.013675213675213675,0.05726495726495728,13,
+haiku,all,u_noise_control,language,ja - en,False,0.0649524900921549,0.03332264957264957,0.09571718473953109,13,
+haiku,all,u_noise_control,language,ja - en,True,0.0641025641025641,0.03290598290598291,0.09447649572649557,13,
+haiku,all,d_noise_control,noise_type,direct - nondirect,False,0.12358979936676197,0.06630348790741598,0.18188065521036692,13,
+haiku,all,d_noise_control,noise_type,direct - nondirect,True,0.1527065527065527,0.094017094017094,0.21196581196581193,13,
+haiku,all,h_noise_control,noise_type,direct - nondirect,False,0.05842111946878093,0.04108600542543232,0.07464815884870987,13,
+haiku,all,h_noise_control,noise_type,direct - nondirect,True,0.09002849002849002,0.06638176638176639,0.1148148148148148,13,
+haiku,discordant_urgency,u_noise_post,noise_type,direct - nondirect,False,0.004241388459677545,-0.007653228449688626,0.01612586037364798,12,
+haiku,discordant_urgency,u_noise_post,noise_type,direct - nondirect,True,0.0036743092298647854,-0.008234126984126983,0.015873015873015872,12,
+haiku,discordant_urgency,u_disc_accuracy,noise_type,direct - nondirect,False,-0.01693204107534326,-0.05169753086419753,0.011617341640706122,12,
+haiku,discordant_urgency,u_disc_accuracy,noise_type,direct - nondirect,True,-0.016203703703703713,-0.0509452160493827,0.012345679012345673,12,
+haiku,discordant_urgency,u_hold_final,noise_type,direct - nondirect,False,0.039094650205761305,0.011291152263374463,0.06995884773662552,12,
+haiku,discordant_urgency,u_hold_final,noise_type,direct - nondirect,True,0.039094650205761305,0.011291152263374463,0.06995884773662552,12,
+haiku,discordant_urgency,u_hold_final,perspective,nurse - patient,False,0.027777777777777787,-0.026234567901234556,0.08333333333333333,12,
+haiku,discordant_urgency,u_hold_final,perspective,nurse - patient,True,0.027777777777777787,-0.026234567901234556,0.08333333333333333,12,
+haiku,discordant_urgency,u_hold_final,perspective,consultant - patient,False,0.06327160493827162,-0.0030864197530864105,0.14351851851851852,12,
+haiku,discordant_urgency,u_hold_final,perspective,consultant - patient,True,0.06327160493827162,-0.0030864197530864105,0.14351851851851852,12,
+haiku,discordant_reassure,u_noise_post,noise_type,direct - nondirect,False,0.03468547912992357,0.024691358024691357,0.04409171075837742,3,only 3 vignettes: interval unstable
+haiku,discordant_reassure,u_noise_post,noise_type,direct - nondirect,True,0.03468547912992357,0.024691358024691357,0.04409171075837742,3,only 3 vignettes: interval unstable
+haiku,discordant_reassure,u_disc_accuracy,noise_type,direct - nondirect,False,0.03395061728395062,0.0,0.08333333333333333,3,only 3 vignettes: interval unstable
+haiku,discordant_reassure,u_disc_accuracy,noise_type,direct - nondirect,True,0.03395061728395062,0.0,0.08333333333333333,3,only 3 vignettes: interval unstable
+haiku,discordant_reassure,u_hold_final,noise_type,direct - nondirect,False,0.0205761316872428,0.0,0.06172839506172839,3,only 3 vignettes: interval unstable
+haiku,discordant_reassure,u_hold_final,noise_type,direct - nondirect,True,0.0205761316872428,0.0,0.06172839506172839,3,only 3 vignettes: interval unstable
+haiku,discordant_reassure,u_hold_final,perspective,nurse - patient,False,0.012345679012345678,0.0,0.037037037037037035,3,only 3 vignettes: interval unstable
+haiku,discordant_reassure,u_hold_final,perspective,nurse - patient,True,0.012345679012345678,0.0,0.037037037037037035,3,only 3 vignettes: interval unstable
+haiku,discordant_reassure,u_hold_final,perspective,consultant - patient,False,0.024691358024691357,0.0,0.07407407407407407,3,only 3 vignettes: interval unstable
+haiku,discordant_reassure,u_hold_final,perspective,consultant - patient,True,0.024691358024691357,0.0,0.07407407407407407,3,only 3 vignettes: interval unstable
+haiku,discordant_dx,u_noise_post,noise_type,direct - nondirect,False,0.01478636854980941,0.004760482448654491,0.026603658189679687,10,
+haiku,discordant_dx,u_noise_post,noise_type,direct - nondirect,True,0.013227513227513227,0.003170194003527337,0.025925925925925925,10,
+haiku,discordant_dx,u_disc_accuracy,noise_type,direct - nondirect,False,0.011145725164416758,-0.0416898148148148,0.05833333333333333,10,
+haiku,discordant_dx,u_disc_accuracy,noise_type,direct - nondirect,True,0.01203703703703704,-0.04166666666666665,0.05833333333333335,10,
+haiku,discordant_dx,u_hold_final,noise_type,direct - nondirect,False,0.01358024691358024,-0.04320987654320989,0.07283950617283949,10,
+haiku,discordant_dx,u_hold_final,noise_type,direct - nondirect,True,0.014814814814814814,-0.04197530864197531,0.07410493827160479,10,
+haiku,discordant_dx,u_hold_final,perspective,nurse - patient,False,-0.0037037037037036978,-0.05740740740740741,0.03518518518518519,10,
+haiku,discordant_dx,u_hold_final,perspective,nurse - patient,True,-0.0037037037037036978,-0.05740740740740741,0.03518518518518519,10,
+haiku,discordant_dx,u_hold_final,perspective,consultant - patient,False,0.018483577917540184,-0.12229210342417889,0.14074074074074075,10,
+haiku,discordant_dx,u_hold_final,perspective,consultant - patient,True,0.016666666666666663,-0.12592592592592594,0.13893518518518494,10,

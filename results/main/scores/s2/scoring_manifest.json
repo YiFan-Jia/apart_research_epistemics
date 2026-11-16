@@ -1,0 +1,44 @@
+{
+  "scorer_version": "2",
+  "label": "s2",
+  "run": "main",
+  "urgency_scale_version": "v3",
+  "urgency_most_urgent_first": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "judge": {
+    "model": "claude-fable-5-2-in-session",
+    "prompt_version": "judge-v2"
+  },
+  "reference_answers": {
+    "source": "frozen in the run",
+    "overridden_vignettes": [],
+    "key_versions": {
+      "V02": "d79c0b913d55",
+      "V06": "f42ad4a9901e",
+      "V07": "ad277f42a2d8",
+      "V09": "51a48b1ff8a2",
+      "V10": "70fec2ab1408",
+      "V15": "8abc54ebcaf2",
+      "V16": "808854fd4a04",
+      "V17": "62c6914fd004",
+      "V18": "14977c36a4c3",
+      "V20": "a799a99b3e77",
+      "V21": "e195f81c9f3e",
+      "V22": "009f2fa40393",
+      "V23": "48be7b00e965"
+    }
+  },
+  "dx_mappings": {
+    "path": "C:\\Users\\jyf08\\Programming\\apart_research_epistemics\\scenarios\\dx_mappings.json",
+    "reviewed_entries": 0,
+    "hash": "4f53cda18c2baa0c"
+  },
+  "include_incomplete": false,
+  "scoring_id": "f64663361112d027",
+  "created_at": "2026-11-15T23:01:42",
+  "code_version": "3c101fb279d71bfe0d1f3853df2bd129e005757e"
+}

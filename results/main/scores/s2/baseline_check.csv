@@ -1,0 +1,685 @@
+model,vignette,language,perspective,check,n,valid,reference,modal_answer,share_matching_reference,distribution,key_version,flag
+haiku,V02,en,consultant,baseline_urgency,102,102,D,D,0.9901960784313726,"{""C"": 1, ""D"": 101}",d79c0b913d55,False
+haiku,V02,en,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",d79c0b913d55,False
+haiku,V02,en,nurse,baseline_urgency,102,102,D,D,1.0,"{""D"": 102}",d79c0b913d55,False
+haiku,V02,en,nurse,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",d79c0b913d55,False
+haiku,V02,en,patient,baseline_urgency,102,102,D,D,0.8627450980392157,"{""C"": 14, ""D"": 88}",d79c0b913d55,False
+haiku,V02,en,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",d79c0b913d55,False
+haiku,V02,ja,consultant,baseline_urgency,102,101,D,D,0.7524752475247525,"{""B"": 10, ""C"": 15, ""D"": 76}",d79c0b913d55,False
+haiku,V02,ja,consultant,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",d79c0b913d55,False
+haiku,V02,ja,nurse,baseline_urgency,102,102,D,B,0.06862745098039216,"{""B"": 82, ""C"": 13, ""D"": 7}",d79c0b913d55,True
+haiku,V02,ja,nurse,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",d79c0b913d55,False
+haiku,V02,ja,patient,baseline_urgency,102,102,D,D,0.8137254901960784,"{""B"": 4, ""C"": 15, ""D"": 83}",d79c0b913d55,False
+haiku,V02,ja,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",d79c0b913d55,False
+haiku,V02,zh,consultant,baseline_urgency,102,101,D,D,0.5841584158415841,"{""B"": 16, ""C"": 26, ""D"": 59}",d79c0b913d55,False
+haiku,V02,zh,consultant,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",d79c0b913d55,False
+haiku,V02,zh,nurse,baseline_urgency,102,102,D,B,0.06862745098039216,"{""B"": 79, ""C"": 16, ""D"": 7}",d79c0b913d55,True
+haiku,V02,zh,nurse,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",d79c0b913d55,False
+haiku,V02,zh,patient,baseline_urgency,102,102,D,C,0.13725490196078433,"{""B"": 26, ""C"": 62, ""D"": 14}",d79c0b913d55,True
+haiku,V02,zh,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",d79c0b913d55,False
+haiku,V06,en,consultant,baseline_urgency,78,75,A,A,1.0,"{""A"": 75}",f42ad4a9901e,False
+haiku,V06,en,consultant,baseline_diagnosis,78,75,start,start,1.0,"{""start"": 75}",f42ad4a9901e,False
+haiku,V06,en,nurse,baseline_urgency,78,75,A,A,1.0,"{""A"": 75}",f42ad4a9901e,False
+haiku,V06,en,nurse,baseline_diagnosis,78,75,start,start,1.0,"{""start"": 75}",f42ad4a9901e,False
+haiku,V06,en,patient,baseline_urgency,78,78,A,A,1.0,"{""A"": 78}",f42ad4a9901e,False
+haiku,V06,en,patient,baseline_diagnosis,78,78,start,start,1.0,"{""start"": 78}",f42ad4a9901e,False
+haiku,V06,ja,consultant,baseline_urgency,78,77,A,A,0.987012987012987,"{""A"": 76, ""B"": 1}",f42ad4a9901e,False
+haiku,V06,ja,consultant,baseline_diagnosis,78,76,start,start,1.0,"{""start"": 76}",f42ad4a9901e,False
+haiku,V06,ja,nurse,baseline_urgency,78,78,A,A,1.0,"{""A"": 78}",f42ad4a9901e,False
+haiku,V06,ja,nurse,baseline_diagnosis,78,78,start,start,1.0,"{""start"": 78}",f42ad4a9901e,False
+haiku,V06,ja,patient,baseline_urgency,78,78,A,A,1.0,"{""A"": 78}",f42ad4a9901e,False
+haiku,V06,ja,patient,baseline_diagnosis,78,78,start,start,1.0,"{""start"": 78}",f42ad4a9901e,False
+haiku,V06,zh,consultant,baseline_urgency,78,75,A,A,1.0,"{""A"": 75}",f42ad4a9901e,False
+haiku,V06,zh,consultant,baseline_diagnosis,78,75,start,start,1.0,"{""start"": 75}",f42ad4a9901e,False
+haiku,V06,zh,nurse,baseline_urgency,78,76,A,A,1.0,"{""A"": 76}",f42ad4a9901e,False
+haiku,V06,zh,nurse,baseline_diagnosis,78,76,start,start,1.0,"{""start"": 76}",f42ad4a9901e,False
+haiku,V06,zh,patient,baseline_urgency,78,78,A,A,1.0,"{""A"": 78}",f42ad4a9901e,False
+haiku,V06,zh,patient,baseline_diagnosis,78,78,start,start,1.0,"{""start"": 78}",f42ad4a9901e,False
+haiku,V07,en,consultant,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",ad277f42a2d8,True
+haiku,V07,en,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",ad277f42a2d8,False
+haiku,V07,en,nurse,baseline_urgency,102,102,D,C,0.029411764705882353,"{""C"": 99, ""D"": 3}",ad277f42a2d8,True
+haiku,V07,en,nurse,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",ad277f42a2d8,False
+haiku,V07,en,patient,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",ad277f42a2d8,True
+haiku,V07,en,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",ad277f42a2d8,False
+haiku,V07,ja,consultant,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",ad277f42a2d8,True
+haiku,V07,ja,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",ad277f42a2d8,False
+haiku,V07,ja,nurse,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",ad277f42a2d8,True
+haiku,V07,ja,nurse,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",ad277f42a2d8,False
+haiku,V07,ja,patient,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",ad277f42a2d8,True
+haiku,V07,ja,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",ad277f42a2d8,False
+haiku,V07,zh,consultant,baseline_urgency,102,102,D,C,0.00980392156862745,"{""C"": 101, ""D"": 1}",ad277f42a2d8,True
+haiku,V07,zh,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",ad277f42a2d8,False
+haiku,V07,zh,nurse,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",ad277f42a2d8,True
+haiku,V07,zh,nurse,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",ad277f42a2d8,False
+haiku,V07,zh,patient,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",ad277f42a2d8,True
+haiku,V07,zh,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",ad277f42a2d8,False
+haiku,V09,en,consultant,baseline_urgency,102,102,D,C,0.0,"{""B"": 26, ""C"": 76}",51a48b1ff8a2,True
+haiku,V09,en,consultant,baseline_diagnosis,102,102,start,start,0.9705882352941176,"{""neither"": 3, ""start"": 99}",51a48b1ff8a2,False
+haiku,V09,en,nurse,baseline_urgency,102,99,D,B,0.0,"{""B"": 92, ""C"": 7}",51a48b1ff8a2,True
+haiku,V09,en,nurse,baseline_diagnosis,102,99,start,start,1.0,"{""start"": 99}",51a48b1ff8a2,False
+haiku,V09,en,patient,baseline_urgency,102,102,D,B,0.0,"{""B"": 99, ""C"": 3}",51a48b1ff8a2,True
+haiku,V09,en,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",51a48b1ff8a2,False
+haiku,V09,ja,consultant,baseline_urgency,102,102,D,B,0.0,"{""B"": 74, ""C"": 28}",51a48b1ff8a2,True
+haiku,V09,ja,consultant,baseline_diagnosis,102,102,start,start,0.7352941176470589,"{""neither"": 27, ""start"": 75}",51a48b1ff8a2,False
+haiku,V09,ja,nurse,baseline_urgency,102,102,D,B,0.0,"{""B"": 102}",51a48b1ff8a2,True
+haiku,V09,ja,nurse,baseline_diagnosis,102,102,start,start,0.6764705882352942,"{""neither"": 33, ""start"": 69}",51a48b1ff8a2,False
+haiku,V09,ja,patient,baseline_urgency,102,102,D,B,0.0,"{""B"": 98, ""C"": 4}",51a48b1ff8a2,True
+haiku,V09,ja,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",51a48b1ff8a2,False
+haiku,V09,zh,consultant,baseline_urgency,102,102,D,B,0.0,"{""B"": 97, ""C"": 5}",51a48b1ff8a2,True
+haiku,V09,zh,consultant,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",51a48b1ff8a2,False
+haiku,V09,zh,nurse,baseline_urgency,102,102,D,B,0.0,"{""B"": 101, ""C"": 1}",51a48b1ff8a2,True
+haiku,V09,zh,nurse,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",51a48b1ff8a2,False
+haiku,V09,zh,patient,baseline_urgency,102,102,D,B,0.0,"{""B"": 96, ""C"": 6}",51a48b1ff8a2,True
+haiku,V09,zh,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",51a48b1ff8a2,False
+haiku,V10,en,consultant,baseline_urgency,102,101,D,C,0.009900990099009901,"{""C"": 100, ""D"": 1}",70fec2ab1408,True
+haiku,V10,en,consultant,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",70fec2ab1408,False
+haiku,V10,en,nurse,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",70fec2ab1408,True
+haiku,V10,en,nurse,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",70fec2ab1408,False
+haiku,V10,en,patient,baseline_urgency,102,101,D,C,0.0,"{""C"": 101}",70fec2ab1408,True
+haiku,V10,en,patient,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",70fec2ab1408,False
+haiku,V10,ja,consultant,baseline_urgency,102,101,D,C,0.0,"{""C"": 101}",70fec2ab1408,True
+haiku,V10,ja,consultant,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",70fec2ab1408,False
+haiku,V10,ja,nurse,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",70fec2ab1408,True
+haiku,V10,ja,nurse,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",70fec2ab1408,False
+haiku,V10,ja,patient,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",70fec2ab1408,True
+haiku,V10,ja,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",70fec2ab1408,False
+haiku,V10,zh,consultant,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",70fec2ab1408,True
+haiku,V10,zh,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",70fec2ab1408,False
+haiku,V10,zh,nurse,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",70fec2ab1408,True
+haiku,V10,zh,nurse,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",70fec2ab1408,False
+haiku,V10,zh,patient,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",70fec2ab1408,True
+haiku,V10,zh,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",70fec2ab1408,False
+haiku,V15,en,consultant,baseline_urgency,102,102,C,B,0.13725490196078433,"{""B"": 88, ""C"": 14}",8abc54ebcaf2,True
+haiku,V15,en,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",8abc54ebcaf2,False
+haiku,V15,en,nurse,baseline_urgency,102,102,C,B,0.00980392156862745,"{""B"": 101, ""C"": 1}",8abc54ebcaf2,True
+haiku,V15,en,nurse,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",8abc54ebcaf2,False
+haiku,V15,en,patient,baseline_urgency,102,102,C,B,0.20588235294117646,"{""B"": 81, ""C"": 21}",8abc54ebcaf2,True
+haiku,V15,en,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",8abc54ebcaf2,False
+haiku,V15,ja,consultant,baseline_urgency,102,102,C,B,0.06862745098039216,"{""B"": 95, ""C"": 7}",8abc54ebcaf2,True
+haiku,V15,ja,consultant,baseline_diagnosis,102,96,start,start,1.0,"{""start"": 96}",8abc54ebcaf2,False
+haiku,V15,ja,nurse,baseline_urgency,102,102,C,B,0.1568627450980392,"{""B"": 86, ""C"": 16}",8abc54ebcaf2,True
+haiku,V15,ja,nurse,baseline_diagnosis,102,92,start,start,1.0,"{""start"": 92}",8abc54ebcaf2,False
+haiku,V15,ja,patient,baseline_urgency,102,102,C,B,0.0196078431372549,"{""B"": 100, ""C"": 2}",8abc54ebcaf2,True
+haiku,V15,ja,patient,baseline_diagnosis,102,99,start,start,1.0,"{""start"": 99}",8abc54ebcaf2,False
+haiku,V15,zh,consultant,baseline_urgency,102,102,C,B,0.13725490196078433,"{""B"": 88, ""C"": 14}",8abc54ebcaf2,True
+haiku,V15,zh,consultant,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",8abc54ebcaf2,False
+haiku,V15,zh,nurse,baseline_urgency,102,102,C,B,0.049019607843137254,"{""B"": 97, ""C"": 5}",8abc54ebcaf2,True
+haiku,V15,zh,nurse,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",8abc54ebcaf2,False
+haiku,V15,zh,patient,baseline_urgency,102,102,C,B,0.0,"{""B"": 102}",8abc54ebcaf2,True
+haiku,V15,zh,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",8abc54ebcaf2,False
+haiku,V16,en,consultant,baseline_urgency,102,102,D,C,0.19607843137254902,"{""C"": 82, ""D"": 20}",808854fd4a04,True
+haiku,V16,en,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",808854fd4a04,False
+haiku,V16,en,nurse,baseline_urgency,102,101,D,C,0.0594059405940594,"{""C"": 95, ""D"": 6}",808854fd4a04,True
+haiku,V16,en,nurse,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",808854fd4a04,False
+haiku,V16,en,patient,baseline_urgency,102,102,D,C,0.029411764705882353,"{""C"": 99, ""D"": 3}",808854fd4a04,True
+haiku,V16,en,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",808854fd4a04,False
+haiku,V16,ja,consultant,baseline_urgency,102,101,D,C,0.039603960396039604,"{""C"": 97, ""D"": 4}",808854fd4a04,True
+haiku,V16,ja,consultant,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",808854fd4a04,False
+haiku,V16,ja,nurse,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",808854fd4a04,True
+haiku,V16,ja,nurse,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",808854fd4a04,False
+haiku,V16,ja,patient,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",808854fd4a04,True
+haiku,V16,ja,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",808854fd4a04,False
+haiku,V16,zh,consultant,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",808854fd4a04,True
+haiku,V16,zh,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",808854fd4a04,False
+haiku,V16,zh,nurse,baseline_urgency,102,101,D,C,0.0,"{""C"": 101}",808854fd4a04,True
+haiku,V16,zh,nurse,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",808854fd4a04,False
+haiku,V16,zh,patient,baseline_urgency,102,102,D,C,0.0,"{""C"": 102}",808854fd4a04,True
+haiku,V16,zh,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",808854fd4a04,False
+haiku,V17,en,consultant,baseline_urgency,102,102,D,D,0.5686274509803921,"{""C"": 44, ""D"": 58}",62c6914fd004,False
+haiku,V17,en,consultant,baseline_diagnosis,102,102,start,start,0.9901960784313726,"{""neither"": 1, ""start"": 101}",62c6914fd004,False
+haiku,V17,en,nurse,baseline_urgency,102,101,D,D,0.7524752475247525,"{""C"": 25, ""D"": 76}",62c6914fd004,False
+haiku,V17,en,nurse,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",62c6914fd004,False
+haiku,V17,en,patient,baseline_urgency,102,102,D,C,0.4215686274509804,"{""C"": 59, ""D"": 43}",62c6914fd004,True
+haiku,V17,en,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",62c6914fd004,False
+haiku,V17,ja,consultant,baseline_urgency,102,102,D,D,0.5784313725490197,"{""C"": 43, ""D"": 59}",62c6914fd004,False
+haiku,V17,ja,consultant,baseline_diagnosis,102,99,start,start,1.0,"{""start"": 99}",62c6914fd004,False
+haiku,V17,ja,nurse,baseline_urgency,102,101,D,D,0.7425742574257426,"{""C"": 26, ""D"": 75}",62c6914fd004,False
+haiku,V17,ja,nurse,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",62c6914fd004,False
+haiku,V17,ja,patient,baseline_urgency,102,102,D,C,0.45098039215686275,"{""C"": 56, ""D"": 46}",62c6914fd004,True
+haiku,V17,ja,patient,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",62c6914fd004,False
+haiku,V17,zh,consultant,baseline_urgency,102,102,D,D,0.5882352941176471,"{""C"": 42, ""D"": 60}",62c6914fd004,False
+haiku,V17,zh,consultant,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",62c6914fd004,False
+haiku,V17,zh,nurse,baseline_urgency,102,101,D,C,0.44554455445544555,"{""C"": 56, ""D"": 45}",62c6914fd004,True
+haiku,V17,zh,nurse,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",62c6914fd004,False
+haiku,V17,zh,patient,baseline_urgency,102,102,D,C,0.049019607843137254,"{""C"": 97, ""D"": 5}",62c6914fd004,True
+haiku,V17,zh,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",62c6914fd004,False
+haiku,V18,en,consultant,baseline_urgency,102,101,C,C,0.9801980198019802,"{""B"": 2, ""C"": 99}",14977c36a4c3,False
+haiku,V18,en,consultant,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",14977c36a4c3,False
+haiku,V18,en,nurse,baseline_urgency,102,100,C,B,0.15,"{""B"": 85, ""C"": 15}",14977c36a4c3,True
+haiku,V18,en,nurse,baseline_diagnosis,102,100,start,start,1.0,"{""start"": 100}",14977c36a4c3,False
+haiku,V18,en,patient,baseline_urgency,102,102,C,B,0.38235294117647056,"{""B"": 63, ""C"": 39}",14977c36a4c3,True
+haiku,V18,en,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",14977c36a4c3,False
+haiku,V18,ja,consultant,baseline_urgency,102,100,C,B,0.3,"{""B"": 70, ""C"": 30}",14977c36a4c3,True
+haiku,V18,ja,consultant,baseline_diagnosis,102,100,start,start,1.0,"{""start"": 100}",14977c36a4c3,False
+haiku,V18,ja,nurse,baseline_urgency,102,102,C,B,0.12745098039215685,"{""B"": 89, ""C"": 13}",14977c36a4c3,True
+haiku,V18,ja,nurse,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",14977c36a4c3,False
+haiku,V18,ja,patient,baseline_urgency,102,102,C,C,0.5196078431372549,"{""B"": 49, ""C"": 53}",14977c36a4c3,False
+haiku,V18,ja,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",14977c36a4c3,False
+haiku,V18,zh,consultant,baseline_urgency,102,102,C,C,0.7549019607843137,"{""B"": 25, ""C"": 77}",14977c36a4c3,False
+haiku,V18,zh,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",14977c36a4c3,False
+haiku,V18,zh,nurse,baseline_urgency,102,101,C,B,0.44554455445544555,"{""B"": 56, ""C"": 45}",14977c36a4c3,True
+haiku,V18,zh,nurse,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",14977c36a4c3,False
+haiku,V18,zh,patient,baseline_urgency,102,99,C,B,0.2727272727272727,"{""B"": 72, ""C"": 27}",14977c36a4c3,True
+haiku,V18,zh,patient,baseline_diagnosis,102,99,start,start,1.0,"{""start"": 99}",14977c36a4c3,False
+haiku,V20,en,consultant,baseline_urgency,102,102,D,C,0.058823529411764705,"{""C"": 96, ""D"": 6}",a799a99b3e77,True
+haiku,V20,en,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",a799a99b3e77,False
+haiku,V20,en,nurse,baseline_urgency,102,101,D,C,0.48514851485148514,"{""C"": 52, ""D"": 49}",a799a99b3e77,True
+haiku,V20,en,nurse,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",a799a99b3e77,False
+haiku,V20,en,patient,baseline_urgency,102,102,D,C,0.00980392156862745,"{""C"": 101, ""D"": 1}",a799a99b3e77,True
+haiku,V20,en,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",a799a99b3e77,False
+haiku,V20,ja,consultant,baseline_urgency,102,102,D,C,0.12745098039215685,"{""C"": 89, ""D"": 13}",a799a99b3e77,True
+haiku,V20,ja,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",a799a99b3e77,False
+haiku,V20,ja,nurse,baseline_urgency,102,102,D,C,0.00980392156862745,"{""B"": 4, ""C"": 97, ""D"": 1}",a799a99b3e77,True
+haiku,V20,ja,nurse,baseline_diagnosis,102,101,start,start,0.9900990099009901,"{""post"": 1, ""start"": 100}",a799a99b3e77,False
+haiku,V20,ja,patient,baseline_urgency,102,102,D,D,0.7745098039215687,"{""C"": 23, ""D"": 79}",a799a99b3e77,False
+haiku,V20,ja,patient,baseline_diagnosis,102,100,start,start,1.0,"{""start"": 100}",a799a99b3e77,False
+haiku,V20,zh,consultant,baseline_urgency,102,102,D,C,0.0,"{""B"": 8, ""C"": 94}",a799a99b3e77,True
+haiku,V20,zh,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",a799a99b3e77,False
+haiku,V20,zh,nurse,baseline_urgency,102,102,D,C,0.13725490196078433,"{""B"": 1, ""C"": 87, ""D"": 14}",a799a99b3e77,True
+haiku,V20,zh,nurse,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",a799a99b3e77,False
+haiku,V20,zh,patient,baseline_urgency,102,102,D,C,0.00980392156862745,"{""C"": 101, ""D"": 1}",a799a99b3e77,True
+haiku,V20,zh,patient,baseline_diagnosis,102,94,start,start,0.9893617021276596,"{""none"": 1, ""start"": 93}",a799a99b3e77,False
+haiku,V21,en,consultant,baseline_urgency,102,102,C,B,0.23529411764705882,"{""B"": 77, ""C"": 24, ""D"": 1}",e195f81c9f3e,True
+haiku,V21,en,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",e195f81c9f3e,False
+haiku,V21,en,nurse,baseline_urgency,102,100,C,B,0.01,"{""B"": 99, ""C"": 1}",e195f81c9f3e,True
+haiku,V21,en,nurse,baseline_diagnosis,102,100,start,start,1.0,"{""start"": 100}",e195f81c9f3e,False
+haiku,V21,en,patient,baseline_urgency,102,102,C,B,0.0,"{""B"": 102}",e195f81c9f3e,True
+haiku,V21,en,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",e195f81c9f3e,False
+haiku,V21,ja,consultant,baseline_urgency,102,102,C,B,0.0392156862745098,"{""B"": 94, ""C"": 4, ""D"": 4}",e195f81c9f3e,True
+haiku,V21,ja,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",e195f81c9f3e,False
+haiku,V21,ja,nurse,baseline_urgency,102,101,C,B,0.039603960396039604,"{""B"": 97, ""C"": 4}",e195f81c9f3e,True
+haiku,V21,ja,nurse,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",e195f81c9f3e,False
+haiku,V21,ja,patient,baseline_urgency,102,102,C,B,0.0,"{""B"": 102}",e195f81c9f3e,True
+haiku,V21,ja,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",e195f81c9f3e,False
+haiku,V21,zh,consultant,baseline_urgency,102,102,C,B,0.029411764705882353,"{""B"": 98, ""C"": 3, ""D"": 1}",e195f81c9f3e,True
+haiku,V21,zh,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",e195f81c9f3e,False
+haiku,V21,zh,nurse,baseline_urgency,102,101,C,B,0.0,"{""B"": 101}",e195f81c9f3e,True
+haiku,V21,zh,nurse,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",e195f81c9f3e,False
+haiku,V21,zh,patient,baseline_urgency,102,102,C,B,0.0,"{""B"": 102}",e195f81c9f3e,True
+haiku,V21,zh,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",e195f81c9f3e,False
+haiku,V22,en,consultant,baseline_urgency,102,102,C,C,1.0,"{""C"": 102}",009f2fa40393,False
+haiku,V22,en,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",009f2fa40393,False
+haiku,V22,en,nurse,baseline_urgency,102,100,C,C,1.0,"{""C"": 100}",009f2fa40393,False
+haiku,V22,en,nurse,baseline_diagnosis,102,100,start,start,1.0,"{""start"": 100}",009f2fa40393,False
+haiku,V22,en,patient,baseline_urgency,102,102,C,C,1.0,"{""C"": 102}",009f2fa40393,False
+haiku,V22,en,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",009f2fa40393,False
+haiku,V22,ja,consultant,baseline_urgency,102,102,C,C,1.0,"{""C"": 102}",009f2fa40393,False
+haiku,V22,ja,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",009f2fa40393,False
+haiku,V22,ja,nurse,baseline_urgency,102,102,C,C,1.0,"{""C"": 102}",009f2fa40393,False
+haiku,V22,ja,nurse,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",009f2fa40393,False
+haiku,V22,ja,patient,baseline_urgency,102,102,C,C,1.0,"{""C"": 102}",009f2fa40393,False
+haiku,V22,ja,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",009f2fa40393,False
+haiku,V22,zh,consultant,baseline_urgency,102,102,C,C,1.0,"{""C"": 102}",009f2fa40393,False
+haiku,V22,zh,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",009f2fa40393,False
+haiku,V22,zh,nurse,baseline_urgency,102,101,C,C,1.0,"{""C"": 101}",009f2fa40393,False
+haiku,V22,zh,nurse,baseline_diagnosis,102,101,start,start,1.0,"{""start"": 101}",009f2fa40393,False
+haiku,V22,zh,patient,baseline_urgency,102,102,C,C,1.0,"{""C"": 102}",009f2fa40393,False
+haiku,V22,zh,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",009f2fa40393,False
+haiku,V23,en,consultant,baseline_urgency,102,102,C,B,0.0,"{""B"": 102}",48be7b00e965,True
+haiku,V23,en,consultant,baseline_diagnosis,102,102,start,start,0.9803921568627451,"{""neither"": 2, ""start"": 100}",48be7b00e965,False
+haiku,V23,en,nurse,baseline_urgency,102,100,C,B,0.0,"{""B"": 100}",48be7b00e965,True
+haiku,V23,en,nurse,baseline_diagnosis,102,100,start,start,1.0,"{""start"": 100}",48be7b00e965,False
+haiku,V23,en,patient,baseline_urgency,102,102,C,B,0.0,"{""B"": 102}",48be7b00e965,True
+haiku,V23,en,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",48be7b00e965,False
+haiku,V23,ja,consultant,baseline_urgency,102,102,C,B,0.0,"{""B"": 102}",48be7b00e965,True
+haiku,V23,ja,consultant,baseline_diagnosis,102,102,start,neither,0.43137254901960786,"{""neither"": 58, ""start"": 44}",48be7b00e965,True
+haiku,V23,ja,nurse,baseline_urgency,102,102,C,B,0.0,"{""B"": 102}",48be7b00e965,True
+haiku,V23,ja,nurse,baseline_diagnosis,102,102,start,start,0.5980392156862745,"{""neither"": 41, ""start"": 61}",48be7b00e965,False
+haiku,V23,ja,patient,baseline_urgency,102,102,C,B,0.0,"{""B"": 102}",48be7b00e965,True
+haiku,V23,ja,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",48be7b00e965,False
+haiku,V23,zh,consultant,baseline_urgency,102,102,C,B,0.0,"{""B"": 102}",48be7b00e965,True
+haiku,V23,zh,consultant,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",48be7b00e965,False
+haiku,V23,zh,nurse,baseline_urgency,102,102,C,B,0.0,"{""B"": 102}",48be7b00e965,True
+haiku,V23,zh,nurse,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",48be7b00e965,False
+haiku,V23,zh,patient,baseline_urgency,102,102,C,B,0.0,"{""B"": 102}",48be7b00e965,True
+haiku,V23,zh,patient,baseline_diagnosis,102,102,start,start,1.0,"{""start"": 102}",48be7b00e965,False
+haiku,V02,en,consultant,discordant_urgency_update_urgency,24,24,B,B,0.625,"{""A"": 9, ""B"": 15}",dacd75cd2cf2,False
+haiku,V02,en,consultant,discordant_urgency_update_diagnosis,24,23,start,start,0.9130434782608695,"{""neither"": 1, ""none"": 1, ""start"": 21}",dacd75cd2cf2,False
+haiku,V02,en,nurse,discordant_urgency_update_urgency,24,24,B,B,0.7083333333333334,"{""A"": 7, ""B"": 17}",dacd75cd2cf2,False
+haiku,V02,en,nurse,discordant_urgency_update_diagnosis,24,24,start,start,0.9583333333333334,"{""neither"": 1, ""start"": 23}",dacd75cd2cf2,False
+haiku,V02,en,patient,discordant_urgency_update_urgency,24,24,B,A,0.16666666666666666,"{""A"": 20, ""B"": 4}",dacd75cd2cf2,True
+haiku,V02,en,patient,discordant_urgency_update_diagnosis,24,23,start,start,0.9565217391304348,"{""none"": 1, ""start"": 22}",dacd75cd2cf2,False
+haiku,V02,ja,consultant,discordant_urgency_update_urgency,24,24,B,B,0.5833333333333334,"{""A"": 10, ""B"": 14}",dacd75cd2cf2,False
+haiku,V02,ja,consultant,discordant_urgency_update_diagnosis,24,23,start,start,1.0,"{""start"": 23}",dacd75cd2cf2,False
+haiku,V02,ja,nurse,discordant_urgency_update_urgency,24,24,B,A,0.20833333333333334,"{""A"": 19, ""B"": 5}",dacd75cd2cf2,True
+haiku,V02,ja,nurse,discordant_urgency_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",dacd75cd2cf2,False
+haiku,V02,ja,patient,discordant_urgency_update_urgency,24,24,B,A,0.20833333333333334,"{""A"": 19, ""B"": 5}",dacd75cd2cf2,True
+haiku,V02,ja,patient,discordant_urgency_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",dacd75cd2cf2,False
+haiku,V02,zh,consultant,discordant_urgency_update_urgency,24,24,B,A,0.2916666666666667,"{""A"": 17, ""B"": 7}",dacd75cd2cf2,True
+haiku,V02,zh,consultant,discordant_urgency_update_diagnosis,24,23,start,start,0.9565217391304348,"{""none"": 1, ""start"": 22}",dacd75cd2cf2,False
+haiku,V02,zh,nurse,discordant_urgency_update_urgency,24,24,B,A,0.08333333333333333,"{""A"": 22, ""B"": 2}",dacd75cd2cf2,True
+haiku,V02,zh,nurse,discordant_urgency_update_diagnosis,24,24,start,start,0.9166666666666666,"{""neither"": 2, ""start"": 22}",dacd75cd2cf2,False
+haiku,V02,zh,patient,discordant_urgency_update_urgency,24,24,B,A,0.08333333333333333,"{""A"": 22, ""B"": 2}",dacd75cd2cf2,True
+haiku,V02,zh,patient,discordant_urgency_update_diagnosis,24,24,start,start,0.9583333333333334,"{""none"": 1, ""start"": 23}",dacd75cd2cf2,False
+haiku,V07,en,consultant,discordant_urgency_update_urgency,24,24,B,A,0.375,"{""A"": 15, ""B"": 9}",c2ae22efdc1c,True
+haiku,V07,en,consultant,discordant_urgency_update_diagnosis,24,22,start,start,0.6818181818181818,"{""neither"": 6, ""none"": 1, ""start"": 15}",c2ae22efdc1c,False
+haiku,V07,en,nurse,discordant_urgency_update_urgency,24,24,B,A,0.4583333333333333,"{""A"": 13, ""B"": 11}",c2ae22efdc1c,True
+haiku,V07,en,nurse,discordant_urgency_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",c2ae22efdc1c,False
+haiku,V07,en,patient,discordant_urgency_update_urgency,24,24,B,A,0.0,"{""A"": 24}",c2ae22efdc1c,True
+haiku,V07,en,patient,discordant_urgency_update_diagnosis,24,22,start,start,0.9090909090909091,"{""none"": 2, ""start"": 20}",c2ae22efdc1c,False
+haiku,V07,ja,consultant,discordant_urgency_update_urgency,24,24,B,B,0.8333333333333334,"{""A"": 4, ""B"": 20}",c2ae22efdc1c,False
+haiku,V07,ja,consultant,discordant_urgency_update_diagnosis,24,23,start,start,0.7391304347826086,"{""neither"": 5, ""none"": 1, ""start"": 17}",c2ae22efdc1c,False
+haiku,V07,ja,nurse,discordant_urgency_update_urgency,24,24,B,B,0.8333333333333334,"{""A"": 4, ""B"": 20}",c2ae22efdc1c,False
+haiku,V07,ja,nurse,discordant_urgency_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",c2ae22efdc1c,False
+haiku,V07,ja,patient,discordant_urgency_update_urgency,24,24,B,A,0.08333333333333333,"{""A"": 22, ""B"": 2}",c2ae22efdc1c,True
+haiku,V07,ja,patient,discordant_urgency_update_diagnosis,24,20,start,start,0.75,"{""neither"": 2, ""none"": 3, ""start"": 15}",c2ae22efdc1c,False
+haiku,V07,zh,consultant,discordant_urgency_update_urgency,24,24,B,B,0.6666666666666666,"{""A"": 8, ""B"": 16}",c2ae22efdc1c,False
+haiku,V07,zh,consultant,discordant_urgency_update_diagnosis,24,20,start,start,0.55,"{""neither"": 6, ""none"": 3, ""start"": 11}",c2ae22efdc1c,False
+haiku,V07,zh,nurse,discordant_urgency_update_urgency,24,24,B,A,0.3333333333333333,"{""A"": 16, ""B"": 8}",c2ae22efdc1c,True
+haiku,V07,zh,nurse,discordant_urgency_update_diagnosis,24,21,start,start,0.9523809523809523,"{""neither"": 1, ""start"": 20}",c2ae22efdc1c,False
+haiku,V07,zh,patient,discordant_urgency_update_urgency,24,24,B,A,0.125,"{""A"": 21, ""B"": 3}",c2ae22efdc1c,True
+haiku,V07,zh,patient,discordant_urgency_update_diagnosis,24,19,start,start,0.6842105263157895,"{""neither"": 5, ""none"": 1, ""start"": 13}",c2ae22efdc1c,False
+haiku,V09,en,consultant,discordant_urgency_update_urgency,24,24,A,A,0.9583333333333334,"{""A"": 23, ""B"": 1}",82c59d7bf478,False
+haiku,V09,en,consultant,discordant_urgency_update_diagnosis,24,24,start,neither,0.20833333333333334,"{""neither"": 19, ""start"": 5}",82c59d7bf478,True
+haiku,V09,en,nurse,discordant_urgency_update_urgency,24,23,A,A,0.9130434782608695,"{""A"": 21, ""B"": 2}",82c59d7bf478,False
+haiku,V09,en,nurse,discordant_urgency_update_diagnosis,24,22,start,neither,0.3181818181818182,"{""neither"": 15, ""start"": 7}",82c59d7bf478,True
+haiku,V09,en,patient,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",82c59d7bf478,False
+haiku,V09,en,patient,discordant_urgency_update_diagnosis,24,24,start,start,0.625,"{""neither"": 9, ""start"": 15}",82c59d7bf478,False
+haiku,V09,ja,consultant,discordant_urgency_update_urgency,24,24,A,A,0.7916666666666666,"{""A"": 19, ""B"": 5}",82c59d7bf478,False
+haiku,V09,ja,consultant,discordant_urgency_update_diagnosis,24,22,start,neither,0.5,"{""neither"": 11, ""start"": 11}",82c59d7bf478,False
+haiku,V09,ja,nurse,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",82c59d7bf478,False
+haiku,V09,ja,nurse,discordant_urgency_update_diagnosis,24,23,start,neither,0.34782608695652173,"{""neither"": 15, ""start"": 8}",82c59d7bf478,True
+haiku,V09,ja,patient,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",82c59d7bf478,False
+haiku,V09,ja,patient,discordant_urgency_update_diagnosis,24,22,start,start,0.9545454545454546,"{""neither"": 1, ""start"": 21}",82c59d7bf478,False
+haiku,V09,zh,consultant,discordant_urgency_update_urgency,24,24,A,A,0.9166666666666666,"{""A"": 22, ""B"": 2}",82c59d7bf478,False
+haiku,V09,zh,consultant,discordant_urgency_update_diagnosis,24,23,start,neither,0.30434782608695654,"{""neither"": 16, ""start"": 7}",82c59d7bf478,True
+haiku,V09,zh,nurse,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",82c59d7bf478,False
+haiku,V09,zh,nurse,discordant_urgency_update_diagnosis,24,23,start,neither,0.43478260869565216,"{""neither"": 12, ""none"": 1, ""start"": 10}",82c59d7bf478,True
+haiku,V09,zh,patient,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",82c59d7bf478,False
+haiku,V09,zh,patient,discordant_urgency_update_diagnosis,24,22,start,start,1.0,"{""start"": 22}",82c59d7bf478,False
+haiku,V10,en,consultant,discordant_urgency_update_urgency,24,24,B,B,0.875,"{""A"": 3, ""B"": 21}",0d9f8e5e406c,False
+haiku,V10,en,consultant,discordant_urgency_update_diagnosis,24,21,start,start,0.9047619047619048,"{""neither"": 2, ""start"": 19}",0d9f8e5e406c,False
+haiku,V10,en,nurse,discordant_urgency_update_urgency,24,24,B,B,0.9583333333333334,"{""A"": 1, ""B"": 23}",0d9f8e5e406c,False
+haiku,V10,en,nurse,discordant_urgency_update_diagnosis,24,23,start,start,0.6956521739130435,"{""neither"": 4, ""none"": 3, ""start"": 16}",0d9f8e5e406c,False
+haiku,V10,en,patient,discordant_urgency_update_urgency,24,24,B,B,0.9583333333333334,"{""A"": 1, ""B"": 23}",0d9f8e5e406c,False
+haiku,V10,en,patient,discordant_urgency_update_diagnosis,24,21,start,start,0.7142857142857143,"{""neither"": 2, ""none"": 4, ""start"": 15}",0d9f8e5e406c,False
+haiku,V10,ja,consultant,discordant_urgency_update_urgency,24,24,B,B,0.7916666666666666,"{""A"": 5, ""B"": 19}",0d9f8e5e406c,False
+haiku,V10,ja,consultant,discordant_urgency_update_diagnosis,24,23,start,start,1.0,"{""start"": 23}",0d9f8e5e406c,False
+haiku,V10,ja,nurse,discordant_urgency_update_urgency,24,24,B,B,0.5833333333333334,"{""A"": 10, ""B"": 14}",0d9f8e5e406c,False
+haiku,V10,ja,nurse,discordant_urgency_update_diagnosis,24,24,start,start,0.8333333333333334,"{""neither"": 3, ""none"": 1, ""start"": 20}",0d9f8e5e406c,False
+haiku,V10,ja,patient,discordant_urgency_update_urgency,24,24,B,B,1.0,"{""B"": 24}",0d9f8e5e406c,False
+haiku,V10,ja,patient,discordant_urgency_update_diagnosis,24,24,start,start,0.9583333333333334,"{""neither"": 1, ""start"": 23}",0d9f8e5e406c,False
+haiku,V10,zh,consultant,discordant_urgency_update_urgency,24,24,B,B,0.875,"{""A"": 3, ""B"": 21}",0d9f8e5e406c,False
+haiku,V10,zh,consultant,discordant_urgency_update_diagnosis,24,20,start,start,0.75,"{""neither"": 3, ""none"": 2, ""start"": 15}",0d9f8e5e406c,False
+haiku,V10,zh,nurse,discordant_urgency_update_urgency,24,24,B,B,0.5,"{""A"": 12, ""B"": 12}",0d9f8e5e406c,False
+haiku,V10,zh,nurse,discordant_urgency_update_diagnosis,24,21,start,start,0.8095238095238095,"{""neither"": 3, ""none"": 1, ""start"": 17}",0d9f8e5e406c,False
+haiku,V10,zh,patient,discordant_urgency_update_urgency,24,24,B,B,0.6666666666666666,"{""A"": 8, ""B"": 16}",0d9f8e5e406c,False
+haiku,V10,zh,patient,discordant_urgency_update_diagnosis,24,20,start,start,0.9,"{""neither"": 2, ""start"": 18}",0d9f8e5e406c,False
+haiku,V15,en,consultant,discordant_urgency_update_urgency,24,24,B,B,0.9583333333333334,"{""A"": 1, ""B"": 23}",eaa5c47456d6,False
+haiku,V15,en,consultant,discordant_urgency_update_diagnosis,24,24,start,start,0.75,"{""neither"": 6, ""start"": 18}",eaa5c47456d6,False
+haiku,V15,en,nurse,discordant_urgency_update_urgency,24,24,B,B,0.9166666666666666,"{""A"": 2, ""B"": 22}",eaa5c47456d6,False
+haiku,V15,en,nurse,discordant_urgency_update_diagnosis,24,24,start,start,0.9583333333333334,"{""neither"": 1, ""start"": 23}",eaa5c47456d6,False
+haiku,V15,en,patient,discordant_urgency_update_urgency,24,24,B,B,0.8333333333333334,"{""A"": 4, ""B"": 20}",eaa5c47456d6,False
+haiku,V15,en,patient,discordant_urgency_update_diagnosis,24,24,start,start,0.9583333333333334,"{""none"": 1, ""start"": 23}",eaa5c47456d6,False
+haiku,V15,ja,consultant,discordant_urgency_update_urgency,24,24,B,B,1.0,"{""B"": 24}",eaa5c47456d6,False
+haiku,V15,ja,consultant,discordant_urgency_update_diagnosis,24,21,start,start,0.7619047619047619,"{""neither"": 5, ""start"": 16}",eaa5c47456d6,False
+haiku,V15,ja,nurse,discordant_urgency_update_urgency,24,24,B,B,1.0,"{""B"": 24}",eaa5c47456d6,False
+haiku,V15,ja,nurse,discordant_urgency_update_diagnosis,24,21,start,start,0.8571428571428571,"{""neither"": 2, ""none"": 1, ""start"": 18}",eaa5c47456d6,False
+haiku,V15,ja,patient,discordant_urgency_update_urgency,24,24,B,B,0.9166666666666666,"{""A"": 2, ""B"": 22}",eaa5c47456d6,False
+haiku,V15,ja,patient,discordant_urgency_update_diagnosis,24,23,start,start,1.0,"{""start"": 23}",eaa5c47456d6,False
+haiku,V15,zh,consultant,discordant_urgency_update_urgency,24,24,B,B,0.9583333333333334,"{""A"": 1, ""B"": 23}",eaa5c47456d6,False
+haiku,V15,zh,consultant,discordant_urgency_update_diagnosis,24,23,start,start,0.9565217391304348,"{""neither"": 1, ""start"": 22}",eaa5c47456d6,False
+haiku,V15,zh,nurse,discordant_urgency_update_urgency,24,24,B,B,0.9583333333333334,"{""A"": 1, ""B"": 23}",eaa5c47456d6,False
+haiku,V15,zh,nurse,discordant_urgency_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",eaa5c47456d6,False
+haiku,V15,zh,patient,discordant_urgency_update_urgency,24,24,B,B,0.875,"{""A"": 3, ""B"": 21}",eaa5c47456d6,False
+haiku,V15,zh,patient,discordant_urgency_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",eaa5c47456d6,False
+haiku,V16,en,consultant,discordant_urgency_update_urgency,24,24,C,A,0.0,"{""A"": 14, ""B"": 10}",835101e55f18,True
+haiku,V16,en,consultant,discordant_urgency_update_diagnosis,24,22,start,neither,0.09090909090909091,"{""neither"": 16, ""none"": 4, ""start"": 2}",835101e55f18,True
+haiku,V16,en,nurse,discordant_urgency_update_urgency,24,24,C,B,0.0,"{""A"": 7, ""B"": 17}",835101e55f18,True
+haiku,V16,en,nurse,discordant_urgency_update_diagnosis,24,21,start,neither,0.047619047619047616,"{""neither"": 12, ""none"": 8, ""start"": 1}",835101e55f18,True
+haiku,V16,en,patient,discordant_urgency_update_urgency,24,24,C,B,0.0,"{""A"": 3, ""B"": 21}",835101e55f18,True
+haiku,V16,en,patient,discordant_urgency_update_diagnosis,24,22,start,neither,0.09090909090909091,"{""neither"": 20, ""start"": 2}",835101e55f18,True
+haiku,V16,ja,consultant,discordant_urgency_update_urgency,24,24,C,B,0.0,"{""A"": 7, ""B"": 17}",835101e55f18,True
+haiku,V16,ja,consultant,discordant_urgency_update_diagnosis,24,19,start,neither,0.3157894736842105,"{""neither"": 12, ""none"": 1, ""start"": 6}",835101e55f18,True
+haiku,V16,ja,nurse,discordant_urgency_update_urgency,24,24,C,B,0.0,"{""A"": 3, ""B"": 21}",835101e55f18,True
+haiku,V16,ja,nurse,discordant_urgency_update_diagnosis,24,14,start,neither,0.14285714285714285,"{""neither"": 10, ""none"": 2, ""start"": 2}",835101e55f18,True
+haiku,V16,ja,patient,discordant_urgency_update_urgency,24,24,C,B,0.0,"{""A"": 4, ""B"": 20}",835101e55f18,True
+haiku,V16,ja,patient,discordant_urgency_update_diagnosis,24,21,start,neither,0.23809523809523808,"{""neither"": 13, ""none"": 3, ""start"": 5}",835101e55f18,True
+haiku,V16,zh,consultant,discordant_urgency_update_urgency,24,24,C,A,0.0,"{""A"": 19, ""B"": 5}",835101e55f18,True
+haiku,V16,zh,consultant,discordant_urgency_update_diagnosis,24,12,start,neither,0.0,"{""neither"": 8, ""none"": 4}",835101e55f18,True
+haiku,V16,zh,nurse,discordant_urgency_update_urgency,24,24,C,A,0.0,"{""A"": 16, ""B"": 8}",835101e55f18,True
+haiku,V16,zh,nurse,discordant_urgency_update_diagnosis,24,16,start,neither,0.0,"{""neither"": 14, ""none"": 2}",835101e55f18,True
+haiku,V16,zh,patient,discordant_urgency_update_urgency,24,24,C,A,0.0,"{""A"": 12, ""B"": 12}",835101e55f18,True
+haiku,V16,zh,patient,discordant_urgency_update_diagnosis,24,19,start,neither,0.15789473684210525,"{""neither"": 14, ""none"": 2, ""start"": 3}",835101e55f18,True
+haiku,V17,en,consultant,discordant_urgency_update_urgency,24,24,B,B,0.9583333333333334,"{""B"": 23, ""C"": 1}",ed1cbae8eab7,False
+haiku,V17,en,consultant,discordant_urgency_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",ed1cbae8eab7,False
+haiku,V17,en,nurse,discordant_urgency_update_urgency,24,24,B,B,1.0,"{""B"": 24}",ed1cbae8eab7,False
+haiku,V17,en,nurse,discordant_urgency_update_diagnosis,24,23,start,start,1.0,"{""start"": 23}",ed1cbae8eab7,False
+haiku,V17,en,patient,discordant_urgency_update_urgency,24,24,B,B,1.0,"{""B"": 24}",ed1cbae8eab7,False
+haiku,V17,en,patient,discordant_urgency_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",ed1cbae8eab7,False
+haiku,V17,ja,consultant,discordant_urgency_update_urgency,24,24,B,B,0.8333333333333334,"{""B"": 20, ""C"": 4}",ed1cbae8eab7,False
+haiku,V17,ja,consultant,discordant_urgency_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",ed1cbae8eab7,False
+haiku,V17,ja,nurse,discordant_urgency_update_urgency,24,24,B,B,1.0,"{""B"": 24}",ed1cbae8eab7,False
+haiku,V17,ja,nurse,discordant_urgency_update_diagnosis,24,22,start,start,1.0,"{""start"": 22}",ed1cbae8eab7,False
+haiku,V17,ja,patient,discordant_urgency_update_urgency,24,24,B,B,1.0,"{""B"": 24}",ed1cbae8eab7,False
+haiku,V17,ja,patient,discordant_urgency_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",ed1cbae8eab7,False
+haiku,V17,zh,consultant,discordant_urgency_update_urgency,24,24,B,B,1.0,"{""B"": 24}",ed1cbae8eab7,False
+haiku,V17,zh,consultant,discordant_urgency_update_diagnosis,24,21,start,start,1.0,"{""start"": 21}",ed1cbae8eab7,False
+haiku,V17,zh,nurse,discordant_urgency_update_urgency,24,24,B,B,1.0,"{""B"": 24}",ed1cbae8eab7,False
+haiku,V17,zh,nurse,discordant_urgency_update_diagnosis,24,23,start,start,1.0,"{""start"": 23}",ed1cbae8eab7,False
+haiku,V17,zh,patient,discordant_urgency_update_urgency,24,24,B,B,0.7916666666666666,"{""A"": 5, ""B"": 19}",ed1cbae8eab7,False
+haiku,V17,zh,patient,discordant_urgency_update_diagnosis,24,24,start,start,0.9583333333333334,"{""none"": 1, ""start"": 23}",ed1cbae8eab7,False
+haiku,V18,en,consultant,discordant_urgency_update_urgency,24,24,A,A,0.7916666666666666,"{""A"": 19, ""B"": 5}",79b3dcf1c0d2,False
+haiku,V18,en,consultant,discordant_urgency_update_diagnosis,24,19,start,neither,0.3157894736842105,"{""neither"": 13, ""start"": 6}",79b3dcf1c0d2,True
+haiku,V18,en,nurse,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",79b3dcf1c0d2,False
+haiku,V18,en,nurse,discordant_urgency_update_diagnosis,24,18,start,neither,0.4444444444444444,"{""neither"": 10, ""start"": 8}",79b3dcf1c0d2,True
+haiku,V18,en,patient,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",79b3dcf1c0d2,False
+haiku,V18,en,patient,discordant_urgency_update_diagnosis,24,21,start,neither,0.19047619047619047,"{""neither"": 17, ""start"": 4}",79b3dcf1c0d2,True
+haiku,V18,ja,consultant,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",79b3dcf1c0d2,False
+haiku,V18,ja,consultant,discordant_urgency_update_diagnosis,24,23,start,neither,0.043478260869565216,"{""neither"": 22, ""start"": 1}",79b3dcf1c0d2,True
+haiku,V18,ja,nurse,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",79b3dcf1c0d2,False
+haiku,V18,ja,nurse,discordant_urgency_update_diagnosis,24,18,start,neither,0.0,"{""neither"": 18}",79b3dcf1c0d2,True
+haiku,V18,ja,patient,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",79b3dcf1c0d2,False
+haiku,V18,ja,patient,discordant_urgency_update_diagnosis,24,14,start,neither,0.07142857142857142,"{""neither"": 12, ""none"": 1, ""start"": 1}",79b3dcf1c0d2,True
+haiku,V18,zh,consultant,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",79b3dcf1c0d2,False
+haiku,V18,zh,consultant,discordant_urgency_update_diagnosis,24,23,start,neither,0.13043478260869565,"{""neither"": 19, ""none"": 1, ""start"": 3}",79b3dcf1c0d2,True
+haiku,V18,zh,nurse,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",79b3dcf1c0d2,False
+haiku,V18,zh,nurse,discordant_urgency_update_diagnosis,24,21,start,neither,0.047619047619047616,"{""neither"": 19, ""none"": 1, ""start"": 1}",79b3dcf1c0d2,True
+haiku,V18,zh,patient,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",79b3dcf1c0d2,False
+haiku,V18,zh,patient,discordant_urgency_update_diagnosis,24,18,start,neither,0.0,"{""neither"": 17, ""none"": 1}",79b3dcf1c0d2,True
+haiku,V20,en,consultant,discordant_urgency_update_urgency,24,24,C,B,0.08333333333333333,"{""B"": 22, ""C"": 2}",a8363d635a24,True
+haiku,V20,en,consultant,discordant_urgency_update_diagnosis,24,21,start,neither,0.14285714285714285,"{""neither"": 18, ""start"": 3}",a8363d635a24,True
+haiku,V20,en,nurse,discordant_urgency_update_urgency,24,24,C,B,0.041666666666666664,"{""A"": 1, ""B"": 22, ""C"": 1}",a8363d635a24,True
+haiku,V20,en,nurse,discordant_urgency_update_diagnosis,24,21,start,neither,0.3333333333333333,"{""neither"": 13, ""none"": 1, ""start"": 7}",a8363d635a24,True
+haiku,V20,en,patient,discordant_urgency_update_urgency,24,24,C,B,0.0,"{""A"": 4, ""B"": 20}",a8363d635a24,True
+haiku,V20,en,patient,discordant_urgency_update_diagnosis,24,19,start,start,0.47368421052631576,"{""neither"": 9, ""none"": 1, ""start"": 9}",a8363d635a24,True
+haiku,V20,ja,consultant,discordant_urgency_update_urgency,24,24,C,B,0.041666666666666664,"{""B"": 23, ""C"": 1}",a8363d635a24,True
+haiku,V20,ja,consultant,discordant_urgency_update_diagnosis,24,20,start,neither,0.2,"{""neither"": 14, ""none"": 2, ""start"": 4}",a8363d635a24,True
+haiku,V20,ja,nurse,discordant_urgency_update_urgency,24,24,C,B,0.041666666666666664,"{""B"": 23, ""C"": 1}",a8363d635a24,True
+haiku,V20,ja,nurse,discordant_urgency_update_diagnosis,24,18,start,start,0.3888888888888889,"{""neither"": 6, ""none"": 5, ""start"": 7}",a8363d635a24,True
+haiku,V20,ja,patient,discordant_urgency_update_urgency,24,24,C,B,0.041666666666666664,"{""B"": 23, ""C"": 1}",a8363d635a24,True
+haiku,V20,ja,patient,discordant_urgency_update_diagnosis,24,21,start,none,0.38095238095238093,"{""neither"": 3, ""none"": 10, ""start"": 8}",a8363d635a24,True
+haiku,V20,zh,consultant,discordant_urgency_update_urgency,24,24,C,B,0.041666666666666664,"{""B"": 23, ""C"": 1}",a8363d635a24,True
+haiku,V20,zh,consultant,discordant_urgency_update_diagnosis,24,17,start,neither,0.17647058823529413,"{""neither"": 10, ""none"": 4, ""start"": 3}",a8363d635a24,True
+haiku,V20,zh,nurse,discordant_urgency_update_urgency,24,24,C,B,0.0,"{""B"": 24}",a8363d635a24,True
+haiku,V20,zh,nurse,discordant_urgency_update_diagnosis,24,22,start,start,0.5,"{""neither"": 5, ""none"": 6, ""start"": 11}",a8363d635a24,False
+haiku,V20,zh,patient,discordant_urgency_update_urgency,24,24,C,B,0.0,"{""A"": 8, ""B"": 16}",a8363d635a24,True
+haiku,V20,zh,patient,discordant_urgency_update_diagnosis,24,17,start,neither,0.29411764705882354,"{""neither"": 9, ""none"": 3, ""start"": 5}",a8363d635a24,True
+haiku,V21,en,consultant,discordant_urgency_update_urgency,24,24,B,A,0.041666666666666664,"{""A"": 23, ""B"": 1}",316016e7e711,True
+haiku,V21,en,consultant,discordant_urgency_update_diagnosis,24,24,start,start,0.9166666666666666,"{""neither"": 1, ""none"": 1, ""start"": 22}",316016e7e711,False
+haiku,V21,en,nurse,discordant_urgency_update_urgency,24,24,B,A,0.0,"{""A"": 24}",316016e7e711,True
+haiku,V21,en,nurse,discordant_urgency_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",316016e7e711,False
+haiku,V21,en,patient,discordant_urgency_update_urgency,24,24,B,A,0.0,"{""A"": 24}",316016e7e711,True
+haiku,V21,en,patient,discordant_urgency_update_diagnosis,24,24,start,start,0.8333333333333334,"{""neither"": 1, ""none"": 3, ""start"": 20}",316016e7e711,False
+haiku,V21,ja,consultant,discordant_urgency_update_urgency,24,24,B,A,0.125,"{""A"": 21, ""B"": 3}",316016e7e711,True
+haiku,V21,ja,consultant,discordant_urgency_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",316016e7e711,False
+haiku,V21,ja,nurse,discordant_urgency_update_urgency,24,24,B,A,0.16666666666666666,"{""A"": 20, ""B"": 4}",316016e7e711,True
+haiku,V21,ja,nurse,discordant_urgency_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",316016e7e711,False
+haiku,V21,ja,patient,discordant_urgency_update_urgency,24,24,B,A,0.0,"{""A"": 24}",316016e7e711,True
+haiku,V21,ja,patient,discordant_urgency_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",316016e7e711,False
+haiku,V21,zh,consultant,discordant_urgency_update_urgency,24,24,B,A,0.08333333333333333,"{""A"": 22, ""B"": 2}",316016e7e711,True
+haiku,V21,zh,consultant,discordant_urgency_update_diagnosis,24,24,start,start,0.9583333333333334,"{""none"": 1, ""start"": 23}",316016e7e711,False
+haiku,V21,zh,nurse,discordant_urgency_update_urgency,24,24,B,A,0.0,"{""A"": 24}",316016e7e711,True
+haiku,V21,zh,nurse,discordant_urgency_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",316016e7e711,False
+haiku,V21,zh,patient,discordant_urgency_update_urgency,24,24,B,A,0.0,"{""A"": 24}",316016e7e711,True
+haiku,V21,zh,patient,discordant_urgency_update_diagnosis,24,24,start,start,0.875,"{""neither"": 2, ""none"": 1, ""start"": 21}",316016e7e711,False
+haiku,V22,en,consultant,discordant_urgency_update_urgency,24,24,B,A,0.4583333333333333,"{""A"": 13, ""B"": 11}",a8a5e9c2a1fc,True
+haiku,V22,en,consultant,discordant_urgency_update_diagnosis,24,24,start,start,0.875,"{""neither"": 3, ""start"": 21}",a8a5e9c2a1fc,False
+haiku,V22,en,nurse,discordant_urgency_update_urgency,24,24,B,A,0.16666666666666666,"{""A"": 20, ""B"": 4}",a8a5e9c2a1fc,True
+haiku,V22,en,nurse,discordant_urgency_update_diagnosis,24,24,start,start,0.6666666666666666,"{""neither"": 5, ""none"": 3, ""start"": 16}",a8a5e9c2a1fc,False
+haiku,V22,en,patient,discordant_urgency_update_urgency,24,24,B,B,0.5416666666666666,"{""A"": 11, ""B"": 13}",a8a5e9c2a1fc,False
+haiku,V22,en,patient,discordant_urgency_update_diagnosis,24,24,start,start,0.7083333333333334,"{""neither"": 7, ""start"": 17}",a8a5e9c2a1fc,False
+haiku,V22,ja,consultant,discordant_urgency_update_urgency,24,24,B,A,0.0,"{""A"": 24}",a8a5e9c2a1fc,True
+haiku,V22,ja,consultant,discordant_urgency_update_diagnosis,24,24,start,start,0.8333333333333334,"{""neither"": 4, ""start"": 20}",a8a5e9c2a1fc,False
+haiku,V22,ja,nurse,discordant_urgency_update_urgency,24,24,B,A,0.0,"{""A"": 24}",a8a5e9c2a1fc,True
+haiku,V22,ja,nurse,discordant_urgency_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",a8a5e9c2a1fc,False
+haiku,V22,ja,patient,discordant_urgency_update_urgency,24,24,B,A,0.0,"{""A"": 24}",a8a5e9c2a1fc,True
+haiku,V22,ja,patient,discordant_urgency_update_diagnosis,24,24,start,start,0.9583333333333334,"{""none"": 1, ""start"": 23}",a8a5e9c2a1fc,False
+haiku,V22,zh,consultant,discordant_urgency_update_urgency,24,24,B,A,0.0,"{""A"": 24}",a8a5e9c2a1fc,True
+haiku,V22,zh,consultant,discordant_urgency_update_diagnosis,24,24,start,start,0.75,"{""neither"": 4, ""none"": 2, ""start"": 18}",a8a5e9c2a1fc,False
+haiku,V22,zh,nurse,discordant_urgency_update_urgency,24,24,B,A,0.0,"{""A"": 24}",a8a5e9c2a1fc,True
+haiku,V22,zh,nurse,discordant_urgency_update_diagnosis,24,24,start,start,0.7916666666666666,"{""neither"": 3, ""none"": 2, ""start"": 19}",a8a5e9c2a1fc,False
+haiku,V22,zh,patient,discordant_urgency_update_urgency,24,24,B,A,0.041666666666666664,"{""A"": 23, ""B"": 1}",a8a5e9c2a1fc,True
+haiku,V22,zh,patient,discordant_urgency_update_diagnosis,24,24,start,start,0.7916666666666666,"{""neither"": 2, ""none"": 3, ""start"": 19}",a8a5e9c2a1fc,False
+haiku,V23,en,consultant,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",02a317520314,False
+haiku,V23,en,consultant,discordant_urgency_update_diagnosis,24,24,start,neither,0.041666666666666664,"{""neither"": 23, ""start"": 1}",02a317520314,True
+haiku,V23,en,nurse,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",02a317520314,False
+haiku,V23,en,nurse,discordant_urgency_update_diagnosis,24,24,start,neither,0.25,"{""neither"": 18, ""start"": 6}",02a317520314,True
+haiku,V23,en,patient,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",02a317520314,False
+haiku,V23,en,patient,discordant_urgency_update_diagnosis,24,24,start,start,0.5,"{""neither"": 10, ""none"": 2, ""start"": 12}",02a317520314,False
+haiku,V23,ja,consultant,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",02a317520314,False
+haiku,V23,ja,consultant,discordant_urgency_update_diagnosis,24,24,start,neither,0.16666666666666666,"{""neither"": 20, ""start"": 4}",02a317520314,True
+haiku,V23,ja,nurse,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",02a317520314,False
+haiku,V23,ja,nurse,discordant_urgency_update_diagnosis,24,24,start,neither,0.041666666666666664,"{""neither"": 23, ""start"": 1}",02a317520314,True
+haiku,V23,ja,patient,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",02a317520314,False
+haiku,V23,ja,patient,discordant_urgency_update_diagnosis,24,24,start,neither,0.5,"{""neither"": 12, ""start"": 12}",02a317520314,False
+haiku,V23,zh,consultant,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",02a317520314,False
+haiku,V23,zh,consultant,discordant_urgency_update_diagnosis,24,24,start,neither,0.16666666666666666,"{""neither"": 18, ""none"": 2, ""start"": 4}",02a317520314,True
+haiku,V23,zh,nurse,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",02a317520314,False
+haiku,V23,zh,nurse,discordant_urgency_update_diagnosis,24,24,start,neither,0.3333333333333333,"{""neither"": 14, ""none"": 2, ""start"": 8}",02a317520314,True
+haiku,V23,zh,patient,discordant_urgency_update_urgency,24,24,A,A,1.0,"{""A"": 24}",02a317520314,False
+haiku,V23,zh,patient,discordant_urgency_update_diagnosis,24,24,start,start,0.7083333333333334,"{""neither"": 7, ""start"": 17}",02a317520314,False
+haiku,V21,en,consultant,discordant_reassure_update_urgency,24,24,D,C,0.3333333333333333,"{""B"": 3, ""C"": 13, ""D"": 8}",da6239c4c2b6,True
+haiku,V21,en,consultant,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",da6239c4c2b6,False
+haiku,V21,en,nurse,discordant_reassure_update_urgency,24,24,D,D,0.5,"{""B"": 6, ""C"": 6, ""D"": 12}",da6239c4c2b6,False
+haiku,V21,en,nurse,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",da6239c4c2b6,False
+haiku,V21,en,patient,discordant_reassure_update_urgency,24,24,D,C,0.08333333333333333,"{""B"": 9, ""C"": 13, ""D"": 2}",da6239c4c2b6,True
+haiku,V21,en,patient,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",da6239c4c2b6,False
+haiku,V21,ja,consultant,discordant_reassure_update_urgency,24,24,D,C,0.125,"{""B"": 9, ""C"": 12, ""D"": 3}",da6239c4c2b6,True
+haiku,V21,ja,consultant,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",da6239c4c2b6,False
+haiku,V21,ja,nurse,discordant_reassure_update_urgency,24,24,D,C,0.125,"{""B"": 3, ""C"": 18, ""D"": 3}",da6239c4c2b6,True
+haiku,V21,ja,nurse,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",da6239c4c2b6,False
+haiku,V21,ja,patient,discordant_reassure_update_urgency,24,24,D,C,0.125,"{""B"": 10, ""C"": 11, ""D"": 3}",da6239c4c2b6,True
+haiku,V21,ja,patient,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",da6239c4c2b6,False
+haiku,V21,zh,consultant,discordant_reassure_update_urgency,24,24,D,C,0.0,"{""B"": 5, ""C"": 19}",da6239c4c2b6,True
+haiku,V21,zh,consultant,discordant_reassure_update_diagnosis,24,24,start,start,0.9583333333333334,"{""neither"": 1, ""start"": 23}",da6239c4c2b6,False
+haiku,V21,zh,nurse,discordant_reassure_update_urgency,24,24,D,B,0.08333333333333333,"{""B"": 12, ""C"": 10, ""D"": 2}",da6239c4c2b6,True
+haiku,V21,zh,nurse,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",da6239c4c2b6,False
+haiku,V21,zh,patient,discordant_reassure_update_urgency,24,24,D,C,0.0,"{""B"": 11, ""C"": 13}",da6239c4c2b6,True
+haiku,V21,zh,patient,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",da6239c4c2b6,False
+haiku,V22,en,consultant,discordant_reassure_update_urgency,24,24,D,C,0.0,"{""C"": 24}",a4da2ff0cf37,True
+haiku,V22,en,consultant,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",a4da2ff0cf37,False
+haiku,V22,en,nurse,discordant_reassure_update_urgency,24,24,D,C,0.0,"{""C"": 24}",a4da2ff0cf37,True
+haiku,V22,en,nurse,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",a4da2ff0cf37,False
+haiku,V22,en,patient,discordant_reassure_update_urgency,24,24,D,C,0.0,"{""C"": 24}",a4da2ff0cf37,True
+haiku,V22,en,patient,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",a4da2ff0cf37,False
+haiku,V22,ja,consultant,discordant_reassure_update_urgency,24,24,D,C,0.041666666666666664,"{""C"": 23, ""D"": 1}",a4da2ff0cf37,True
+haiku,V22,ja,consultant,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",a4da2ff0cf37,False
+haiku,V22,ja,nurse,discordant_reassure_update_urgency,24,24,D,C,0.041666666666666664,"{""C"": 23, ""D"": 1}",a4da2ff0cf37,True
+haiku,V22,ja,nurse,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",a4da2ff0cf37,False
+haiku,V22,ja,patient,discordant_reassure_update_urgency,24,24,D,C,0.0,"{""C"": 24}",a4da2ff0cf37,True
+haiku,V22,ja,patient,discordant_reassure_update_diagnosis,24,24,start,start,0.9583333333333334,"{""none"": 1, ""start"": 23}",a4da2ff0cf37,False
+haiku,V22,zh,consultant,discordant_reassure_update_urgency,24,24,D,C,0.0,"{""C"": 24}",a4da2ff0cf37,True
+haiku,V22,zh,consultant,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",a4da2ff0cf37,False
+haiku,V22,zh,nurse,discordant_reassure_update_urgency,24,24,D,C,0.0,"{""B"": 2, ""C"": 22}",a4da2ff0cf37,True
+haiku,V22,zh,nurse,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",a4da2ff0cf37,False
+haiku,V22,zh,patient,discordant_reassure_update_urgency,24,24,D,C,0.0,"{""C"": 24}",a4da2ff0cf37,True
+haiku,V22,zh,patient,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",a4da2ff0cf37,False
+haiku,V23,en,consultant,discordant_reassure_update_urgency,24,24,D,B,0.0,"{""B"": 23, ""C"": 1}",74cb3d5bdfad,True
+haiku,V23,en,consultant,discordant_reassure_update_diagnosis,24,24,start,start,0.7916666666666666,"{""neither"": 5, ""start"": 19}",74cb3d5bdfad,False
+haiku,V23,en,nurse,discordant_reassure_update_urgency,24,24,D,B,0.0,"{""B"": 23, ""C"": 1}",74cb3d5bdfad,True
+haiku,V23,en,nurse,discordant_reassure_update_diagnosis,24,24,start,start,0.9166666666666666,"{""neither"": 2, ""start"": 22}",74cb3d5bdfad,False
+haiku,V23,en,patient,discordant_reassure_update_urgency,24,24,D,B,0.0,"{""B"": 24}",74cb3d5bdfad,True
+haiku,V23,en,patient,discordant_reassure_update_diagnosis,24,24,start,start,0.9583333333333334,"{""neither"": 1, ""start"": 23}",74cb3d5bdfad,False
+haiku,V23,ja,consultant,discordant_reassure_update_urgency,24,24,D,B,0.0,"{""B"": 22, ""C"": 2}",74cb3d5bdfad,True
+haiku,V23,ja,consultant,discordant_reassure_update_diagnosis,24,24,start,start,0.625,"{""neither"": 8, ""none"": 1, ""start"": 15}",74cb3d5bdfad,False
+haiku,V23,ja,nurse,discordant_reassure_update_urgency,24,24,D,B,0.0,"{""B"": 24}",74cb3d5bdfad,True
+haiku,V23,ja,nurse,discordant_reassure_update_diagnosis,24,24,start,start,0.6666666666666666,"{""neither"": 8, ""start"": 16}",74cb3d5bdfad,False
+haiku,V23,ja,patient,discordant_reassure_update_urgency,24,24,D,B,0.0,"{""B"": 23, ""C"": 1}",74cb3d5bdfad,True
+haiku,V23,ja,patient,discordant_reassure_update_diagnosis,24,24,start,start,0.9166666666666666,"{""neither"": 2, ""start"": 22}",74cb3d5bdfad,False
+haiku,V23,zh,consultant,discordant_reassure_update_urgency,24,24,D,B,0.0,"{""B"": 24}",74cb3d5bdfad,True
+haiku,V23,zh,consultant,discordant_reassure_update_diagnosis,24,24,start,start,0.75,"{""neither"": 4, ""none"": 2, ""start"": 18}",74cb3d5bdfad,False
+haiku,V23,zh,nurse,discordant_reassure_update_urgency,24,24,D,B,0.0,"{""B"": 24}",74cb3d5bdfad,True
+haiku,V23,zh,nurse,discordant_reassure_update_diagnosis,24,24,start,start,0.9583333333333334,"{""neither"": 1, ""start"": 23}",74cb3d5bdfad,False
+haiku,V23,zh,patient,discordant_reassure_update_urgency,24,24,D,B,0.0,"{""B"": 24}",74cb3d5bdfad,True
+haiku,V23,zh,patient,discordant_reassure_update_diagnosis,24,24,start,start,1.0,"{""start"": 24}",74cb3d5bdfad,False
+haiku,V02,en,consultant,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",d79c0b913d55,False
+haiku,V02,en,consultant,discordant_dx_update_diagnosis,24,24,post,post,0.9583333333333334,"{""neither"": 1, ""post"": 23}",d79c0b913d55,False
+haiku,V02,en,nurse,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",d79c0b913d55,False
+haiku,V02,en,nurse,discordant_dx_update_diagnosis,24,22,post,post,0.9545454545454546,"{""neither"": 1, ""post"": 21}",d79c0b913d55,False
+haiku,V02,en,patient,discordant_dx_update_urgency,24,24,A,A,0.9166666666666666,"{""A"": 22, ""B"": 2}",d79c0b913d55,False
+haiku,V02,en,patient,discordant_dx_update_diagnosis,24,24,post,neither,0.125,"{""neither"": 21, ""post"": 3}",d79c0b913d55,True
+haiku,V02,ja,consultant,discordant_dx_update_urgency,24,23,A,A,1.0,"{""A"": 23}",d79c0b913d55,False
+haiku,V02,ja,consultant,discordant_dx_update_diagnosis,24,21,post,post,0.9523809523809523,"{""neither"": 1, ""post"": 20}",d79c0b913d55,False
+haiku,V02,ja,nurse,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",d79c0b913d55,False
+haiku,V02,ja,nurse,discordant_dx_update_diagnosis,24,22,post,post,1.0,"{""post"": 22}",d79c0b913d55,False
+haiku,V02,ja,patient,discordant_dx_update_urgency,24,24,A,A,0.9583333333333334,"{""A"": 23, ""B"": 1}",d79c0b913d55,False
+haiku,V02,ja,patient,discordant_dx_update_diagnosis,24,15,post,neither,0.3333333333333333,"{""neither"": 10, ""post"": 5}",d79c0b913d55,True
+haiku,V02,zh,consultant,discordant_dx_update_urgency,24,24,A,A,0.9583333333333334,"{""A"": 23, ""B"": 1}",d79c0b913d55,False
+haiku,V02,zh,consultant,discordant_dx_update_diagnosis,24,22,post,post,0.8181818181818182,"{""neither"": 4, ""post"": 18}",d79c0b913d55,False
+haiku,V02,zh,nurse,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",d79c0b913d55,False
+haiku,V02,zh,nurse,discordant_dx_update_diagnosis,24,19,post,post,0.9473684210526315,"{""neither"": 1, ""post"": 18}",d79c0b913d55,False
+haiku,V02,zh,patient,discordant_dx_update_urgency,24,24,A,A,0.9583333333333334,"{""A"": 23, ""B"": 1}",d79c0b913d55,False
+haiku,V02,zh,patient,discordant_dx_update_diagnosis,24,15,post,neither,0.26666666666666666,"{""neither"": 11, ""post"": 4}",d79c0b913d55,True
+haiku,V06,en,consultant,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",f42ad4a9901e,False
+haiku,V06,en,consultant,discordant_dx_update_diagnosis,24,23,post,post,0.8260869565217391,"{""post"": 19, ""start"": 4}",f42ad4a9901e,False
+haiku,V06,en,nurse,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",f42ad4a9901e,False
+haiku,V06,en,nurse,discordant_dx_update_diagnosis,24,18,post,post,0.7777777777777778,"{""post"": 14, ""start"": 4}",f42ad4a9901e,False
+haiku,V06,en,patient,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",f42ad4a9901e,False
+haiku,V06,en,patient,discordant_dx_update_diagnosis,24,23,post,post,0.6086956521739131,"{""post"": 14, ""start"": 9}",f42ad4a9901e,False
+haiku,V06,ja,consultant,discordant_dx_update_urgency,24,24,A,A,0.9166666666666666,"{""A"": 22, ""B"": 2}",f42ad4a9901e,False
+haiku,V06,ja,consultant,discordant_dx_update_diagnosis,24,21,post,post,0.6190476190476191,"{""post"": 13, ""start"": 8}",f42ad4a9901e,False
+haiku,V06,ja,nurse,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",f42ad4a9901e,False
+haiku,V06,ja,nurse,discordant_dx_update_diagnosis,24,23,post,post,0.6956521739130435,"{""post"": 16, ""start"": 7}",f42ad4a9901e,False
+haiku,V06,ja,patient,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",f42ad4a9901e,False
+haiku,V06,ja,patient,discordant_dx_update_diagnosis,24,22,post,start,0.09090909090909091,"{""post"": 2, ""start"": 20}",f42ad4a9901e,True
+haiku,V06,zh,consultant,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",f42ad4a9901e,False
+haiku,V06,zh,consultant,discordant_dx_update_diagnosis,24,16,post,start,0.5,"{""post"": 8, ""start"": 8}",f42ad4a9901e,False
+haiku,V06,zh,nurse,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",f42ad4a9901e,False
+haiku,V06,zh,nurse,discordant_dx_update_diagnosis,24,17,post,post,0.5294117647058824,"{""post"": 9, ""start"": 8}",f42ad4a9901e,False
+haiku,V06,zh,patient,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",f42ad4a9901e,False
+haiku,V06,zh,patient,discordant_dx_update_diagnosis,24,19,post,start,0.10526315789473684,"{""post"": 2, ""start"": 17}",f42ad4a9901e,True
+haiku,V07,en,consultant,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",ad277f42a2d8,False
+haiku,V07,en,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",ad277f42a2d8,False
+haiku,V07,en,nurse,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",ad277f42a2d8,False
+haiku,V07,en,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",ad277f42a2d8,False
+haiku,V07,en,patient,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",ad277f42a2d8,False
+haiku,V07,en,patient,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",ad277f42a2d8,False
+haiku,V07,ja,consultant,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",ad277f42a2d8,False
+haiku,V07,ja,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",ad277f42a2d8,False
+haiku,V07,ja,nurse,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",ad277f42a2d8,False
+haiku,V07,ja,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",ad277f42a2d8,False
+haiku,V07,ja,patient,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",ad277f42a2d8,False
+haiku,V07,ja,patient,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",ad277f42a2d8,False
+haiku,V07,zh,consultant,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",ad277f42a2d8,False
+haiku,V07,zh,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",ad277f42a2d8,False
+haiku,V07,zh,nurse,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",ad277f42a2d8,False
+haiku,V07,zh,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",ad277f42a2d8,False
+haiku,V07,zh,patient,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",ad277f42a2d8,False
+haiku,V07,zh,patient,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",ad277f42a2d8,False
+haiku,V09,en,consultant,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",51a48b1ff8a2,False
+haiku,V09,en,consultant,discordant_dx_update_diagnosis,24,16,post,post,0.6875,"{""neither"": 5, ""post"": 11}",51a48b1ff8a2,False
+haiku,V09,en,nurse,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",51a48b1ff8a2,False
+haiku,V09,en,nurse,discordant_dx_update_diagnosis,24,15,post,post,0.4666666666666667,"{""neither"": 5, ""none"": 3, ""post"": 7}",51a48b1ff8a2,True
+haiku,V09,en,patient,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",51a48b1ff8a2,False
+haiku,V09,en,patient,discordant_dx_update_diagnosis,24,12,post,none,0.16666666666666666,"{""neither"": 2, ""none"": 7, ""post"": 2, ""start"": 1}",51a48b1ff8a2,True
+haiku,V09,ja,consultant,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",51a48b1ff8a2,False
+haiku,V09,ja,consultant,discordant_dx_update_diagnosis,24,21,post,neither,0.3333333333333333,"{""neither"": 12, ""none"": 2, ""post"": 7}",51a48b1ff8a2,True
+haiku,V09,ja,nurse,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",51a48b1ff8a2,False
+haiku,V09,ja,nurse,discordant_dx_update_diagnosis,24,20,post,neither,0.15,"{""neither"": 16, ""none"": 1, ""post"": 3}",51a48b1ff8a2,True
+haiku,V09,ja,patient,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",51a48b1ff8a2,False
+haiku,V09,ja,patient,discordant_dx_update_diagnosis,24,19,post,neither,0.21052631578947367,"{""neither"": 7, ""none"": 6, ""post"": 4, ""start"": 2}",51a48b1ff8a2,True
+haiku,V09,zh,consultant,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",51a48b1ff8a2,False
+haiku,V09,zh,consultant,discordant_dx_update_diagnosis,24,11,post,post,0.6363636363636364,"{""neither"": 3, ""none"": 1, ""post"": 7}",51a48b1ff8a2,False
+haiku,V09,zh,nurse,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",51a48b1ff8a2,False
+haiku,V09,zh,nurse,discordant_dx_update_diagnosis,24,10,post,neither,0.3,"{""neither"": 4, ""none"": 3, ""post"": 3}",51a48b1ff8a2,True
+haiku,V09,zh,patient,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",51a48b1ff8a2,False
+haiku,V09,zh,patient,discordant_dx_update_diagnosis,24,11,post,none,0.0,"{""neither"": 1, ""none"": 10}",51a48b1ff8a2,True
+haiku,V10,en,consultant,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",70fec2ab1408,False
+haiku,V10,en,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",70fec2ab1408,False
+haiku,V10,en,nurse,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",70fec2ab1408,False
+haiku,V10,en,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",70fec2ab1408,False
+haiku,V10,en,patient,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",70fec2ab1408,False
+haiku,V10,en,patient,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",70fec2ab1408,False
+haiku,V10,ja,consultant,discordant_dx_update_urgency,24,24,A,A,0.9166666666666666,"{""A"": 22, ""B"": 2}",70fec2ab1408,False
+haiku,V10,ja,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",70fec2ab1408,False
+haiku,V10,ja,nurse,discordant_dx_update_urgency,24,24,A,A,0.9583333333333334,"{""A"": 23, ""B"": 1}",70fec2ab1408,False
+haiku,V10,ja,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",70fec2ab1408,False
+haiku,V10,ja,patient,discordant_dx_update_urgency,24,24,A,A,0.9166666666666666,"{""A"": 22, ""B"": 2}",70fec2ab1408,False
+haiku,V10,ja,patient,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",70fec2ab1408,False
+haiku,V10,zh,consultant,discordant_dx_update_urgency,24,24,A,A,0.8333333333333334,"{""A"": 20, ""B"": 4}",70fec2ab1408,False
+haiku,V10,zh,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",70fec2ab1408,False
+haiku,V10,zh,nurse,discordant_dx_update_urgency,24,24,A,A,0.9583333333333334,"{""A"": 23, ""B"": 1}",70fec2ab1408,False
+haiku,V10,zh,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",70fec2ab1408,False
+haiku,V10,zh,patient,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",70fec2ab1408,False
+haiku,V10,zh,patient,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",70fec2ab1408,False
+haiku,V15,en,consultant,discordant_dx_update_urgency,24,24,B,A,0.25,"{""A"": 18, ""B"": 6}",8abc54ebcaf2,True
+haiku,V15,en,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",8abc54ebcaf2,False
+haiku,V15,en,nurse,discordant_dx_update_urgency,24,24,B,A,0.0,"{""A"": 24}",8abc54ebcaf2,True
+haiku,V15,en,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",8abc54ebcaf2,False
+haiku,V15,en,patient,discordant_dx_update_urgency,24,24,B,A,0.25,"{""A"": 18, ""B"": 6}",8abc54ebcaf2,True
+haiku,V15,en,patient,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",8abc54ebcaf2,False
+haiku,V15,ja,consultant,discordant_dx_update_urgency,24,24,B,A,0.375,"{""A"": 15, ""B"": 9}",8abc54ebcaf2,True
+haiku,V15,ja,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",8abc54ebcaf2,False
+haiku,V15,ja,nurse,discordant_dx_update_urgency,24,24,B,A,0.4166666666666667,"{""A"": 14, ""B"": 10}",8abc54ebcaf2,True
+haiku,V15,ja,nurse,discordant_dx_update_diagnosis,24,23,post,post,1.0,"{""post"": 23}",8abc54ebcaf2,False
+haiku,V15,ja,patient,discordant_dx_update_urgency,24,24,B,A,0.20833333333333334,"{""A"": 19, ""B"": 5}",8abc54ebcaf2,True
+haiku,V15,ja,patient,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",8abc54ebcaf2,False
+haiku,V15,zh,consultant,discordant_dx_update_urgency,24,24,B,B,0.75,"{""A"": 6, ""B"": 18}",8abc54ebcaf2,False
+haiku,V15,zh,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",8abc54ebcaf2,False
+haiku,V15,zh,nurse,discordant_dx_update_urgency,24,24,B,A,0.375,"{""A"": 15, ""B"": 9}",8abc54ebcaf2,True
+haiku,V15,zh,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",8abc54ebcaf2,False
+haiku,V15,zh,patient,discordant_dx_update_urgency,24,24,B,A,0.041666666666666664,"{""A"": 23, ""B"": 1}",8abc54ebcaf2,True
+haiku,V15,zh,patient,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",8abc54ebcaf2,False
+haiku,V16,en,consultant,discordant_dx_update_urgency,24,24,C,B,0.0,"{""B"": 24}",808854fd4a04,True
+haiku,V16,en,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",808854fd4a04,False
+haiku,V16,en,nurse,discordant_dx_update_urgency,24,24,C,B,0.0,"{""B"": 24}",808854fd4a04,True
+haiku,V16,en,nurse,discordant_dx_update_diagnosis,24,24,post,post,0.9583333333333334,"{""post"": 23, ""start"": 1}",808854fd4a04,False
+haiku,V16,en,patient,discordant_dx_update_urgency,24,24,C,B,0.0,"{""B"": 24}",808854fd4a04,True
+haiku,V16,en,patient,discordant_dx_update_diagnosis,24,23,post,post,0.8260869565217391,"{""neither"": 1, ""none"": 3, ""post"": 19}",808854fd4a04,False
+haiku,V16,ja,consultant,discordant_dx_update_urgency,24,24,C,B,0.0,"{""B"": 24}",808854fd4a04,True
+haiku,V16,ja,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",808854fd4a04,False
+haiku,V16,ja,nurse,discordant_dx_update_urgency,24,24,C,B,0.0,"{""B"": 24}",808854fd4a04,True
+haiku,V16,ja,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",808854fd4a04,False
+haiku,V16,ja,patient,discordant_dx_update_urgency,24,24,C,B,0.0,"{""B"": 24}",808854fd4a04,True
+haiku,V16,ja,patient,discordant_dx_update_diagnosis,24,24,post,post,0.9583333333333334,"{""neither"": 1, ""post"": 23}",808854fd4a04,False
+haiku,V16,zh,consultant,discordant_dx_update_urgency,24,24,C,B,0.0,"{""B"": 24}",808854fd4a04,True
+haiku,V16,zh,consultant,discordant_dx_update_diagnosis,24,22,post,post,0.9090909090909091,"{""neither"": 2, ""post"": 20}",808854fd4a04,False
+haiku,V16,zh,nurse,discordant_dx_update_urgency,24,24,C,B,0.0,"{""B"": 24}",808854fd4a04,True
+haiku,V16,zh,nurse,discordant_dx_update_diagnosis,24,21,post,post,0.9047619047619048,"{""neither"": 1, ""none"": 1, ""post"": 19}",808854fd4a04,False
+haiku,V16,zh,patient,discordant_dx_update_urgency,24,24,C,B,0.0,"{""B"": 24}",808854fd4a04,True
+haiku,V16,zh,patient,discordant_dx_update_diagnosis,24,22,post,post,0.6363636363636364,"{""neither"": 3, ""none"": 5, ""post"": 14}",808854fd4a04,False
+haiku,V17,en,consultant,discordant_dx_update_urgency,24,24,B,A,0.25,"{""A"": 18, ""B"": 6}",62c6914fd004,True
+haiku,V17,en,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",62c6914fd004,False
+haiku,V17,en,nurse,discordant_dx_update_urgency,24,24,B,A,0.2916666666666667,"{""A"": 17, ""B"": 7}",62c6914fd004,True
+haiku,V17,en,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",62c6914fd004,False
+haiku,V17,en,patient,discordant_dx_update_urgency,24,24,B,A,0.125,"{""A"": 21, ""B"": 3}",62c6914fd004,True
+haiku,V17,en,patient,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",62c6914fd004,False
+haiku,V17,ja,consultant,discordant_dx_update_urgency,24,24,B,B,0.7916666666666666,"{""A"": 5, ""B"": 19}",62c6914fd004,False
+haiku,V17,ja,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",62c6914fd004,False
+haiku,V17,ja,nurse,discordant_dx_update_urgency,24,24,B,A,0.375,"{""A"": 15, ""B"": 9}",62c6914fd004,True
+haiku,V17,ja,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",62c6914fd004,False
+haiku,V17,ja,patient,discordant_dx_update_urgency,24,24,B,B,0.5,"{""A"": 12, ""B"": 12}",62c6914fd004,False
+haiku,V17,ja,patient,discordant_dx_update_diagnosis,24,23,post,post,1.0,"{""post"": 23}",62c6914fd004,False
+haiku,V17,zh,consultant,discordant_dx_update_urgency,24,24,B,A,0.4166666666666667,"{""A"": 14, ""B"": 10}",62c6914fd004,True
+haiku,V17,zh,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",62c6914fd004,False
+haiku,V17,zh,nurse,discordant_dx_update_urgency,24,24,B,A,0.4583333333333333,"{""A"": 13, ""B"": 11}",62c6914fd004,True
+haiku,V17,zh,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",62c6914fd004,False
+haiku,V17,zh,patient,discordant_dx_update_urgency,24,24,B,A,0.20833333333333334,"{""A"": 19, ""B"": 5}",62c6914fd004,True
+haiku,V17,zh,patient,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",62c6914fd004,False
+haiku,V18,en,consultant,discordant_dx_update_urgency,24,24,D,D,0.9583333333333334,"{""C"": 1, ""D"": 23}",14977c36a4c3,False
+haiku,V18,en,consultant,discordant_dx_update_diagnosis,24,22,post,post,1.0,"{""post"": 22}",14977c36a4c3,False
+haiku,V18,en,nurse,discordant_dx_update_urgency,24,24,D,C,0.16666666666666666,"{""C"": 20, ""D"": 4}",14977c36a4c3,True
+haiku,V18,en,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",14977c36a4c3,False
+haiku,V18,en,patient,discordant_dx_update_urgency,24,24,D,C,0.125,"{""C"": 21, ""D"": 3}",14977c36a4c3,True
+haiku,V18,en,patient,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",14977c36a4c3,False
+haiku,V18,ja,consultant,discordant_dx_update_urgency,24,24,D,D,0.7083333333333334,"{""C"": 7, ""D"": 17}",14977c36a4c3,False
+haiku,V18,ja,consultant,discordant_dx_update_diagnosis,24,23,post,post,0.9565217391304348,"{""post"": 22, ""start"": 1}",14977c36a4c3,False
+haiku,V18,ja,nurse,discordant_dx_update_urgency,24,24,D,C,0.4166666666666667,"{""C"": 14, ""D"": 10}",14977c36a4c3,True
+haiku,V18,ja,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",14977c36a4c3,False
+haiku,V18,ja,patient,discordant_dx_update_urgency,24,24,D,C,0.16666666666666666,"{""C"": 20, ""D"": 4}",14977c36a4c3,True
+haiku,V18,ja,patient,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",14977c36a4c3,False
+haiku,V18,zh,consultant,discordant_dx_update_urgency,24,24,D,D,0.7916666666666666,"{""C"": 5, ""D"": 19}",14977c36a4c3,False
+haiku,V18,zh,consultant,discordant_dx_update_diagnosis,24,23,post,post,1.0,"{""post"": 23}",14977c36a4c3,False
+haiku,V18,zh,nurse,discordant_dx_update_urgency,24,24,D,C,0.25,"{""C"": 18, ""D"": 6}",14977c36a4c3,True
+haiku,V18,zh,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",14977c36a4c3,False
+haiku,V18,zh,patient,discordant_dx_update_urgency,24,24,D,C,0.16666666666666666,"{""C"": 20, ""D"": 4}",14977c36a4c3,True
+haiku,V18,zh,patient,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",14977c36a4c3,False
+haiku,V20,en,consultant,discordant_dx_update_urgency,24,24,A,B,0.20833333333333334,"{""A"": 5, ""B"": 19}",a799a99b3e77,True
+haiku,V20,en,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",a799a99b3e77,False
+haiku,V20,en,nurse,discordant_dx_update_urgency,24,24,A,B,0.375,"{""A"": 9, ""B"": 15}",a799a99b3e77,True
+haiku,V20,en,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",a799a99b3e77,False
+haiku,V20,en,patient,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",a799a99b3e77,False
+haiku,V20,en,patient,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",a799a99b3e77,False
+haiku,V20,ja,consultant,discordant_dx_update_urgency,24,24,A,B,0.2916666666666667,"{""A"": 7, ""B"": 17}",a799a99b3e77,True
+haiku,V20,ja,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",a799a99b3e77,False
+haiku,V20,ja,nurse,discordant_dx_update_urgency,24,24,A,A,0.5416666666666666,"{""A"": 13, ""B"": 11}",a799a99b3e77,False
+haiku,V20,ja,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",a799a99b3e77,False
+haiku,V20,ja,patient,discordant_dx_update_urgency,24,24,A,A,0.9583333333333334,"{""A"": 23, ""B"": 1}",a799a99b3e77,False
+haiku,V20,ja,patient,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",a799a99b3e77,False
+haiku,V20,zh,consultant,discordant_dx_update_urgency,24,24,A,A,0.5416666666666666,"{""A"": 13, ""B"": 11}",a799a99b3e77,False
+haiku,V20,zh,consultant,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",a799a99b3e77,False
+haiku,V20,zh,nurse,discordant_dx_update_urgency,24,24,A,A,0.7083333333333334,"{""A"": 17, ""B"": 7}",a799a99b3e77,False
+haiku,V20,zh,nurse,discordant_dx_update_diagnosis,24,24,post,post,1.0,"{""post"": 24}",a799a99b3e77,False
+haiku,V20,zh,patient,discordant_dx_update_urgency,24,24,A,A,1.0,"{""A"": 24}",a799a99b3e77,False
+haiku,V20,zh,patient,discordant_dx_update_diagnosis,24,23,post,post,1.0,"{""post"": 23}",a799a99b3e77,False
