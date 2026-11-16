@@ -22,6 +22,18 @@
 | `results/` | Model outputs, labels and figures |
 | `report/` | Official template and the write-up |
 
+## Working from another computer
+
+The git repo holds the code, scenarios, docs, figures and the main run's scored tables (`results/main/scores/s2/`). The rest of `results/`, including the main run's database and the diagnosis judge cache, is too large for git and is attached to the release [`results-2026-11-16`](https://github.com/YiFan-Jia/apart_research_epistemics/releases/tag/results-2026-11-16) as one archive (373 MB, 13,647 files). From the root of a clone:
+
+```bash
+curl -LO https://github.com/YiFan-Jia/apart_research_epistemics/releases/download/results-2026-11-16/results_2026-11-16.tar.gz
+tar -xzf results_2026-11-16.tar.gz
+pip install -r requirements.txt
+```
+
+This recreates `results/` as it was on the machine that ran the study. Analysis needs no API key; copy `.env.example` to `.env` only to run new conversations or the API judge.
+
 ## Live documents (editable copies)
 
 | Document | Link |
